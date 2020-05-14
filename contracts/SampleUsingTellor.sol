@@ -1,18 +1,26 @@
 pragma solidity >=0.4.21 <0.7.0;
+import "usingtellor/contracts/UsingTellor.sol";
 
 contract SampleUsingTellor is UsingTellor {
-  address public owner;
-  uint public last_completed_migration;
+  uint public tellorID;
+  uint public qualifiedValue;
+  uint public currentValue;
 
-  constructor() public {
-    owner = msg.sender;
+  constructor(uint _tellorID, address payable _tellorAddress) UsingTellor(_tellorAddress) public {
+    tellorID = _tellorID;
   }
 
-  modifier restricted() {
-    if (msg.sender == owner) _;
+  function updateValues() external {
+    bool _didGet;
+    uint _timestamp;
+    uint _value;
+
+    (_didGet,_value,_timestamp) = getDataBefore(tellorID, now - 1 hours);
+    if(_didGet){
+      qualifiedValue = _value;
+    }
+
+    (_didGet,currentValue,_timestamp) = getCurrentValue(tellorID);
   }
 
-  function setCompleted(uint completed) public restricted {
-    last_completed_migration = completed;
-  }
 }
