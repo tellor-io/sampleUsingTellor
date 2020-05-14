@@ -1,5 +1,7 @@
 pragma solidity >=0.4.21 <0.7.0;
 import "usingtellor/contracts/UsingTellor.sol";
+// import "usingtellor/contracts/libraries/TellorLibrary.sol";
+// import "usingtellor/contracts/testContracts/Tellor.sol";
 
 contract SampleUsingTellor is UsingTellor {
   uint public tellorID;
