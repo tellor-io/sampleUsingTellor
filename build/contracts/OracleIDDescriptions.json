@@ -818,10 +818,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3804,
-                        3805
+                        3799,
+                        3800
                       ],
-                      "referencedDeclaration": 3805,
+                      "referencedDeclaration": 3800,
                       "src": "975:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -1191,10 +1191,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3804,
-                        3805
+                        3799,
+                        3800
                       ],
-                      "referencedDeclaration": 3805,
+                      "referencedDeclaration": 3800,
                       "src": "1532:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -1675,10 +1675,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3804,
-                        3805
+                        3799,
+                        3800
                       ],
-                      "referencedDeclaration": 3805,
+                      "referencedDeclaration": 3800,
                       "src": "2197:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -3381,10 +3381,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3804,
-                        3805
+                        3799,
+                        3800
                       ],
-                      "referencedDeclaration": 3805,
+                      "referencedDeclaration": 3800,
                       "src": "975:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -3754,10 +3754,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3804,
-                        3805
+                        3799,
+                        3800
                       ],
-                      "referencedDeclaration": 3805,
+                      "referencedDeclaration": 3800,
                       "src": "1532:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -4238,10 +4238,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3804,
-                        3805
+                        3799,
+                        3800
                       ],
-                      "referencedDeclaration": 3805,
+                      "referencedDeclaration": 3800,
                       "src": "2197:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -5362,8 +5362,8 @@
     "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.1.0",
-  "updatedAt": "2020-05-14T18:21:19.520Z",
+  "schemaVersion": "3.0.23",
+  "updatedAt": "2020-05-18T15:25:40.183Z",
   "devdoc": {
     "methods": {
       "defineTellorCodeToStatusCode(uint256,uint256)": {

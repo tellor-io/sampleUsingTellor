@@ -1,0 +1,27 @@
+{
+  "name": "sampleusingtellor",
+  "version": "1.0.0",
+  "description": "Sample Using Tellor Repo",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "usingtellor": "^1.0.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tellor-io/sampleUsingTellor.git"
+  },
+  "author": "Tellor Inc.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tellor-io/sampleUsingTellor/issues"
+  },
+  "homepage": "https://github.com/tellor-io/sampleUsingTellor#readme"
+}
