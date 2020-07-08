@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "dotenv": "^8.2.0",
-    "usingtellor": "^1.0.8"
+    "usingtellor": "^1.0.10"
   },
   "devDependencies": {},
   "scripts": {

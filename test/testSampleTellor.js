@@ -31,21 +31,24 @@ contract('UsingTellor Tests', function(accounts) {
         master = await new web3.eth.Contract(TellorMaster.abi,oracle.address);
         oracle = await new web3.eth.Contract(Tellor.abi,oracle.address);
         await web3.eth.sendTransaction({to:oracle._address,from:accounts[0],gas:4000000,data:oracle.methods.requestData("1","BTC/USD",1000,0).encodeABI()})
-        sampleUsingTellor = await SampleUsingTellor.new(1,oracle._address)
+        sampleUsingTellor = await SampleUsingTellor.new(1,oracle._address,1000000)
     })
     it("Update Price", async function(){
         for(var i =1;i<6;i++){
-            await web3.eth.sendTransaction({to:oracle._address,from:accounts[i],gas:2000000,data:oracle.methods.submitMiningSolution("1",1,1200).encodeABI()})      
+            await web3.eth.sendTransaction({to:oracle._address,from:accounts[i],gas:2000000,data:oracle.methods.submitMiningSolution("1",1,1200000000).encodeABI()})      
         }
-        await sampleUsingTellor.updateValues();
+        await sampleUsingTellor.updateValues(1,0);
         assert(await sampleUsingTellor.currentValue.call() == 1200)
         await web3.eth.sendTransaction({to:oracle._address,from:accounts[0],gas:4000000,data:oracle.methods.requestData("1","BTC/USD",1000,0).encodeABI()})
-        advanceTime(86400)
+        await advanceTime(2*60*60)
         for(var i =1;i<6;i++){
-            await web3.eth.sendTransaction({to:oracle._address,from:accounts[i],gas:2000000,data:oracle.methods.submitMiningSolution("1",1,100).encodeABI()})      
+            await web3.eth.sendTransaction({to:oracle._address,from:accounts[i],gas:2000000,data:oracle.methods.submitMiningSolution("1",1,100000000).encodeABI()})      
         }
-        await sampleUsingTellor.updateValues();
+        await sampleUsingTellor.updateValues(5,1);
+                assert(await sampleUsingTellor.currentValue.call() == 100)
+        console.log(await sampleUsingTellor.qualifiedValue.call())
         assert(await sampleUsingTellor.qualifiedValue.call() == 1200, "Value should still be 1200")
-        assert(await sampleUsingTellor.currentValue.call() == 100)
+
+
 	})
 })

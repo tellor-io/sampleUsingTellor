@@ -44,14 +44,14 @@
     "absolutePath": "usingtellor/contracts/interfaces/EIP2362Interface.sol",
     "exportedSymbols": {
       "EIP2362Interface": [
-        572
+        635
       ]
     },
-    "id": 573,
+    "id": 636,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 560,
+        "id": 623,
         "literals": [
           "solidity",
           ">=",
@@ -70,9 +70,9 @@
         "contractKind": "interface",
         "documentation": "@dev EIP2362 Interface for pull oracles\nhttps://github.com/tellor-io/EIP-2362",
         "fullyImplemented": false,
-        "id": 572,
+        "id": 635,
         "linearizedBaseContracts": [
-          572
+          635
         ],
         "name": "EIP2362Interface",
         "nodeType": "ContractDefinition",
@@ -80,22 +80,22 @@
           {
             "body": null,
             "documentation": "@dev Exposed function pertaining to EIP standards\n@param _id bytes32 ID of the query\n@return int,uint,uint returns the value, timestamp, and status code of query",
-            "id": 571,
+            "id": 634,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "valueFor",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 563,
+              "id": 626,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 562,
+                  "id": 625,
                   "name": "_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 571,
+                  "scope": 634,
                   "src": "383:11:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -104,7 +104,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 561,
+                    "id": 624,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "383:7:4",
@@ -120,15 +120,15 @@
               "src": "382:13:4"
             },
             "returnParameters": {
-              "id": 570,
+              "id": 633,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 565,
+                  "id": 628,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 571,
+                  "scope": 634,
                   "src": "418:6:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -137,7 +137,7 @@
                     "typeString": "int256"
                   },
                   "typeName": {
-                    "id": 564,
+                    "id": 627,
                     "name": "int256",
                     "nodeType": "ElementaryTypeName",
                     "src": "418:6:4",
@@ -151,10 +151,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 567,
+                  "id": 630,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 571,
+                  "scope": 634,
                   "src": "425:7:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -163,7 +163,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 566,
+                    "id": 629,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "425:7:4",
@@ -177,10 +177,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 569,
+                  "id": 632,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 571,
+                  "scope": 634,
                   "src": "433:7:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -189,7 +189,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 568,
+                    "id": 631,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "433:7:4",
@@ -204,14 +204,14 @@
               ],
               "src": "417:24:4"
             },
-            "scope": 572,
+            "scope": 635,
             "src": "365:77:4",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 573,
+        "scope": 636,
         "src": "136:309:4"
       }
     ],
@@ -221,14 +221,14 @@
     "absolutePath": "usingtellor/contracts/interfaces/EIP2362Interface.sol",
     "exportedSymbols": {
       "EIP2362Interface": [
-        572
+        635
       ]
     },
-    "id": 573,
+    "id": 636,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 560,
+        "id": 623,
         "literals": [
           "solidity",
           ">=",
@@ -247,9 +247,9 @@
         "contractKind": "interface",
         "documentation": "@dev EIP2362 Interface for pull oracles\nhttps://github.com/tellor-io/EIP-2362",
         "fullyImplemented": false,
-        "id": 572,
+        "id": 635,
         "linearizedBaseContracts": [
-          572
+          635
         ],
         "name": "EIP2362Interface",
         "nodeType": "ContractDefinition",
@@ -257,22 +257,22 @@
           {
             "body": null,
             "documentation": "@dev Exposed function pertaining to EIP standards\n@param _id bytes32 ID of the query\n@return int,uint,uint returns the value, timestamp, and status code of query",
-            "id": 571,
+            "id": 634,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "valueFor",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 563,
+              "id": 626,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 562,
+                  "id": 625,
                   "name": "_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 571,
+                  "scope": 634,
                   "src": "383:11:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -281,7 +281,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 561,
+                    "id": 624,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "383:7:4",
@@ -297,15 +297,15 @@
               "src": "382:13:4"
             },
             "returnParameters": {
-              "id": 570,
+              "id": 633,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 565,
+                  "id": 628,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 571,
+                  "scope": 634,
                   "src": "418:6:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -314,7 +314,7 @@
                     "typeString": "int256"
                   },
                   "typeName": {
-                    "id": 564,
+                    "id": 627,
                     "name": "int256",
                     "nodeType": "ElementaryTypeName",
                     "src": "418:6:4",
@@ -328,10 +328,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 567,
+                  "id": 630,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 571,
+                  "scope": 634,
                   "src": "425:7:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -340,7 +340,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 566,
+                    "id": 629,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "425:7:4",
@@ -354,10 +354,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 569,
+                  "id": 632,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 571,
+                  "scope": 634,
                   "src": "433:7:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -366,7 +366,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 568,
+                    "id": 631,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "433:7:4",
@@ -381,14 +381,14 @@
               ],
               "src": "417:24:4"
             },
-            "scope": 572,
+            "scope": 635,
             "src": "365:77:4",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 573,
+        "scope": 636,
         "src": "136:309:4"
       }
     ],
@@ -400,7 +400,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.23",
-  "updatedAt": "2020-05-18T15:25:40.190Z",
+  "updatedAt": "2020-07-08T18:39:34.030Z",
   "devdoc": {
     "details": "EIP2362 Interface for pull oracles https://github.com/tellor-io/EIP-2362",
     "methods": {

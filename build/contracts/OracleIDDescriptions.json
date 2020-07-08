@@ -235,14 +235,14 @@
     "absolutePath": "usingtellor/contracts/OracleIDDescriptions.sol",
     "exportedSymbols": {
       "OracleIDDescriptions": [
-        313
+        335
       ]
     },
-    "id": 314,
+    "id": 336,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 106,
+        "id": 128,
         "literals": [
           "solidity",
           "^",
@@ -258,19 +258,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 313,
+        "id": 335,
         "linearizedBaseContracts": [
-          313
+          335
         ],
         "name": "OracleIDDescriptions",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 110,
+            "id": 132,
             "name": "tellorIDtoBytesID",
             "nodeType": "VariableDeclaration",
-            "scope": 313,
+            "scope": 335,
             "src": "149:40:2",
             "stateVariable": true,
             "storageLocation": "default",
@@ -279,9 +279,9 @@
               "typeString": "mapping(uint256 => bytes32)"
             },
             "typeName": {
-              "id": 109,
+              "id": 131,
               "keyType": {
-                "id": 107,
+                "id": 129,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
                 "src": "157:4:2",
@@ -297,7 +297,7 @@
                 "typeString": "mapping(uint256 => bytes32)"
               },
               "valueType": {
-                "id": 108,
+                "id": 130,
                 "name": "bytes32",
                 "nodeType": "ElementaryTypeName",
                 "src": "163:7:2",
@@ -312,10 +312,10 @@
           },
           {
             "constant": false,
-            "id": 114,
+            "id": 136,
             "name": "bytesIDtoTellorID",
             "nodeType": "VariableDeclaration",
-            "scope": 313,
+            "scope": 335,
             "src": "196:42:2",
             "stateVariable": true,
             "storageLocation": "default",
@@ -324,9 +324,9 @@
               "typeString": "mapping(bytes32 => uint256)"
             },
             "typeName": {
-              "id": 113,
+              "id": 135,
               "keyType": {
-                "id": 111,
+                "id": 133,
                 "name": "bytes32",
                 "nodeType": "ElementaryTypeName",
                 "src": "204:7:2",
@@ -342,7 +342,7 @@
                 "typeString": "mapping(bytes32 => uint256)"
               },
               "valueType": {
-                "id": 112,
+                "id": 134,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
                 "src": "215:4:2",
@@ -357,10 +357,10 @@
           },
           {
             "constant": false,
-            "id": 118,
+            "id": 140,
             "name": "tellorCodeToStatusCode",
             "nodeType": "VariableDeclaration",
-            "scope": 313,
+            "scope": 335,
             "src": "245:44:2",
             "stateVariable": true,
             "storageLocation": "default",
@@ -369,9 +369,9 @@
               "typeString": "mapping(uint256 => uint256)"
             },
             "typeName": {
-              "id": 117,
+              "id": 139,
               "keyType": {
-                "id": 115,
+                "id": 137,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
                 "src": "253:4:2",
@@ -387,7 +387,7 @@
                 "typeString": "mapping(uint256 => uint256)"
               },
               "valueType": {
-                "id": 116,
+                "id": 138,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
                 "src": "261:4:2",
@@ -402,10 +402,10 @@
           },
           {
             "constant": false,
-            "id": 122,
+            "id": 144,
             "name": "statusCodeToTellorCode",
             "nodeType": "VariableDeclaration",
-            "scope": 313,
+            "scope": 335,
             "src": "296:44:2",
             "stateVariable": true,
             "storageLocation": "default",
@@ -414,9 +414,9 @@
               "typeString": "mapping(uint256 => uint256)"
             },
             "typeName": {
-              "id": 121,
+              "id": 143,
               "keyType": {
-                "id": 119,
+                "id": 141,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
                 "src": "304:4:2",
@@ -432,7 +432,7 @@
                 "typeString": "mapping(uint256 => uint256)"
               },
               "valueType": {
-                "id": 120,
+                "id": 142,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
                 "src": "312:4:2",
@@ -447,10 +447,10 @@
           },
           {
             "constant": false,
-            "id": 126,
+            "id": 148,
             "name": "tellorIdtoAdjFactor",
             "nodeType": "VariableDeclaration",
-            "scope": 313,
+            "scope": 335,
             "src": "347:40:2",
             "stateVariable": true,
             "storageLocation": "default",
@@ -459,9 +459,9 @@
               "typeString": "mapping(uint256 => int256)"
             },
             "typeName": {
-              "id": 125,
+              "id": 147,
               "keyType": {
-                "id": 123,
+                "id": 145,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
                 "src": "355:4:2",
@@ -477,7 +477,7 @@
                 "typeString": "mapping(uint256 => int256)"
               },
               "valueType": {
-                "id": 124,
+                "id": 146,
                 "name": "int",
                 "nodeType": "ElementaryTypeName",
                 "src": "363:3:2",
@@ -493,20 +493,20 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 132,
+            "id": 154,
             "name": "TellorIdMappedToBytes",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 131,
+              "id": 153,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 128,
+                  "id": 150,
                   "indexed": false,
                   "name": "_requestID",
                   "nodeType": "VariableDeclaration",
-                  "scope": 132,
+                  "scope": 154,
                   "src": "440:15:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -515,7 +515,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 127,
+                    "id": 149,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "440:4:2",
@@ -529,11 +529,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 130,
+                  "id": 152,
                   "indexed": false,
                   "name": "_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 132,
+                  "scope": 154,
                   "src": "457:11:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -542,7 +542,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 129,
+                    "id": 151,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "457:7:2",
@@ -562,20 +562,20 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 138,
+            "id": 160,
             "name": "StatusMapped",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 137,
+              "id": 159,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 134,
+                  "id": 156,
                   "indexed": false,
                   "name": "_tellorStatus",
                   "nodeType": "VariableDeclaration",
-                  "scope": 138,
+                  "scope": 160,
                   "src": "495:18:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -584,7 +584,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 133,
+                    "id": 155,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "495:4:2",
@@ -598,11 +598,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 136,
+                  "id": 158,
                   "indexed": false,
                   "name": "_status",
                   "nodeType": "VariableDeclaration",
-                  "scope": 138,
+                  "scope": 160,
                   "src": "515:12:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -611,7 +611,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 135,
+                    "id": 157,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "515:4:2",
@@ -631,20 +631,20 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 144,
+            "id": 166,
             "name": "AdjFactorMapped",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 143,
+              "id": 165,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 140,
+                  "id": 162,
                   "indexed": false,
                   "name": "_requestID",
                   "nodeType": "VariableDeclaration",
-                  "scope": 144,
+                  "scope": 166,
                   "src": "557:15:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -653,7 +653,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 139,
+                    "id": 161,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "557:4:2",
@@ -667,11 +667,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 142,
+                  "id": 164,
                   "indexed": false,
                   "name": "_adjFactor",
                   "nodeType": "VariableDeclaration",
-                  "scope": 144,
+                  "scope": 166,
                   "src": "574:14:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -680,7 +680,7 @@
                     "typeString": "int256"
                   },
                   "typeName": {
-                    "id": 141,
+                    "id": 163,
                     "name": "int",
                     "nodeType": "ElementaryTypeName",
                     "src": "574:3:2",
@@ -699,7 +699,7 @@
           },
           {
             "body": {
-              "id": 171,
+              "id": 193,
               "nodeType": "Block",
               "src": "964:186:2",
               "statements": [
@@ -713,7 +713,7 @@
                           "typeIdentifier": "t_int256",
                           "typeString": "int256"
                         },
-                        "id": 156,
+                        "id": 178,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -722,25 +722,25 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 152,
+                            "id": 174,
                             "name": "tellorIdtoAdjFactor",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 126,
+                            "referencedDeclaration": 148,
                             "src": "983:19:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_mapping$_t_uint256_$_t_int256_$",
                               "typeString": "mapping(uint256 => int256)"
                             }
                           },
-                          "id": 154,
+                          "id": 176,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 153,
+                            "id": 175,
                             "name": "_tellorId",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 146,
+                            "referencedDeclaration": 168,
                             "src": "1003:9:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -763,7 +763,7 @@
                         "rightExpression": {
                           "argumentTypes": null,
                           "hexValue": "30",
-                          "id": 155,
+                          "id": 177,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -787,7 +787,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "416c726561647920536574",
-                        "id": 157,
+                        "id": 179,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -814,21 +814,21 @@
                           "typeString": "literal_string \"Already Set\""
                         }
                       ],
-                      "id": 151,
+                      "id": 173,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3799,
-                        3800
+                        3933,
+                        3934
                       ],
-                      "referencedDeclaration": 3800,
+                      "referencedDeclaration": 3934,
                       "src": "975:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 158,
+                    "id": 180,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -842,14 +842,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 159,
+                  "id": 181,
                   "nodeType": "ExpressionStatement",
                   "src": "975:59:2"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 164,
+                    "id": 186,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -858,25 +858,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 160,
+                        "id": 182,
                         "name": "tellorIdtoAdjFactor",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 126,
+                        "referencedDeclaration": 148,
                         "src": "1045:19:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_uint256_$_t_int256_$",
                           "typeString": "mapping(uint256 => int256)"
                         }
                       },
-                      "id": 162,
+                      "id": 184,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 161,
+                        "id": 183,
                         "name": "_tellorId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 146,
+                        "referencedDeclaration": 168,
                         "src": "1065:9:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -898,11 +898,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 163,
+                      "id": 185,
                       "name": "_adjFactor",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 148,
+                      "referencedDeclaration": 170,
                       "src": "1078:10:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_int256",
@@ -915,7 +915,7 @@
                       "typeString": "int256"
                     }
                   },
-                  "id": 165,
+                  "id": 187,
                   "nodeType": "ExpressionStatement",
                   "src": "1045:43:2"
                 },
@@ -925,11 +925,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 167,
+                        "id": 189,
                         "name": "_tellorId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 146,
+                        "referencedDeclaration": 168,
                         "src": "1120:9:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -938,11 +938,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 168,
+                        "id": 190,
                         "name": "_adjFactor",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 148,
+                        "referencedDeclaration": 170,
                         "src": "1131:10:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_int256",
@@ -961,18 +961,18 @@
                           "typeString": "int256"
                         }
                       ],
-                      "id": 166,
+                      "id": 188,
                       "name": "AdjFactorMapped",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 144,
+                      "referencedDeclaration": 166,
                       "src": "1104:15:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_int256_$returns$__$",
                         "typeString": "function (uint256,int256)"
                       }
                     },
-                    "id": 169,
+                    "id": 191,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -986,29 +986,29 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 170,
+                  "id": 192,
                   "nodeType": "EmitStatement",
                   "src": "1099:43:2"
                 }
               ]
             },
             "documentation": "@dev This function allows the user to map the tellor's Id to it's _adjFactor and\nto match the standarized granularity\n@param _tellorId uint the tellor status\n@param _adjFactor is 1eN where N is the number of decimals to convert to ADO standard",
-            "id": 172,
+            "id": 194,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "defineTellorIdtoAdjFactor",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 149,
+              "id": 171,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 146,
+                  "id": 168,
                   "name": "_tellorId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 172,
+                  "scope": 194,
                   "src": "924:14:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1017,7 +1017,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 145,
+                    "id": 167,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "924:4:2",
@@ -1031,10 +1031,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 148,
+                  "id": 170,
                   "name": "_adjFactor",
                   "nodeType": "VariableDeclaration",
-                  "scope": 172,
+                  "scope": 194,
                   "src": "940:14:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1043,7 +1043,7 @@
                     "typeString": "int256"
                   },
                   "typeName": {
-                    "id": 147,
+                    "id": 169,
                     "name": "int",
                     "nodeType": "ElementaryTypeName",
                     "src": "940:3:2",
@@ -1059,12 +1059,12 @@
               "src": "923:32:2"
             },
             "returnParameters": {
-              "id": 150,
+              "id": 172,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "964:0:2"
             },
-            "scope": 313,
+            "scope": 335,
             "src": "889:261:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1072,7 +1072,7 @@
           },
           {
             "body": {
-              "id": 205,
+              "id": 227,
               "nodeType": "Block",
               "src": "1521:253:2",
               "statements": [
@@ -1086,7 +1086,7 @@
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         },
-                        "id": 184,
+                        "id": 206,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1095,25 +1095,25 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 180,
+                            "id": 202,
                             "name": "tellorCodeToStatusCode",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 118,
+                            "referencedDeclaration": 140,
                             "src": "1540:22:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_mapping$_t_uint256_$_t_uint256_$",
                               "typeString": "mapping(uint256 => uint256)"
                             }
                           },
-                          "id": 182,
+                          "id": 204,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 181,
+                            "id": 203,
                             "name": "_tellorStatus",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 174,
+                            "referencedDeclaration": 196,
                             "src": "1563:13:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -1136,7 +1136,7 @@
                         "rightExpression": {
                           "argumentTypes": null,
                           "hexValue": "30",
-                          "id": 183,
+                          "id": 205,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -1160,7 +1160,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "416c726561647920536574",
-                        "id": 185,
+                        "id": 207,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1187,21 +1187,21 @@
                           "typeString": "literal_string \"Already Set\""
                         }
                       ],
-                      "id": 179,
+                      "id": 201,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3799,
-                        3800
+                        3933,
+                        3934
                       ],
-                      "referencedDeclaration": 3800,
+                      "referencedDeclaration": 3934,
                       "src": "1532:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 186,
+                    "id": 208,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1215,14 +1215,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 187,
+                  "id": 209,
                   "nodeType": "ExpressionStatement",
                   "src": "1532:66:2"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 192,
+                    "id": 214,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1231,25 +1231,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 188,
+                        "id": 210,
                         "name": "tellorCodeToStatusCode",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 118,
+                        "referencedDeclaration": 140,
                         "src": "1609:22:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_uint256_$_t_uint256_$",
                           "typeString": "mapping(uint256 => uint256)"
                         }
                       },
-                      "id": 190,
+                      "id": 212,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 189,
+                        "id": 211,
                         "name": "_tellorStatus",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 174,
+                        "referencedDeclaration": 196,
                         "src": "1632:13:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1271,11 +1271,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 191,
+                      "id": 213,
                       "name": "_status",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 176,
+                      "referencedDeclaration": 198,
                       "src": "1649:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1288,14 +1288,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 193,
+                  "id": 215,
                   "nodeType": "ExpressionStatement",
                   "src": "1609:47:2"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 198,
+                    "id": 220,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1304,25 +1304,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 194,
+                        "id": 216,
                         "name": "statusCodeToTellorCode",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 122,
+                        "referencedDeclaration": 144,
                         "src": "1667:22:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_uint256_$_t_uint256_$",
                           "typeString": "mapping(uint256 => uint256)"
                         }
                       },
-                      "id": 196,
+                      "id": 218,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 195,
+                        "id": 217,
                         "name": "_status",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 176,
+                        "referencedDeclaration": 198,
                         "src": "1690:7:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1344,11 +1344,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 197,
+                      "id": 219,
                       "name": "_tellorStatus",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 174,
+                      "referencedDeclaration": 196,
                       "src": "1701:13:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1361,7 +1361,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 199,
+                  "id": 221,
                   "nodeType": "ExpressionStatement",
                   "src": "1667:47:2"
                 },
@@ -1371,11 +1371,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 201,
+                        "id": 223,
                         "name": "_tellorStatus",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 174,
+                        "referencedDeclaration": 196,
                         "src": "1743:13:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1384,11 +1384,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 202,
+                        "id": 224,
                         "name": "_status",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 176,
+                        "referencedDeclaration": 198,
                         "src": "1758:7:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1407,18 +1407,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 200,
+                      "id": 222,
                       "name": "StatusMapped",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 138,
+                      "referencedDeclaration": 160,
                       "src": "1730:12:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_uint256_$returns$__$",
                         "typeString": "function (uint256,uint256)"
                       }
                     },
-                    "id": 203,
+                    "id": 225,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1432,29 +1432,29 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 204,
+                  "id": 226,
                   "nodeType": "EmitStatement",
                   "src": "1725:41:2"
                 }
               ]
             },
             "documentation": "@dev This function allows the user to map the tellor uint data status code to the standarized \nADO uint status code such as null, retreived etc...\n@param _tellorStatus uint the tellor status\n@param _status the ADO standarized uint status",
-            "id": 206,
+            "id": 228,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "defineTellorCodeToStatusCode",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 177,
+              "id": 199,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 174,
+                  "id": 196,
                   "name": "_tellorStatus",
                   "nodeType": "VariableDeclaration",
-                  "scope": 206,
+                  "scope": 228,
                   "src": "1479:18:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1463,7 +1463,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 173,
+                    "id": 195,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1479:4:2",
@@ -1477,10 +1477,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 176,
+                  "id": 198,
                   "name": "_status",
                   "nodeType": "VariableDeclaration",
-                  "scope": 206,
+                  "scope": 228,
                   "src": "1499:12:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1489,7 +1489,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 175,
+                    "id": 197,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1499:4:2",
@@ -1505,12 +1505,12 @@
               "src": "1478:34:2"
             },
             "returnParameters": {
-              "id": 178,
+              "id": 200,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1521:0:2"
             },
-            "scope": 313,
+            "scope": 335,
             "src": "1441:333:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1518,7 +1518,7 @@
           },
           {
             "body": {
-              "id": 241,
+              "id": 263,
               "nodeType": "Block",
               "src": "2186:231:2",
               "statements": [
@@ -1532,7 +1532,7 @@
                           "typeIdentifier": "t_bytes32",
                           "typeString": "bytes32"
                         },
-                        "id": 220,
+                        "id": 242,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1541,25 +1541,25 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 214,
+                            "id": 236,
                             "name": "tellorIDtoBytesID",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 110,
+                            "referencedDeclaration": 132,
                             "src": "2205:17:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_mapping$_t_uint256_$_t_bytes32_$",
                               "typeString": "mapping(uint256 => bytes32)"
                             }
                           },
-                          "id": 216,
+                          "id": 238,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 215,
+                            "id": 237,
                             "name": "_requestID",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 208,
+                            "referencedDeclaration": 230,
                             "src": "2223:10:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -1585,7 +1585,7 @@
                             {
                               "argumentTypes": null,
                               "hexValue": "30",
-                              "id": 218,
+                              "id": 240,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -1608,7 +1608,7 @@
                                 "typeString": "int_const 0"
                               }
                             ],
-                            "id": 217,
+                            "id": 239,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -1621,7 +1621,7 @@
                             },
                             "typeName": "bytes32"
                           },
-                          "id": 219,
+                          "id": 241,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -1644,7 +1644,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "416c726561647920536574",
-                        "id": 221,
+                        "id": 243,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1671,21 +1671,21 @@
                           "typeString": "literal_string \"Already Set\""
                         }
                       ],
-                      "id": 213,
+                      "id": 235,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3799,
-                        3800
+                        3933,
+                        3934
                       ],
-                      "referencedDeclaration": 3800,
+                      "referencedDeclaration": 3934,
                       "src": "2197:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 222,
+                    "id": 244,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1699,14 +1699,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 223,
+                  "id": 245,
                   "nodeType": "ExpressionStatement",
                   "src": "2197:67:2"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 228,
+                    "id": 250,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1715,25 +1715,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 224,
+                        "id": 246,
                         "name": "tellorIDtoBytesID",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 110,
+                        "referencedDeclaration": 132,
                         "src": "2275:17:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_uint256_$_t_bytes32_$",
                           "typeString": "mapping(uint256 => bytes32)"
                         }
                       },
-                      "id": 226,
+                      "id": 248,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 225,
+                        "id": 247,
                         "name": "_requestID",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 208,
+                        "referencedDeclaration": 230,
                         "src": "2293:10:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1755,11 +1755,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 227,
+                      "id": 249,
                       "name": "_id",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 210,
+                      "referencedDeclaration": 232,
                       "src": "2307:3:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes32",
@@ -1772,14 +1772,14 @@
                       "typeString": "bytes32"
                     }
                   },
-                  "id": 229,
+                  "id": 251,
                   "nodeType": "ExpressionStatement",
                   "src": "2275:35:2"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 234,
+                    "id": 256,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1788,25 +1788,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 230,
+                        "id": 252,
                         "name": "bytesIDtoTellorID",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 114,
+                        "referencedDeclaration": 136,
                         "src": "2321:17:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
                           "typeString": "mapping(bytes32 => uint256)"
                         }
                       },
-                      "id": 232,
+                      "id": 254,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 231,
+                        "id": 253,
                         "name": "_id",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 210,
+                        "referencedDeclaration": 232,
                         "src": "2339:3:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes32",
@@ -1828,11 +1828,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 233,
+                      "id": 255,
                       "name": "_requestID",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 208,
+                      "referencedDeclaration": 230,
                       "src": "2346:10:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1845,7 +1845,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 235,
+                  "id": 257,
                   "nodeType": "ExpressionStatement",
                   "src": "2321:35:2"
                 },
@@ -1855,11 +1855,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 237,
+                        "id": 259,
                         "name": "_requestID",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 208,
+                        "referencedDeclaration": 230,
                         "src": "2394:10:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1868,11 +1868,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 238,
+                        "id": 260,
                         "name": "_id",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 210,
+                        "referencedDeclaration": 232,
                         "src": "2405:3:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes32",
@@ -1891,18 +1891,18 @@
                           "typeString": "bytes32"
                         }
                       ],
-                      "id": 236,
+                      "id": 258,
                       "name": "TellorIdMappedToBytes",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 132,
+                      "referencedDeclaration": 154,
                       "src": "2372:21:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_bytes32_$returns$__$",
                         "typeString": "function (uint256,bytes32)"
                       }
                     },
-                    "id": 239,
+                    "id": 261,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1916,29 +1916,29 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 240,
+                  "id": 262,
                   "nodeType": "EmitStatement",
                   "src": "2367:42:2"
                 }
               ]
             },
             "documentation": "@dev Allows user to map the standarized bytes32 Id to a specific requestID from Tellor\nThe dev should ensure the _requestId exists otherwise request the data on Tellor to get a requestId\n@param _requestID is the existing Tellor RequestID \n@param _id is the descption of the ID in bytes ",
-            "id": 242,
+            "id": 264,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "defineTellorIdToBytesID",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 211,
+              "id": 233,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 208,
+                  "id": 230,
                   "name": "_requestID",
                   "nodeType": "VariableDeclaration",
-                  "scope": 242,
+                  "scope": 264,
                   "src": "2148:15:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1947,7 +1947,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 207,
+                    "id": 229,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "2148:4:2",
@@ -1961,10 +1961,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 210,
+                  "id": 232,
                   "name": "_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 242,
+                  "scope": 264,
                   "src": "2165:11:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1973,7 +1973,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 209,
+                    "id": 231,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "2165:7:2",
@@ -1989,12 +1989,12 @@
               "src": "2147:30:2"
             },
             "returnParameters": {
-              "id": 212,
+              "id": 234,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2186:0:2"
             },
-            "scope": 313,
+            "scope": 335,
             "src": "2115:302:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -2002,7 +2002,7 @@
           },
           {
             "body": {
-              "id": 253,
+              "id": 275,
               "nodeType": "Block",
               "src": "2732:57:2",
               "statements": [
@@ -2011,25 +2011,25 @@
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 249,
+                      "id": 271,
                       "name": "statusCodeToTellorCode",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 122,
+                      "referencedDeclaration": 144,
                       "src": "2750:22:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_uint256_$_t_uint256_$",
                         "typeString": "mapping(uint256 => uint256)"
                       }
                     },
-                    "id": 251,
+                    "id": 273,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 250,
+                      "id": 272,
                       "name": "_status",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 244,
+                      "referencedDeclaration": 266,
                       "src": "2773:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2047,30 +2047,30 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 248,
-                  "id": 252,
+                  "functionReturnParameters": 270,
+                  "id": 274,
                   "nodeType": "Return",
                   "src": "2743:38:2"
                 }
               ]
             },
             "documentation": "@dev Getter function for the uint Tellor status code from the specified uint ADO standarized status code\n@param _status the uint ADO standarized status\n@return _tellorStatus uint ",
-            "id": 254,
+            "id": 276,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getTellorStatusFromStatus",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 245,
+              "id": 267,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 244,
+                  "id": 266,
                   "name": "_status",
                   "nodeType": "VariableDeclaration",
-                  "scope": 254,
+                  "scope": 276,
                   "src": "2679:12:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2079,7 +2079,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 243,
+                    "id": 265,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "2679:4:2",
@@ -2095,15 +2095,15 @@
               "src": "2678:14:2"
             },
             "returnParameters": {
-              "id": 248,
+              "id": 270,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 247,
+                  "id": 269,
                   "name": "_tellorStatus",
                   "nodeType": "VariableDeclaration",
-                  "scope": 254,
+                  "scope": 276,
                   "src": "2713:18:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2112,7 +2112,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 246,
+                    "id": 268,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "2713:4:2",
@@ -2127,7 +2127,7 @@
               ],
               "src": "2712:20:2"
             },
-            "scope": 313,
+            "scope": 335,
             "src": "2644:145:2",
             "stateMutability": "view",
             "superFunction": null,
@@ -2135,7 +2135,7 @@
           },
           {
             "body": {
-              "id": 265,
+              "id": 287,
               "nodeType": "Block",
               "src": "3100:63:2",
               "statements": [
@@ -2144,25 +2144,25 @@
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 261,
+                      "id": 283,
                       "name": "tellorCodeToStatusCode",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 118,
+                      "referencedDeclaration": 140,
                       "src": "3118:22:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_uint256_$_t_uint256_$",
                         "typeString": "mapping(uint256 => uint256)"
                       }
                     },
-                    "id": 263,
+                    "id": 285,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 262,
+                      "id": 284,
                       "name": "_tellorStatus",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 256,
+                      "referencedDeclaration": 278,
                       "src": "3141:13:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2180,30 +2180,30 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 260,
-                  "id": 264,
+                  "functionReturnParameters": 282,
+                  "id": 286,
                   "nodeType": "Return",
                   "src": "3111:44:2"
                 }
               ]
             },
             "documentation": "@dev Getter function of the uint ADO standarized status code from the specified Tellor uint status\n@param _tellorStatus uint \n@return _status the uint ADO standarized status",
-            "id": 266,
+            "id": 288,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getStatusFromTellorStatus",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 257,
+              "id": 279,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 256,
+                  "id": 278,
                   "name": "_tellorStatus",
                   "nodeType": "VariableDeclaration",
-                  "scope": 266,
+                  "scope": 288,
                   "src": "3046:18:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2212,7 +2212,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 255,
+                    "id": 277,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "3046:4:2",
@@ -2228,15 +2228,15 @@
               "src": "3045:20:2"
             },
             "returnParameters": {
-              "id": 260,
+              "id": 282,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 259,
+                  "id": 281,
                   "name": "_status",
                   "nodeType": "VariableDeclaration",
-                  "scope": 266,
+                  "scope": 288,
                   "src": "3086:12:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2245,7 +2245,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 258,
+                    "id": 280,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "3086:4:2",
@@ -2260,7 +2260,7 @@
               ],
               "src": "3085:14:2"
             },
-            "scope": 313,
+            "scope": 335,
             "src": "3010:153:2",
             "stateMutability": "view",
             "superFunction": null,
@@ -2268,7 +2268,7 @@
           },
           {
             "body": {
-              "id": 277,
+              "id": 299,
               "nodeType": "Block",
               "src": "3533:47:2",
               "statements": [
@@ -2277,25 +2277,25 @@
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 273,
+                      "id": 295,
                       "name": "bytesIDtoTellorID",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 114,
+                      "referencedDeclaration": 136,
                       "src": "3550:17:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
                         "typeString": "mapping(bytes32 => uint256)"
                       }
                     },
-                    "id": 275,
+                    "id": 297,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 274,
+                      "id": 296,
                       "name": "_id",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 268,
+                      "referencedDeclaration": 290,
                       "src": "3568:3:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes32",
@@ -2313,30 +2313,30 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 272,
-                  "id": 276,
+                  "functionReturnParameters": 294,
+                  "id": 298,
                   "nodeType": "Return",
                   "src": "3543:29:2"
                 }
               ]
             },
             "documentation": "@dev Getter function of the Tellor RequestID based on the specified bytes32 ADO standaraized _id\n@param _id is the bytes32 descriptor mapped to an existing Tellor's requestId\n@return _requestId is Tellor's requestID corresnpoding to _id",
-            "id": 278,
+            "id": 300,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getTellorIdFromBytes",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 269,
+              "id": 291,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 268,
+                  "id": 290,
                   "name": "_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 278,
+                  "scope": 300,
                   "src": "3481:11:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2345,7 +2345,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 267,
+                    "id": 289,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "3481:7:2",
@@ -2361,15 +2361,15 @@
               "src": "3480:13:2"
             },
             "returnParameters": {
-              "id": 272,
+              "id": 294,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 271,
+                  "id": 293,
                   "name": "_requestId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 278,
+                  "scope": 300,
                   "src": "3515:15:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2378,7 +2378,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 270,
+                    "id": 292,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "3515:4:2",
@@ -2393,7 +2393,7 @@
               ],
               "src": "3514:17:2"
             },
-            "scope": 313,
+            "scope": 335,
             "src": "3451:129:2",
             "stateMutability": "view",
             "superFunction": null,
@@ -2401,21 +2401,21 @@
           },
           {
             "body": {
-              "id": 299,
+              "id": 321,
               "nodeType": "Block",
               "src": "3947:135:2",
               "statements": [
                 {
                   "assignments": [
-                    286
+                    308
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 286,
+                      "id": 308,
                       "name": "requestID",
                       "nodeType": "VariableDeclaration",
-                      "scope": 299,
+                      "scope": 321,
                       "src": "3957:14:2",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -2424,7 +2424,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 285,
+                        "id": 307,
                         "name": "uint",
                         "nodeType": "ElementaryTypeName",
                         "src": "3957:4:2",
@@ -2437,30 +2437,30 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 290,
+                  "id": 312,
                   "initialValue": {
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 287,
+                      "id": 309,
                       "name": "bytesIDtoTellorID",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 114,
+                      "referencedDeclaration": 136,
                       "src": "3974:17:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
                         "typeString": "mapping(bytes32 => uint256)"
                       }
                     },
-                    "id": 289,
+                    "id": 311,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 288,
+                      "id": 310,
                       "name": "_id",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 280,
+                      "referencedDeclaration": 302,
                       "src": "3992:3:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes32",
@@ -2484,18 +2484,18 @@
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 295,
+                    "id": 317,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 291,
+                      "id": 313,
                       "name": "adjFactor",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 283,
+                      "referencedDeclaration": 305,
                       "src": "4006:9:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_int256",
@@ -2508,25 +2508,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 292,
+                        "id": 314,
                         "name": "tellorIdtoAdjFactor",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 126,
+                        "referencedDeclaration": 148,
                         "src": "4018:19:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_uint256_$_t_int256_$",
                           "typeString": "mapping(uint256 => int256)"
                         }
                       },
-                      "id": 294,
+                      "id": 316,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 293,
+                        "id": 315,
                         "name": "requestID",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 286,
+                        "referencedDeclaration": 308,
                         "src": "4038:9:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -2550,48 +2550,48 @@
                       "typeString": "int256"
                     }
                   },
-                  "id": 296,
+                  "id": 318,
                   "nodeType": "ExpressionStatement",
                   "src": "4006:42:2"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 297,
+                    "id": 319,
                     "name": "adjFactor",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 283,
+                    "referencedDeclaration": 305,
                     "src": "4065:9:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_int256",
                       "typeString": "int256"
                     }
                   },
-                  "functionReturnParameters": 284,
-                  "id": 298,
+                  "functionReturnParameters": 306,
+                  "id": 320,
                   "nodeType": "Return",
                   "src": "4058:16:2"
                 }
               ]
             },
             "documentation": "@dev Getter function of the Tellor RequestID based on the specified bytes32 ADO standaraized _id\n@param _id is the bytes32 descriptor mapped to an existing Tellor's requestId\n@return _requestId is Tellor's requestID corresnpoding to _id",
-            "id": 300,
+            "id": 322,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getGranularityAdjFactor",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 281,
+              "id": 303,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 280,
+                  "id": 302,
                   "name": "_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 300,
+                  "scope": 322,
                   "src": "3897:11:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2600,7 +2600,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 279,
+                    "id": 301,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "3897:7:2",
@@ -2616,15 +2616,15 @@
               "src": "3896:13:2"
             },
             "returnParameters": {
-              "id": 284,
+              "id": 306,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 283,
+                  "id": 305,
                   "name": "adjFactor",
                   "nodeType": "VariableDeclaration",
-                  "scope": 300,
+                  "scope": 322,
                   "src": "3931:13:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2633,7 +2633,7 @@
                     "typeString": "int256"
                   },
                   "typeName": {
-                    "id": 282,
+                    "id": 304,
                     "name": "int",
                     "nodeType": "ElementaryTypeName",
                     "src": "3931:3:2",
@@ -2648,7 +2648,7 @@
               ],
               "src": "3930:15:2"
             },
-            "scope": 313,
+            "scope": 335,
             "src": "3864:218:2",
             "stateMutability": "view",
             "superFunction": null,
@@ -2656,7 +2656,7 @@
           },
           {
             "body": {
-              "id": 311,
+              "id": 333,
               "nodeType": "Block",
               "src": "4426:55:2",
               "statements": [
@@ -2665,25 +2665,25 @@
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 307,
+                      "id": 329,
                       "name": "tellorIDtoBytesID",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 110,
+                      "referencedDeclaration": 132,
                       "src": "4444:17:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_uint256_$_t_bytes32_$",
                         "typeString": "mapping(uint256 => bytes32)"
                       }
                     },
-                    "id": 309,
+                    "id": 331,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 308,
+                      "id": 330,
                       "name": "_requestId",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 302,
+                      "referencedDeclaration": 324,
                       "src": "4462:10:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2701,30 +2701,30 @@
                       "typeString": "bytes32"
                     }
                   },
-                  "functionReturnParameters": 306,
-                  "id": 310,
+                  "functionReturnParameters": 328,
+                  "id": 332,
                   "nodeType": "Return",
                   "src": "4437:36:2"
                 }
               ]
             },
             "documentation": "@dev Getter function of the bytes32 ADO standaraized _id based on the specified Tellor RequestID \n@param _requestId is Tellor's requestID\n@return _id is the bytes32 descriptor mapped to an existing Tellor's requestId",
-            "id": 312,
+            "id": 334,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getBytesFromTellorID",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 303,
+              "id": 325,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 302,
+                  "id": 324,
                   "name": "_requestId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 312,
+                  "scope": 334,
                   "src": "4376:15:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2733,7 +2733,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 301,
+                    "id": 323,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "4376:4:2",
@@ -2749,15 +2749,15 @@
               "src": "4375:17:2"
             },
             "returnParameters": {
-              "id": 306,
+              "id": 328,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 305,
+                  "id": 327,
                   "name": "_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 312,
+                  "scope": 334,
                   "src": "4413:11:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2766,7 +2766,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 304,
+                    "id": 326,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "4413:7:2",
@@ -2781,14 +2781,14 @@
               ],
               "src": "4412:13:2"
             },
-            "scope": 313,
+            "scope": 335,
             "src": "4346:135:2",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 314,
+        "scope": 336,
         "src": "91:4395:2"
       }
     ],
@@ -2798,14 +2798,14 @@
     "absolutePath": "usingtellor/contracts/OracleIDDescriptions.sol",
     "exportedSymbols": {
       "OracleIDDescriptions": [
-        313
+        335
       ]
     },
-    "id": 314,
+    "id": 336,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 106,
+        "id": 128,
         "literals": [
           "solidity",
           "^",
@@ -2821,19 +2821,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 313,
+        "id": 335,
         "linearizedBaseContracts": [
-          313
+          335
         ],
         "name": "OracleIDDescriptions",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 110,
+            "id": 132,
             "name": "tellorIDtoBytesID",
             "nodeType": "VariableDeclaration",
-            "scope": 313,
+            "scope": 335,
             "src": "149:40:2",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2842,9 +2842,9 @@
               "typeString": "mapping(uint256 => bytes32)"
             },
             "typeName": {
-              "id": 109,
+              "id": 131,
               "keyType": {
-                "id": 107,
+                "id": 129,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
                 "src": "157:4:2",
@@ -2860,7 +2860,7 @@
                 "typeString": "mapping(uint256 => bytes32)"
               },
               "valueType": {
-                "id": 108,
+                "id": 130,
                 "name": "bytes32",
                 "nodeType": "ElementaryTypeName",
                 "src": "163:7:2",
@@ -2875,10 +2875,10 @@
           },
           {
             "constant": false,
-            "id": 114,
+            "id": 136,
             "name": "bytesIDtoTellorID",
             "nodeType": "VariableDeclaration",
-            "scope": 313,
+            "scope": 335,
             "src": "196:42:2",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2887,9 +2887,9 @@
               "typeString": "mapping(bytes32 => uint256)"
             },
             "typeName": {
-              "id": 113,
+              "id": 135,
               "keyType": {
-                "id": 111,
+                "id": 133,
                 "name": "bytes32",
                 "nodeType": "ElementaryTypeName",
                 "src": "204:7:2",
@@ -2905,7 +2905,7 @@
                 "typeString": "mapping(bytes32 => uint256)"
               },
               "valueType": {
-                "id": 112,
+                "id": 134,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
                 "src": "215:4:2",
@@ -2920,10 +2920,10 @@
           },
           {
             "constant": false,
-            "id": 118,
+            "id": 140,
             "name": "tellorCodeToStatusCode",
             "nodeType": "VariableDeclaration",
-            "scope": 313,
+            "scope": 335,
             "src": "245:44:2",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2932,9 +2932,9 @@
               "typeString": "mapping(uint256 => uint256)"
             },
             "typeName": {
-              "id": 117,
+              "id": 139,
               "keyType": {
-                "id": 115,
+                "id": 137,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
                 "src": "253:4:2",
@@ -2950,7 +2950,7 @@
                 "typeString": "mapping(uint256 => uint256)"
               },
               "valueType": {
-                "id": 116,
+                "id": 138,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
                 "src": "261:4:2",
@@ -2965,10 +2965,10 @@
           },
           {
             "constant": false,
-            "id": 122,
+            "id": 144,
             "name": "statusCodeToTellorCode",
             "nodeType": "VariableDeclaration",
-            "scope": 313,
+            "scope": 335,
             "src": "296:44:2",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2977,9 +2977,9 @@
               "typeString": "mapping(uint256 => uint256)"
             },
             "typeName": {
-              "id": 121,
+              "id": 143,
               "keyType": {
-                "id": 119,
+                "id": 141,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
                 "src": "304:4:2",
@@ -2995,7 +2995,7 @@
                 "typeString": "mapping(uint256 => uint256)"
               },
               "valueType": {
-                "id": 120,
+                "id": 142,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
                 "src": "312:4:2",
@@ -3010,10 +3010,10 @@
           },
           {
             "constant": false,
-            "id": 126,
+            "id": 148,
             "name": "tellorIdtoAdjFactor",
             "nodeType": "VariableDeclaration",
-            "scope": 313,
+            "scope": 335,
             "src": "347:40:2",
             "stateVariable": true,
             "storageLocation": "default",
@@ -3022,9 +3022,9 @@
               "typeString": "mapping(uint256 => int256)"
             },
             "typeName": {
-              "id": 125,
+              "id": 147,
               "keyType": {
-                "id": 123,
+                "id": 145,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
                 "src": "355:4:2",
@@ -3040,7 +3040,7 @@
                 "typeString": "mapping(uint256 => int256)"
               },
               "valueType": {
-                "id": 124,
+                "id": 146,
                 "name": "int",
                 "nodeType": "ElementaryTypeName",
                 "src": "363:3:2",
@@ -3056,20 +3056,20 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 132,
+            "id": 154,
             "name": "TellorIdMappedToBytes",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 131,
+              "id": 153,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 128,
+                  "id": 150,
                   "indexed": false,
                   "name": "_requestID",
                   "nodeType": "VariableDeclaration",
-                  "scope": 132,
+                  "scope": 154,
                   "src": "440:15:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3078,7 +3078,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 127,
+                    "id": 149,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "440:4:2",
@@ -3092,11 +3092,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 130,
+                  "id": 152,
                   "indexed": false,
                   "name": "_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 132,
+                  "scope": 154,
                   "src": "457:11:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3105,7 +3105,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 129,
+                    "id": 151,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "457:7:2",
@@ -3125,20 +3125,20 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 138,
+            "id": 160,
             "name": "StatusMapped",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 137,
+              "id": 159,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 134,
+                  "id": 156,
                   "indexed": false,
                   "name": "_tellorStatus",
                   "nodeType": "VariableDeclaration",
-                  "scope": 138,
+                  "scope": 160,
                   "src": "495:18:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3147,7 +3147,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 133,
+                    "id": 155,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "495:4:2",
@@ -3161,11 +3161,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 136,
+                  "id": 158,
                   "indexed": false,
                   "name": "_status",
                   "nodeType": "VariableDeclaration",
-                  "scope": 138,
+                  "scope": 160,
                   "src": "515:12:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3174,7 +3174,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 135,
+                    "id": 157,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "515:4:2",
@@ -3194,20 +3194,20 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 144,
+            "id": 166,
             "name": "AdjFactorMapped",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 143,
+              "id": 165,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 140,
+                  "id": 162,
                   "indexed": false,
                   "name": "_requestID",
                   "nodeType": "VariableDeclaration",
-                  "scope": 144,
+                  "scope": 166,
                   "src": "557:15:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3216,7 +3216,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 139,
+                    "id": 161,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "557:4:2",
@@ -3230,11 +3230,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 142,
+                  "id": 164,
                   "indexed": false,
                   "name": "_adjFactor",
                   "nodeType": "VariableDeclaration",
-                  "scope": 144,
+                  "scope": 166,
                   "src": "574:14:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3243,7 +3243,7 @@
                     "typeString": "int256"
                   },
                   "typeName": {
-                    "id": 141,
+                    "id": 163,
                     "name": "int",
                     "nodeType": "ElementaryTypeName",
                     "src": "574:3:2",
@@ -3262,7 +3262,7 @@
           },
           {
             "body": {
-              "id": 171,
+              "id": 193,
               "nodeType": "Block",
               "src": "964:186:2",
               "statements": [
@@ -3276,7 +3276,7 @@
                           "typeIdentifier": "t_int256",
                           "typeString": "int256"
                         },
-                        "id": 156,
+                        "id": 178,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -3285,25 +3285,25 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 152,
+                            "id": 174,
                             "name": "tellorIdtoAdjFactor",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 126,
+                            "referencedDeclaration": 148,
                             "src": "983:19:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_mapping$_t_uint256_$_t_int256_$",
                               "typeString": "mapping(uint256 => int256)"
                             }
                           },
-                          "id": 154,
+                          "id": 176,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 153,
+                            "id": 175,
                             "name": "_tellorId",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 146,
+                            "referencedDeclaration": 168,
                             "src": "1003:9:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -3326,7 +3326,7 @@
                         "rightExpression": {
                           "argumentTypes": null,
                           "hexValue": "30",
-                          "id": 155,
+                          "id": 177,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -3350,7 +3350,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "416c726561647920536574",
-                        "id": 157,
+                        "id": 179,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -3377,21 +3377,21 @@
                           "typeString": "literal_string \"Already Set\""
                         }
                       ],
-                      "id": 151,
+                      "id": 173,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3799,
-                        3800
+                        3933,
+                        3934
                       ],
-                      "referencedDeclaration": 3800,
+                      "referencedDeclaration": 3934,
                       "src": "975:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 158,
+                    "id": 180,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3405,14 +3405,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 159,
+                  "id": 181,
                   "nodeType": "ExpressionStatement",
                   "src": "975:59:2"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 164,
+                    "id": 186,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3421,25 +3421,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 160,
+                        "id": 182,
                         "name": "tellorIdtoAdjFactor",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 126,
+                        "referencedDeclaration": 148,
                         "src": "1045:19:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_uint256_$_t_int256_$",
                           "typeString": "mapping(uint256 => int256)"
                         }
                       },
-                      "id": 162,
+                      "id": 184,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 161,
+                        "id": 183,
                         "name": "_tellorId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 146,
+                        "referencedDeclaration": 168,
                         "src": "1065:9:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -3461,11 +3461,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 163,
+                      "id": 185,
                       "name": "_adjFactor",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 148,
+                      "referencedDeclaration": 170,
                       "src": "1078:10:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_int256",
@@ -3478,7 +3478,7 @@
                       "typeString": "int256"
                     }
                   },
-                  "id": 165,
+                  "id": 187,
                   "nodeType": "ExpressionStatement",
                   "src": "1045:43:2"
                 },
@@ -3488,11 +3488,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 167,
+                        "id": 189,
                         "name": "_tellorId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 146,
+                        "referencedDeclaration": 168,
                         "src": "1120:9:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -3501,11 +3501,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 168,
+                        "id": 190,
                         "name": "_adjFactor",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 148,
+                        "referencedDeclaration": 170,
                         "src": "1131:10:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_int256",
@@ -3524,18 +3524,18 @@
                           "typeString": "int256"
                         }
                       ],
-                      "id": 166,
+                      "id": 188,
                       "name": "AdjFactorMapped",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 144,
+                      "referencedDeclaration": 166,
                       "src": "1104:15:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_int256_$returns$__$",
                         "typeString": "function (uint256,int256)"
                       }
                     },
-                    "id": 169,
+                    "id": 191,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3549,29 +3549,29 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 170,
+                  "id": 192,
                   "nodeType": "EmitStatement",
                   "src": "1099:43:2"
                 }
               ]
             },
             "documentation": "@dev This function allows the user to map the tellor's Id to it's _adjFactor and\nto match the standarized granularity\n@param _tellorId uint the tellor status\n@param _adjFactor is 1eN where N is the number of decimals to convert to ADO standard",
-            "id": 172,
+            "id": 194,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "defineTellorIdtoAdjFactor",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 149,
+              "id": 171,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 146,
+                  "id": 168,
                   "name": "_tellorId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 172,
+                  "scope": 194,
                   "src": "924:14:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3580,7 +3580,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 145,
+                    "id": 167,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "924:4:2",
@@ -3594,10 +3594,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 148,
+                  "id": 170,
                   "name": "_adjFactor",
                   "nodeType": "VariableDeclaration",
-                  "scope": 172,
+                  "scope": 194,
                   "src": "940:14:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3606,7 +3606,7 @@
                     "typeString": "int256"
                   },
                   "typeName": {
-                    "id": 147,
+                    "id": 169,
                     "name": "int",
                     "nodeType": "ElementaryTypeName",
                     "src": "940:3:2",
@@ -3622,12 +3622,12 @@
               "src": "923:32:2"
             },
             "returnParameters": {
-              "id": 150,
+              "id": 172,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "964:0:2"
             },
-            "scope": 313,
+            "scope": 335,
             "src": "889:261:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -3635,7 +3635,7 @@
           },
           {
             "body": {
-              "id": 205,
+              "id": 227,
               "nodeType": "Block",
               "src": "1521:253:2",
               "statements": [
@@ -3649,7 +3649,7 @@
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         },
-                        "id": 184,
+                        "id": 206,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -3658,25 +3658,25 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 180,
+                            "id": 202,
                             "name": "tellorCodeToStatusCode",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 118,
+                            "referencedDeclaration": 140,
                             "src": "1540:22:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_mapping$_t_uint256_$_t_uint256_$",
                               "typeString": "mapping(uint256 => uint256)"
                             }
                           },
-                          "id": 182,
+                          "id": 204,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 181,
+                            "id": 203,
                             "name": "_tellorStatus",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 174,
+                            "referencedDeclaration": 196,
                             "src": "1563:13:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -3699,7 +3699,7 @@
                         "rightExpression": {
                           "argumentTypes": null,
                           "hexValue": "30",
-                          "id": 183,
+                          "id": 205,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -3723,7 +3723,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "416c726561647920536574",
-                        "id": 185,
+                        "id": 207,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -3750,21 +3750,21 @@
                           "typeString": "literal_string \"Already Set\""
                         }
                       ],
-                      "id": 179,
+                      "id": 201,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3799,
-                        3800
+                        3933,
+                        3934
                       ],
-                      "referencedDeclaration": 3800,
+                      "referencedDeclaration": 3934,
                       "src": "1532:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 186,
+                    "id": 208,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3778,14 +3778,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 187,
+                  "id": 209,
                   "nodeType": "ExpressionStatement",
                   "src": "1532:66:2"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 192,
+                    "id": 214,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3794,25 +3794,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 188,
+                        "id": 210,
                         "name": "tellorCodeToStatusCode",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 118,
+                        "referencedDeclaration": 140,
                         "src": "1609:22:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_uint256_$_t_uint256_$",
                           "typeString": "mapping(uint256 => uint256)"
                         }
                       },
-                      "id": 190,
+                      "id": 212,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 189,
+                        "id": 211,
                         "name": "_tellorStatus",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 174,
+                        "referencedDeclaration": 196,
                         "src": "1632:13:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -3834,11 +3834,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 191,
+                      "id": 213,
                       "name": "_status",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 176,
+                      "referencedDeclaration": 198,
                       "src": "1649:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3851,14 +3851,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 193,
+                  "id": 215,
                   "nodeType": "ExpressionStatement",
                   "src": "1609:47:2"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 198,
+                    "id": 220,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3867,25 +3867,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 194,
+                        "id": 216,
                         "name": "statusCodeToTellorCode",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 122,
+                        "referencedDeclaration": 144,
                         "src": "1667:22:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_uint256_$_t_uint256_$",
                           "typeString": "mapping(uint256 => uint256)"
                         }
                       },
-                      "id": 196,
+                      "id": 218,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 195,
+                        "id": 217,
                         "name": "_status",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 176,
+                        "referencedDeclaration": 198,
                         "src": "1690:7:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -3907,11 +3907,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 197,
+                      "id": 219,
                       "name": "_tellorStatus",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 174,
+                      "referencedDeclaration": 196,
                       "src": "1701:13:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3924,7 +3924,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 199,
+                  "id": 221,
                   "nodeType": "ExpressionStatement",
                   "src": "1667:47:2"
                 },
@@ -3934,11 +3934,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 201,
+                        "id": 223,
                         "name": "_tellorStatus",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 174,
+                        "referencedDeclaration": 196,
                         "src": "1743:13:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -3947,11 +3947,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 202,
+                        "id": 224,
                         "name": "_status",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 176,
+                        "referencedDeclaration": 198,
                         "src": "1758:7:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -3970,18 +3970,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 200,
+                      "id": 222,
                       "name": "StatusMapped",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 138,
+                      "referencedDeclaration": 160,
                       "src": "1730:12:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_uint256_$returns$__$",
                         "typeString": "function (uint256,uint256)"
                       }
                     },
-                    "id": 203,
+                    "id": 225,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3995,29 +3995,29 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 204,
+                  "id": 226,
                   "nodeType": "EmitStatement",
                   "src": "1725:41:2"
                 }
               ]
             },
             "documentation": "@dev This function allows the user to map the tellor uint data status code to the standarized \nADO uint status code such as null, retreived etc...\n@param _tellorStatus uint the tellor status\n@param _status the ADO standarized uint status",
-            "id": 206,
+            "id": 228,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "defineTellorCodeToStatusCode",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 177,
+              "id": 199,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 174,
+                  "id": 196,
                   "name": "_tellorStatus",
                   "nodeType": "VariableDeclaration",
-                  "scope": 206,
+                  "scope": 228,
                   "src": "1479:18:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4026,7 +4026,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 173,
+                    "id": 195,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1479:4:2",
@@ -4040,10 +4040,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 176,
+                  "id": 198,
                   "name": "_status",
                   "nodeType": "VariableDeclaration",
-                  "scope": 206,
+                  "scope": 228,
                   "src": "1499:12:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4052,7 +4052,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 175,
+                    "id": 197,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1499:4:2",
@@ -4068,12 +4068,12 @@
               "src": "1478:34:2"
             },
             "returnParameters": {
-              "id": 178,
+              "id": 200,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1521:0:2"
             },
-            "scope": 313,
+            "scope": 335,
             "src": "1441:333:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -4081,7 +4081,7 @@
           },
           {
             "body": {
-              "id": 241,
+              "id": 263,
               "nodeType": "Block",
               "src": "2186:231:2",
               "statements": [
@@ -4095,7 +4095,7 @@
                           "typeIdentifier": "t_bytes32",
                           "typeString": "bytes32"
                         },
-                        "id": 220,
+                        "id": 242,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -4104,25 +4104,25 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 214,
+                            "id": 236,
                             "name": "tellorIDtoBytesID",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 110,
+                            "referencedDeclaration": 132,
                             "src": "2205:17:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_mapping$_t_uint256_$_t_bytes32_$",
                               "typeString": "mapping(uint256 => bytes32)"
                             }
                           },
-                          "id": 216,
+                          "id": 238,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 215,
+                            "id": 237,
                             "name": "_requestID",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 208,
+                            "referencedDeclaration": 230,
                             "src": "2223:10:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
@@ -4148,7 +4148,7 @@
                             {
                               "argumentTypes": null,
                               "hexValue": "30",
-                              "id": 218,
+                              "id": 240,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -4171,7 +4171,7 @@
                                 "typeString": "int_const 0"
                               }
                             ],
-                            "id": 217,
+                            "id": 239,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -4184,7 +4184,7 @@
                             },
                             "typeName": "bytes32"
                           },
-                          "id": 219,
+                          "id": 241,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -4207,7 +4207,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "416c726561647920536574",
-                        "id": 221,
+                        "id": 243,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -4234,21 +4234,21 @@
                           "typeString": "literal_string \"Already Set\""
                         }
                       ],
-                      "id": 213,
+                      "id": 235,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3799,
-                        3800
+                        3933,
+                        3934
                       ],
-                      "referencedDeclaration": 3800,
+                      "referencedDeclaration": 3934,
                       "src": "2197:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 222,
+                    "id": 244,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4262,14 +4262,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 223,
+                  "id": 245,
                   "nodeType": "ExpressionStatement",
                   "src": "2197:67:2"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 228,
+                    "id": 250,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4278,25 +4278,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 224,
+                        "id": 246,
                         "name": "tellorIDtoBytesID",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 110,
+                        "referencedDeclaration": 132,
                         "src": "2275:17:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_uint256_$_t_bytes32_$",
                           "typeString": "mapping(uint256 => bytes32)"
                         }
                       },
-                      "id": 226,
+                      "id": 248,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 225,
+                        "id": 247,
                         "name": "_requestID",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 208,
+                        "referencedDeclaration": 230,
                         "src": "2293:10:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -4318,11 +4318,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 227,
+                      "id": 249,
                       "name": "_id",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 210,
+                      "referencedDeclaration": 232,
                       "src": "2307:3:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes32",
@@ -4335,14 +4335,14 @@
                       "typeString": "bytes32"
                     }
                   },
-                  "id": 229,
+                  "id": 251,
                   "nodeType": "ExpressionStatement",
                   "src": "2275:35:2"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 234,
+                    "id": 256,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4351,25 +4351,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 230,
+                        "id": 252,
                         "name": "bytesIDtoTellorID",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 114,
+                        "referencedDeclaration": 136,
                         "src": "2321:17:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
                           "typeString": "mapping(bytes32 => uint256)"
                         }
                       },
-                      "id": 232,
+                      "id": 254,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 231,
+                        "id": 253,
                         "name": "_id",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 210,
+                        "referencedDeclaration": 232,
                         "src": "2339:3:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes32",
@@ -4391,11 +4391,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 233,
+                      "id": 255,
                       "name": "_requestID",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 208,
+                      "referencedDeclaration": 230,
                       "src": "2346:10:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -4408,7 +4408,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 235,
+                  "id": 257,
                   "nodeType": "ExpressionStatement",
                   "src": "2321:35:2"
                 },
@@ -4418,11 +4418,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 237,
+                        "id": 259,
                         "name": "_requestID",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 208,
+                        "referencedDeclaration": 230,
                         "src": "2394:10:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -4431,11 +4431,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 238,
+                        "id": 260,
                         "name": "_id",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 210,
+                        "referencedDeclaration": 232,
                         "src": "2405:3:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes32",
@@ -4454,18 +4454,18 @@
                           "typeString": "bytes32"
                         }
                       ],
-                      "id": 236,
+                      "id": 258,
                       "name": "TellorIdMappedToBytes",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 132,
+                      "referencedDeclaration": 154,
                       "src": "2372:21:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_bytes32_$returns$__$",
                         "typeString": "function (uint256,bytes32)"
                       }
                     },
-                    "id": 239,
+                    "id": 261,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4479,29 +4479,29 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 240,
+                  "id": 262,
                   "nodeType": "EmitStatement",
                   "src": "2367:42:2"
                 }
               ]
             },
             "documentation": "@dev Allows user to map the standarized bytes32 Id to a specific requestID from Tellor\nThe dev should ensure the _requestId exists otherwise request the data on Tellor to get a requestId\n@param _requestID is the existing Tellor RequestID \n@param _id is the descption of the ID in bytes ",
-            "id": 242,
+            "id": 264,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "defineTellorIdToBytesID",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 211,
+              "id": 233,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 208,
+                  "id": 230,
                   "name": "_requestID",
                   "nodeType": "VariableDeclaration",
-                  "scope": 242,
+                  "scope": 264,
                   "src": "2148:15:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4510,7 +4510,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 207,
+                    "id": 229,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "2148:4:2",
@@ -4524,10 +4524,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 210,
+                  "id": 232,
                   "name": "_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 242,
+                  "scope": 264,
                   "src": "2165:11:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4536,7 +4536,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 209,
+                    "id": 231,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "2165:7:2",
@@ -4552,12 +4552,12 @@
               "src": "2147:30:2"
             },
             "returnParameters": {
-              "id": 212,
+              "id": 234,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2186:0:2"
             },
-            "scope": 313,
+            "scope": 335,
             "src": "2115:302:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -4565,7 +4565,7 @@
           },
           {
             "body": {
-              "id": 253,
+              "id": 275,
               "nodeType": "Block",
               "src": "2732:57:2",
               "statements": [
@@ -4574,25 +4574,25 @@
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 249,
+                      "id": 271,
                       "name": "statusCodeToTellorCode",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 122,
+                      "referencedDeclaration": 144,
                       "src": "2750:22:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_uint256_$_t_uint256_$",
                         "typeString": "mapping(uint256 => uint256)"
                       }
                     },
-                    "id": 251,
+                    "id": 273,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 250,
+                      "id": 272,
                       "name": "_status",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 244,
+                      "referencedDeclaration": 266,
                       "src": "2773:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -4610,30 +4610,30 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 248,
-                  "id": 252,
+                  "functionReturnParameters": 270,
+                  "id": 274,
                   "nodeType": "Return",
                   "src": "2743:38:2"
                 }
               ]
             },
             "documentation": "@dev Getter function for the uint Tellor status code from the specified uint ADO standarized status code\n@param _status the uint ADO standarized status\n@return _tellorStatus uint ",
-            "id": 254,
+            "id": 276,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getTellorStatusFromStatus",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 245,
+              "id": 267,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 244,
+                  "id": 266,
                   "name": "_status",
                   "nodeType": "VariableDeclaration",
-                  "scope": 254,
+                  "scope": 276,
                   "src": "2679:12:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4642,7 +4642,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 243,
+                    "id": 265,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "2679:4:2",
@@ -4658,15 +4658,15 @@
               "src": "2678:14:2"
             },
             "returnParameters": {
-              "id": 248,
+              "id": 270,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 247,
+                  "id": 269,
                   "name": "_tellorStatus",
                   "nodeType": "VariableDeclaration",
-                  "scope": 254,
+                  "scope": 276,
                   "src": "2713:18:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4675,7 +4675,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 246,
+                    "id": 268,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "2713:4:2",
@@ -4690,7 +4690,7 @@
               ],
               "src": "2712:20:2"
             },
-            "scope": 313,
+            "scope": 335,
             "src": "2644:145:2",
             "stateMutability": "view",
             "superFunction": null,
@@ -4698,7 +4698,7 @@
           },
           {
             "body": {
-              "id": 265,
+              "id": 287,
               "nodeType": "Block",
               "src": "3100:63:2",
               "statements": [
@@ -4707,25 +4707,25 @@
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 261,
+                      "id": 283,
                       "name": "tellorCodeToStatusCode",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 118,
+                      "referencedDeclaration": 140,
                       "src": "3118:22:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_uint256_$_t_uint256_$",
                         "typeString": "mapping(uint256 => uint256)"
                       }
                     },
-                    "id": 263,
+                    "id": 285,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 262,
+                      "id": 284,
                       "name": "_tellorStatus",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 256,
+                      "referencedDeclaration": 278,
                       "src": "3141:13:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -4743,30 +4743,30 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 260,
-                  "id": 264,
+                  "functionReturnParameters": 282,
+                  "id": 286,
                   "nodeType": "Return",
                   "src": "3111:44:2"
                 }
               ]
             },
             "documentation": "@dev Getter function of the uint ADO standarized status code from the specified Tellor uint status\n@param _tellorStatus uint \n@return _status the uint ADO standarized status",
-            "id": 266,
+            "id": 288,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getStatusFromTellorStatus",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 257,
+              "id": 279,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 256,
+                  "id": 278,
                   "name": "_tellorStatus",
                   "nodeType": "VariableDeclaration",
-                  "scope": 266,
+                  "scope": 288,
                   "src": "3046:18:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4775,7 +4775,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 255,
+                    "id": 277,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "3046:4:2",
@@ -4791,15 +4791,15 @@
               "src": "3045:20:2"
             },
             "returnParameters": {
-              "id": 260,
+              "id": 282,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 259,
+                  "id": 281,
                   "name": "_status",
                   "nodeType": "VariableDeclaration",
-                  "scope": 266,
+                  "scope": 288,
                   "src": "3086:12:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4808,7 +4808,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 258,
+                    "id": 280,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "3086:4:2",
@@ -4823,7 +4823,7 @@
               ],
               "src": "3085:14:2"
             },
-            "scope": 313,
+            "scope": 335,
             "src": "3010:153:2",
             "stateMutability": "view",
             "superFunction": null,
@@ -4831,7 +4831,7 @@
           },
           {
             "body": {
-              "id": 277,
+              "id": 299,
               "nodeType": "Block",
               "src": "3533:47:2",
               "statements": [
@@ -4840,25 +4840,25 @@
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 273,
+                      "id": 295,
                       "name": "bytesIDtoTellorID",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 114,
+                      "referencedDeclaration": 136,
                       "src": "3550:17:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
                         "typeString": "mapping(bytes32 => uint256)"
                       }
                     },
-                    "id": 275,
+                    "id": 297,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 274,
+                      "id": 296,
                       "name": "_id",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 268,
+                      "referencedDeclaration": 290,
                       "src": "3568:3:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes32",
@@ -4876,30 +4876,30 @@
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 272,
-                  "id": 276,
+                  "functionReturnParameters": 294,
+                  "id": 298,
                   "nodeType": "Return",
                   "src": "3543:29:2"
                 }
               ]
             },
             "documentation": "@dev Getter function of the Tellor RequestID based on the specified bytes32 ADO standaraized _id\n@param _id is the bytes32 descriptor mapped to an existing Tellor's requestId\n@return _requestId is Tellor's requestID corresnpoding to _id",
-            "id": 278,
+            "id": 300,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getTellorIdFromBytes",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 269,
+              "id": 291,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 268,
+                  "id": 290,
                   "name": "_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 278,
+                  "scope": 300,
                   "src": "3481:11:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4908,7 +4908,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 267,
+                    "id": 289,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "3481:7:2",
@@ -4924,15 +4924,15 @@
               "src": "3480:13:2"
             },
             "returnParameters": {
-              "id": 272,
+              "id": 294,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 271,
+                  "id": 293,
                   "name": "_requestId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 278,
+                  "scope": 300,
                   "src": "3515:15:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4941,7 +4941,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 270,
+                    "id": 292,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "3515:4:2",
@@ -4956,7 +4956,7 @@
               ],
               "src": "3514:17:2"
             },
-            "scope": 313,
+            "scope": 335,
             "src": "3451:129:2",
             "stateMutability": "view",
             "superFunction": null,
@@ -4964,21 +4964,21 @@
           },
           {
             "body": {
-              "id": 299,
+              "id": 321,
               "nodeType": "Block",
               "src": "3947:135:2",
               "statements": [
                 {
                   "assignments": [
-                    286
+                    308
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 286,
+                      "id": 308,
                       "name": "requestID",
                       "nodeType": "VariableDeclaration",
-                      "scope": 299,
+                      "scope": 321,
                       "src": "3957:14:2",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -4987,7 +4987,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 285,
+                        "id": 307,
                         "name": "uint",
                         "nodeType": "ElementaryTypeName",
                         "src": "3957:4:2",
@@ -5000,30 +5000,30 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 290,
+                  "id": 312,
                   "initialValue": {
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 287,
+                      "id": 309,
                       "name": "bytesIDtoTellorID",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 114,
+                      "referencedDeclaration": 136,
                       "src": "3974:17:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
                         "typeString": "mapping(bytes32 => uint256)"
                       }
                     },
-                    "id": 289,
+                    "id": 311,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 288,
+                      "id": 310,
                       "name": "_id",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 280,
+                      "referencedDeclaration": 302,
                       "src": "3992:3:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes32",
@@ -5047,18 +5047,18 @@
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 295,
+                    "id": 317,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 291,
+                      "id": 313,
                       "name": "adjFactor",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 283,
+                      "referencedDeclaration": 305,
                       "src": "4006:9:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_int256",
@@ -5071,25 +5071,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 292,
+                        "id": 314,
                         "name": "tellorIdtoAdjFactor",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 126,
+                        "referencedDeclaration": 148,
                         "src": "4018:19:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_uint256_$_t_int256_$",
                           "typeString": "mapping(uint256 => int256)"
                         }
                       },
-                      "id": 294,
+                      "id": 316,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 293,
+                        "id": 315,
                         "name": "requestID",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 286,
+                        "referencedDeclaration": 308,
                         "src": "4038:9:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -5113,48 +5113,48 @@
                       "typeString": "int256"
                     }
                   },
-                  "id": 296,
+                  "id": 318,
                   "nodeType": "ExpressionStatement",
                   "src": "4006:42:2"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 297,
+                    "id": 319,
                     "name": "adjFactor",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 283,
+                    "referencedDeclaration": 305,
                     "src": "4065:9:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_int256",
                       "typeString": "int256"
                     }
                   },
-                  "functionReturnParameters": 284,
-                  "id": 298,
+                  "functionReturnParameters": 306,
+                  "id": 320,
                   "nodeType": "Return",
                   "src": "4058:16:2"
                 }
               ]
             },
             "documentation": "@dev Getter function of the Tellor RequestID based on the specified bytes32 ADO standaraized _id\n@param _id is the bytes32 descriptor mapped to an existing Tellor's requestId\n@return _requestId is Tellor's requestID corresnpoding to _id",
-            "id": 300,
+            "id": 322,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getGranularityAdjFactor",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 281,
+              "id": 303,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 280,
+                  "id": 302,
                   "name": "_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 300,
+                  "scope": 322,
                   "src": "3897:11:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5163,7 +5163,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 279,
+                    "id": 301,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "3897:7:2",
@@ -5179,15 +5179,15 @@
               "src": "3896:13:2"
             },
             "returnParameters": {
-              "id": 284,
+              "id": 306,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 283,
+                  "id": 305,
                   "name": "adjFactor",
                   "nodeType": "VariableDeclaration",
-                  "scope": 300,
+                  "scope": 322,
                   "src": "3931:13:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5196,7 +5196,7 @@
                     "typeString": "int256"
                   },
                   "typeName": {
-                    "id": 282,
+                    "id": 304,
                     "name": "int",
                     "nodeType": "ElementaryTypeName",
                     "src": "3931:3:2",
@@ -5211,7 +5211,7 @@
               ],
               "src": "3930:15:2"
             },
-            "scope": 313,
+            "scope": 335,
             "src": "3864:218:2",
             "stateMutability": "view",
             "superFunction": null,
@@ -5219,7 +5219,7 @@
           },
           {
             "body": {
-              "id": 311,
+              "id": 333,
               "nodeType": "Block",
               "src": "4426:55:2",
               "statements": [
@@ -5228,25 +5228,25 @@
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 307,
+                      "id": 329,
                       "name": "tellorIDtoBytesID",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 110,
+                      "referencedDeclaration": 132,
                       "src": "4444:17:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_uint256_$_t_bytes32_$",
                         "typeString": "mapping(uint256 => bytes32)"
                       }
                     },
-                    "id": 309,
+                    "id": 331,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 308,
+                      "id": 330,
                       "name": "_requestId",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 302,
+                      "referencedDeclaration": 324,
                       "src": "4462:10:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -5264,30 +5264,30 @@
                       "typeString": "bytes32"
                     }
                   },
-                  "functionReturnParameters": 306,
-                  "id": 310,
+                  "functionReturnParameters": 328,
+                  "id": 332,
                   "nodeType": "Return",
                   "src": "4437:36:2"
                 }
               ]
             },
             "documentation": "@dev Getter function of the bytes32 ADO standaraized _id based on the specified Tellor RequestID \n@param _requestId is Tellor's requestID\n@return _id is the bytes32 descriptor mapped to an existing Tellor's requestId",
-            "id": 312,
+            "id": 334,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getBytesFromTellorID",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 303,
+              "id": 325,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 302,
+                  "id": 324,
                   "name": "_requestId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 312,
+                  "scope": 334,
                   "src": "4376:15:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5296,7 +5296,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 301,
+                    "id": 323,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "4376:4:2",
@@ -5312,15 +5312,15 @@
               "src": "4375:17:2"
             },
             "returnParameters": {
-              "id": 306,
+              "id": 328,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 305,
+                  "id": 327,
                   "name": "_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 312,
+                  "scope": 334,
                   "src": "4413:11:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -5329,7 +5329,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 304,
+                    "id": 326,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "4413:7:2",
@@ -5344,14 +5344,14 @@
               ],
               "src": "4412:13:2"
             },
-            "scope": 313,
+            "scope": 335,
             "src": "4346:135:2",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 314,
+        "scope": 336,
         "src": "91:4395:2"
       }
     ],
@@ -5363,7 +5363,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.23",
-  "updatedAt": "2020-05-18T15:25:40.183Z",
+  "updatedAt": "2020-07-08T18:39:34.024Z",
   "devdoc": {
     "methods": {
       "defineTellorCodeToStatusCode(uint256,uint256)": {
