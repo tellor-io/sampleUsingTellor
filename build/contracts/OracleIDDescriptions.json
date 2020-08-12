@@ -6,18 +6,16 @@
       "inputs": [
         {
           "indexed": false,
-          "internalType": "uint256",
           "name": "_requestID",
           "type": "uint256"
         },
         {
           "indexed": false,
-          "internalType": "int256",
-          "name": "_adjFactor",
-          "type": "int256"
+          "name": "_id",
+          "type": "bytes32"
         }
       ],
-      "name": "AdjFactorMapped",
+      "name": "TellorIdMappedToBytes",
       "type": "event"
     },
     {
@@ -25,13 +23,11 @@
       "inputs": [
         {
           "indexed": false,
-          "internalType": "uint256",
           "name": "_tellorStatus",
           "type": "uint256"
         },
         {
           "indexed": false,
-          "internalType": "uint256",
           "name": "_status",
           "type": "uint256"
         }
@@ -44,30 +40,26 @@
       "inputs": [
         {
           "indexed": false,
-          "internalType": "uint256",
           "name": "_requestID",
           "type": "uint256"
         },
         {
           "indexed": false,
-          "internalType": "bytes32",
-          "name": "_id",
-          "type": "bytes32"
+          "name": "_adjFactor",
+          "type": "int256"
         }
       ],
-      "name": "TellorIdMappedToBytes",
+      "name": "AdjFactorMapped",
       "type": "event"
     },
     {
       "constant": false,
       "inputs": [
         {
-          "internalType": "uint256",
           "name": "_tellorId",
           "type": "uint256"
         },
         {
-          "internalType": "int256",
           "name": "_adjFactor",
           "type": "int256"
         }
@@ -82,12 +74,10 @@
       "constant": false,
       "inputs": [
         {
-          "internalType": "uint256",
           "name": "_tellorStatus",
           "type": "uint256"
         },
         {
-          "internalType": "uint256",
           "name": "_status",
           "type": "uint256"
         }
@@ -102,12 +92,10 @@
       "constant": false,
       "inputs": [
         {
-          "internalType": "uint256",
           "name": "_requestID",
           "type": "uint256"
         },
         {
-          "internalType": "bytes32",
           "name": "_id",
           "type": "bytes32"
         }
@@ -122,7 +110,6 @@
       "constant": true,
       "inputs": [
         {
-          "internalType": "uint256",
           "name": "_status",
           "type": "uint256"
         }
@@ -130,7 +117,6 @@
       "name": "getTellorStatusFromStatus",
       "outputs": [
         {
-          "internalType": "uint256",
           "name": "_tellorStatus",
           "type": "uint256"
         }
@@ -143,7 +129,6 @@
       "constant": true,
       "inputs": [
         {
-          "internalType": "uint256",
           "name": "_tellorStatus",
           "type": "uint256"
         }
@@ -151,7 +136,6 @@
       "name": "getStatusFromTellorStatus",
       "outputs": [
         {
-          "internalType": "uint256",
           "name": "_status",
           "type": "uint256"
         }
@@ -164,7 +148,6 @@
       "constant": true,
       "inputs": [
         {
-          "internalType": "bytes32",
           "name": "_id",
           "type": "bytes32"
         }
@@ -172,7 +155,6 @@
       "name": "getTellorIdFromBytes",
       "outputs": [
         {
-          "internalType": "uint256",
           "name": "_requestId",
           "type": "uint256"
         }
@@ -185,7 +167,6 @@
       "constant": true,
       "inputs": [
         {
-          "internalType": "bytes32",
           "name": "_id",
           "type": "bytes32"
         }
@@ -193,7 +174,6 @@
       "name": "getGranularityAdjFactor",
       "outputs": [
         {
-          "internalType": "int256",
           "name": "adjFactor",
           "type": "int256"
         }
@@ -206,7 +186,6 @@
       "constant": true,
       "inputs": [
         {
-          "internalType": "uint256",
           "name": "_requestId",
           "type": "uint256"
         }
@@ -214,7 +193,6 @@
       "name": "getBytesFromTellorID",
       "outputs": [
         {
-          "internalType": "bytes32",
           "name": "_id",
           "type": "bytes32"
         }
@@ -224,13 +202,13 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_requestID\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"int256\",\"name\":\"_adjFactor\",\"type\":\"int256\"}],\"name\":\"AdjFactorMapped\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_tellorStatus\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_status\",\"type\":\"uint256\"}],\"name\":\"StatusMapped\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_requestID\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"_id\",\"type\":\"bytes32\"}],\"name\":\"TellorIdMappedToBytes\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tellorStatus\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_status\",\"type\":\"uint256\"}],\"name\":\"defineTellorCodeToStatusCode\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_requestID\",\"type\":\"uint256\"},{\"internalType\":\"bytes32\",\"name\":\"_id\",\"type\":\"bytes32\"}],\"name\":\"defineTellorIdToBytesID\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tellorId\",\"type\":\"uint256\"},{\"internalType\":\"int256\",\"name\":\"_adjFactor\",\"type\":\"int256\"}],\"name\":\"defineTellorIdtoAdjFactor\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_requestId\",\"type\":\"uint256\"}],\"name\":\"getBytesFromTellorID\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"_id\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_id\",\"type\":\"bytes32\"}],\"name\":\"getGranularityAdjFactor\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"adjFactor\",\"type\":\"int256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tellorStatus\",\"type\":\"uint256\"}],\"name\":\"getStatusFromTellorStatus\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_status\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_id\",\"type\":\"bytes32\"}],\"name\":\"getTellorIdFromBytes\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_requestId\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_status\",\"type\":\"uint256\"}],\"name\":\"getTellorStatusFromStatus\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_tellorStatus\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"defineTellorCodeToStatusCode(uint256,uint256)\":{\"details\":\"This function allows the user to map the tellor uint data status code to the standarized  ADO uint status code such as null, retreived etc...\",\"params\":{\"_status\":\"the ADO standarized uint status\",\"_tellorStatus\":\"uint the tellor status\"}},\"defineTellorIdToBytesID(uint256,bytes32)\":{\"details\":\"Allows user to map the standarized bytes32 Id to a specific requestID from Tellor The dev should ensure the _requestId exists otherwise request the data on Tellor to get a requestId\",\"params\":{\"_id\":\"is the descption of the ID in bytes \",\"_requestID\":\"is the existing Tellor RequestID \"}},\"defineTellorIdtoAdjFactor(uint256,int256)\":{\"details\":\"This function allows the user to map the tellor's Id to it's _adjFactor and to match the standarized granularity\",\"params\":{\"_adjFactor\":\"is 1eN where N is the number of decimals to convert to ADO standard\",\"_tellorId\":\"uint the tellor status\"}},\"getBytesFromTellorID(uint256)\":{\"details\":\"Getter function of the bytes32 ADO standaraized _id based on the specified Tellor RequestID \",\"params\":{\"_requestId\":\"is Tellor's requestID\"},\"return\":\"_id is the bytes32 descriptor mapped to an existing Tellor's requestId\"},\"getGranularityAdjFactor(bytes32)\":{\"details\":\"Getter function of the Tellor RequestID based on the specified bytes32 ADO standaraized _id\",\"params\":{\"_id\":\"is the bytes32 descriptor mapped to an existing Tellor's requestId\"},\"return\":\"_requestId is Tellor's requestID corresnpoding to _id\"},\"getStatusFromTellorStatus(uint256)\":{\"details\":\"Getter function of the uint ADO standarized status code from the specified Tellor uint status\",\"params\":{\"_tellorStatus\":\"uint \"},\"return\":\"_status the uint ADO standarized status\"},\"getTellorIdFromBytes(bytes32)\":{\"details\":\"Getter function of the Tellor RequestID based on the specified bytes32 ADO standaraized _id\",\"params\":{\"_id\":\"is the bytes32 descriptor mapped to an existing Tellor's requestId\"},\"return\":\"_requestId is Tellor's requestID corresnpoding to _id\"},\"getTellorStatusFromStatus(uint256)\":{\"details\":\"Getter function for the uint Tellor status code from the specified uint ADO standarized status code\",\"params\":{\"_status\":\"the uint ADO standarized status\"},\"return\":\"_tellorStatus uint \"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"usingtellor/contracts/OracleIDDescriptions.sol\":\"OracleIDDescriptions\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"usingtellor/contracts/OracleIDDescriptions.sol\":{\"keccak256\":\"0xd64d287d85868142312486c9092fb988e78aabc7d0dcf32bec8ac5e0b142cec4\",\"urls\":[\"bzz-raw://0fd55670db352e998633e0475726ee2dac274bc330ba98d27f847a4b983ccf45\",\"dweb:/ipfs/QmaMe52m2oZWtMZLx1TA43ZW8VgzA9eRnqL7FM2j7wMCNX\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b5061063b806100206000396000f3fe608060405234801561001057600080fd5b50600436106100885760003560e01c806373b333181161005b57806373b3331814610181578063a21b0a5b146101c3578063afdc2c1414610205578063c4e9e9501461023d57610088565b80630a3ff7db1461008d57806344a63883146100cf5780635aa6fdd11461010757806367cfa3f81461013f575b600080fd5b6100b9600480360360208110156100a357600080fd5b810190808035906020019092919050505061027f565b6040518082815260200191505060405180910390f35b610105600480360360408110156100e557600080fd5b81019080803590602001909291908035906020019092919050505061029b565b005b61013d6004803603604081101561011d57600080fd5b810190808035906020019092919080359060200190929190505050610397565b005b61016b6004803603602081101561015557600080fd5b8101908080359060200190929190505050610493565b6040518082815260200191505060405180910390f35b6101ad6004803603602081101561019757600080fd5b81019080803590602001909291905050506104b0565b6040518082815260200191505060405180910390f35b6101ef600480360360208110156101d957600080fd5b81019080803590602001909291905050506104e8565b6040518082815260200191505060405180910390f35b61023b6004803603604081101561021b57600080fd5b810190808035906020019092919080359060200190929190505050610505565b005b6102696004803603602081101561025357600080fd5b81019080803590602001909291905050506105e9565b6040518082815260200191505060405180910390f35b6000806000838152602001908152602001600020549050919050565b6000600260008481526020019081526020016000205414610324576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252600b8152602001807f416c72656164792053657400000000000000000000000000000000000000000081525060200191505060405180910390fd5b8060026000848152602001908152602001600020819055508160036000838152602001908152602001600020819055507f4be3492cbedb6304ecd98cf1b46776c7e0e5c07b4a8114318bcd5ea08715ac1a8282604051808381526020018281526020019250505060405180910390a15050565b6000801b6000808481526020019081526020016000205414610421576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252600b8152602001807f416c72656164792053657400000000000000000000000000000000000000000081525060200191505060405180910390fd5b80600080848152602001908152602001600020819055508160016000838152602001908152602001600020819055507f6d663ee2b4cf058e66f9e5a74c6155bde58a5a717d01ccfb8befad11118c7db18282604051808381526020018281526020019250505060405180910390a15050565b600060026000838152602001908152602001600020549050919050565b600080600160008481526020019081526020016000205490506004600082815260200190815260200160002054915081915050919050565b600060036000838152602001908152602001600020549050919050565b600060046000848152602001908152602001600020541461058e576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252600b8152602001807f416c72656164792053657400000000000000000000000000000000000000000081525060200191505060405180910390fd5b8060046000848152602001908152602001600020819055507f4e40f4beec771602f74beb36f2284d5286db9b4aa133ac28ec5f96f8c7559f1e8282604051808381526020018281526020019250505060405180910390a15050565b60006001600083815260200190815260200160002054905091905056fea265627a7a72315820e3206f970e29b295b78bf2f767ee9fd7b05005ab8e1049918eda940946791af864736f6c63430005100032",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100885760003560e01c806373b333181161005b57806373b3331814610181578063a21b0a5b146101c3578063afdc2c1414610205578063c4e9e9501461023d57610088565b80630a3ff7db1461008d57806344a63883146100cf5780635aa6fdd11461010757806367cfa3f81461013f575b600080fd5b6100b9600480360360208110156100a357600080fd5b810190808035906020019092919050505061027f565b6040518082815260200191505060405180910390f35b610105600480360360408110156100e557600080fd5b81019080803590602001909291908035906020019092919050505061029b565b005b61013d6004803603604081101561011d57600080fd5b810190808035906020019092919080359060200190929190505050610397565b005b61016b6004803603602081101561015557600080fd5b8101908080359060200190929190505050610493565b6040518082815260200191505060405180910390f35b6101ad6004803603602081101561019757600080fd5b81019080803590602001909291905050506104b0565b6040518082815260200191505060405180910390f35b6101ef600480360360208110156101d957600080fd5b81019080803590602001909291905050506104e8565b6040518082815260200191505060405180910390f35b61023b6004803603604081101561021b57600080fd5b810190808035906020019092919080359060200190929190505050610505565b005b6102696004803603602081101561025357600080fd5b81019080803590602001909291905050506105e9565b6040518082815260200191505060405180910390f35b6000806000838152602001908152602001600020549050919050565b6000600260008481526020019081526020016000205414610324576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252600b8152602001807f416c72656164792053657400000000000000000000000000000000000000000081525060200191505060405180910390fd5b8060026000848152602001908152602001600020819055508160036000838152602001908152602001600020819055507f4be3492cbedb6304ecd98cf1b46776c7e0e5c07b4a8114318bcd5ea08715ac1a8282604051808381526020018281526020019250505060405180910390a15050565b6000801b6000808481526020019081526020016000205414610421576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252600b8152602001807f416c72656164792053657400000000000000000000000000000000000000000081525060200191505060405180910390fd5b80600080848152602001908152602001600020819055508160016000838152602001908152602001600020819055507f6d663ee2b4cf058e66f9e5a74c6155bde58a5a717d01ccfb8befad11118c7db18282604051808381526020018281526020019250505060405180910390a15050565b600060026000838152602001908152602001600020549050919050565b600080600160008481526020019081526020016000205490506004600082815260200190815260200160002054915081915050919050565b600060036000838152602001908152602001600020549050919050565b600060046000848152602001908152602001600020541461058e576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252600b8152602001807f416c72656164792053657400000000000000000000000000000000000000000081525060200191505060405180910390fd5b8060046000848152602001908152602001600020819055507f4e40f4beec771602f74beb36f2284d5286db9b4aa133ac28ec5f96f8c7559f1e8282604051808381526020018281526020019250505060405180910390a15050565b60006001600083815260200190815260200160002054905091905056fea265627a7a72315820e3206f970e29b295b78bf2f767ee9fd7b05005ab8e1049918eda940946791af864736f6c63430005100032",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"_requestId\",\"type\":\"uint256\"}],\"name\":\"getBytesFromTellorID\",\"outputs\":[{\"name\":\"_id\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_tellorStatus\",\"type\":\"uint256\"},{\"name\":\"_status\",\"type\":\"uint256\"}],\"name\":\"defineTellorCodeToStatusCode\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_requestID\",\"type\":\"uint256\"},{\"name\":\"_id\",\"type\":\"bytes32\"}],\"name\":\"defineTellorIdToBytesID\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_tellorStatus\",\"type\":\"uint256\"}],\"name\":\"getStatusFromTellorStatus\",\"outputs\":[{\"name\":\"_status\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_id\",\"type\":\"bytes32\"}],\"name\":\"getGranularityAdjFactor\",\"outputs\":[{\"name\":\"adjFactor\",\"type\":\"int256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_status\",\"type\":\"uint256\"}],\"name\":\"getTellorStatusFromStatus\",\"outputs\":[{\"name\":\"_tellorStatus\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_tellorId\",\"type\":\"uint256\"},{\"name\":\"_adjFactor\",\"type\":\"int256\"}],\"name\":\"defineTellorIdtoAdjFactor\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_id\",\"type\":\"bytes32\"}],\"name\":\"getTellorIdFromBytes\",\"outputs\":[{\"name\":\"_requestId\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_requestID\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_id\",\"type\":\"bytes32\"}],\"name\":\"TellorIdMappedToBytes\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_tellorStatus\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_status\",\"type\":\"uint256\"}],\"name\":\"StatusMapped\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_requestID\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_adjFactor\",\"type\":\"int256\"}],\"name\":\"AdjFactorMapped\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{\"defineTellorCodeToStatusCode(uint256,uint256)\":{\"details\":\"This function allows the user to map the tellor uint data status code to the standarized \\r ADO uint status code such as null, retreived etc...\\r\",\"params\":{\"_status\":\"the ADO standarized uint status\\r\",\"_tellorStatus\":\"uint the tellor status\\r\"}},\"defineTellorIdToBytesID(uint256,bytes32)\":{\"details\":\"Allows user to map the standarized bytes32 Id to a specific requestID from Tellor\\r The dev should ensure the _requestId exists otherwise request the data on Tellor to get a requestId\\r\",\"params\":{\"_id\":\"is the descption of the ID in bytes \\r\",\"_requestID\":\"is the existing Tellor RequestID \\r\"}},\"defineTellorIdtoAdjFactor(uint256,int256)\":{\"details\":\"This function allows the user to map the tellor's Id to it's _adjFactor and\\r to match the standarized granularity\\r\",\"params\":{\"_adjFactor\":\"is 1eN where N is the number of decimals to convert to ADO standard\\r\",\"_tellorId\":\"uint the tellor status\\r\"}},\"getBytesFromTellorID(uint256)\":{\"details\":\"Getter function of the bytes32 ADO standaraized _id based on the specified Tellor RequestID \\r\",\"params\":{\"_requestId\":\"is Tellor's requestID\\r\"},\"return\":\"_id is the bytes32 descriptor mapped to an existing Tellor's requestId\\r\"},\"getGranularityAdjFactor(bytes32)\":{\"details\":\"Getter function of the Tellor RequestID based on the specified bytes32 ADO standaraized _id\\r\",\"params\":{\"_id\":\"is the bytes32 descriptor mapped to an existing Tellor's requestId\\r\"},\"return\":\"_requestId is Tellor's requestID corresnpoding to _id\\r\"},\"getStatusFromTellorStatus(uint256)\":{\"details\":\"Getter function of the uint ADO standarized status code from the specified Tellor uint status\\r\",\"params\":{\"_tellorStatus\":\"uint \\r\"},\"return\":\"_status the uint ADO standarized status\\r\"},\"getTellorIdFromBytes(bytes32)\":{\"details\":\"Getter function of the Tellor RequestID based on the specified bytes32 ADO standaraized _id\\r\",\"params\":{\"_id\":\"is the bytes32 descriptor mapped to an existing Tellor's requestId\\r\"},\"return\":\"_requestId is Tellor's requestID corresnpoding to _id\\r\"},\"getTellorStatusFromStatus(uint256)\":{\"details\":\"Getter function for the uint Tellor status code from the specified uint ADO standarized status code\\r\",\"params\":{\"_status\":\"the uint ADO standarized status\\r\"},\"return\":\"_tellorStatus uint \\r\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"usingtellor/contracts/OracleIDDescriptions.sol\":\"OracleIDDescriptions\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"usingtellor/contracts/OracleIDDescriptions.sol\":{\"keccak256\":\"0xd64d287d85868142312486c9092fb988e78aabc7d0dcf32bec8ac5e0b142cec4\",\"urls\":[\"bzzr://95623e6a7dfafa146b3d7d4eb96493abf967d6cc482e88fb4f13546ecbe3dcda\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610632806100206000396000f3fe608060405234801561001057600080fd5b50600436106100885760003560e01c806373b333181161005b57806373b3331814610181578063a21b0a5b146101c3578063afdc2c1414610205578063c4e9e9501461023d57610088565b80630a3ff7db1461008d57806344a63883146100cf5780635aa6fdd11461010757806367cfa3f81461013f575b600080fd5b6100b9600480360360208110156100a357600080fd5b810190808035906020019092919050505061027f565b6040518082815260200191505060405180910390f35b610105600480360360408110156100e557600080fd5b81019080803590602001909291908035906020019092919050505061029b565b005b61013d6004803603604081101561011d57600080fd5b810190808035906020019092919080359060200190929190505050610397565b005b61016b6004803603602081101561015557600080fd5b8101908080359060200190929190505050610493565b6040518082815260200191505060405180910390f35b6101ad6004803603602081101561019757600080fd5b81019080803590602001909291905050506104b0565b6040518082815260200191505060405180910390f35b6101ef600480360360208110156101d957600080fd5b81019080803590602001909291905050506104e8565b6040518082815260200191505060405180910390f35b61023b6004803603604081101561021b57600080fd5b810190808035906020019092919080359060200190929190505050610505565b005b6102696004803603602081101561025357600080fd5b81019080803590602001909291905050506105e9565b6040518082815260200191505060405180910390f35b6000806000838152602001908152602001600020549050919050565b6000600260008481526020019081526020016000205414610324576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252600b8152602001807f416c72656164792053657400000000000000000000000000000000000000000081525060200191505060405180910390fd5b8060026000848152602001908152602001600020819055508160036000838152602001908152602001600020819055507f4be3492cbedb6304ecd98cf1b46776c7e0e5c07b4a8114318bcd5ea08715ac1a8282604051808381526020018281526020019250505060405180910390a15050565b6000801b6000808481526020019081526020016000205414610421576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252600b8152602001807f416c72656164792053657400000000000000000000000000000000000000000081525060200191505060405180910390fd5b80600080848152602001908152602001600020819055508160016000838152602001908152602001600020819055507f6d663ee2b4cf058e66f9e5a74c6155bde58a5a717d01ccfb8befad11118c7db18282604051808381526020018281526020019250505060405180910390a15050565b600060026000838152602001908152602001600020549050919050565b600080600160008481526020019081526020016000205490506004600082815260200190815260200160002054915081915050919050565b600060036000838152602001908152602001600020549050919050565b600060046000848152602001908152602001600020541461058e576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252600b8152602001807f416c72656164792053657400000000000000000000000000000000000000000081525060200191505060405180910390fd5b8060046000848152602001908152602001600020819055507f4e40f4beec771602f74beb36f2284d5286db9b4aa133ac28ec5f96f8c7559f1e8282604051808381526020018281526020019250505060405180910390a15050565b60006001600083815260200190815260200160002054905091905056fea165627a7a72305820f712681eb1470eed30f6b46173ba9fb165a2d1f78406b9309daedffb598b62780029",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100885760003560e01c806373b333181161005b57806373b3331814610181578063a21b0a5b146101c3578063afdc2c1414610205578063c4e9e9501461023d57610088565b80630a3ff7db1461008d57806344a63883146100cf5780635aa6fdd11461010757806367cfa3f81461013f575b600080fd5b6100b9600480360360208110156100a357600080fd5b810190808035906020019092919050505061027f565b6040518082815260200191505060405180910390f35b610105600480360360408110156100e557600080fd5b81019080803590602001909291908035906020019092919050505061029b565b005b61013d6004803603604081101561011d57600080fd5b810190808035906020019092919080359060200190929190505050610397565b005b61016b6004803603602081101561015557600080fd5b8101908080359060200190929190505050610493565b6040518082815260200191505060405180910390f35b6101ad6004803603602081101561019757600080fd5b81019080803590602001909291905050506104b0565b6040518082815260200191505060405180910390f35b6101ef600480360360208110156101d957600080fd5b81019080803590602001909291905050506104e8565b6040518082815260200191505060405180910390f35b61023b6004803603604081101561021b57600080fd5b810190808035906020019092919080359060200190929190505050610505565b005b6102696004803603602081101561025357600080fd5b81019080803590602001909291905050506105e9565b6040518082815260200191505060405180910390f35b6000806000838152602001908152602001600020549050919050565b6000600260008481526020019081526020016000205414610324576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252600b8152602001807f416c72656164792053657400000000000000000000000000000000000000000081525060200191505060405180910390fd5b8060026000848152602001908152602001600020819055508160036000838152602001908152602001600020819055507f4be3492cbedb6304ecd98cf1b46776c7e0e5c07b4a8114318bcd5ea08715ac1a8282604051808381526020018281526020019250505060405180910390a15050565b6000801b6000808481526020019081526020016000205414610421576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252600b8152602001807f416c72656164792053657400000000000000000000000000000000000000000081525060200191505060405180910390fd5b80600080848152602001908152602001600020819055508160016000838152602001908152602001600020819055507f6d663ee2b4cf058e66f9e5a74c6155bde58a5a717d01ccfb8befad11118c7db18282604051808381526020018281526020019250505060405180910390a15050565b600060026000838152602001908152602001600020549050919050565b600080600160008481526020019081526020016000205490506004600082815260200190815260200160002054915081915050919050565b600060036000838152602001908152602001600020549050919050565b600060046000848152602001908152602001600020541461058e576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252600b8152602001807f416c72656164792053657400000000000000000000000000000000000000000081525060200191505060405180910390fd5b8060046000848152602001908152602001600020819055507f4e40f4beec771602f74beb36f2284d5286db9b4aa133ac28ec5f96f8c7559f1e8282604051808381526020018281526020019250505060405180910390a15050565b60006001600083815260200190815260200160002054905091905056fea165627a7a72305820f712681eb1470eed30f6b46173ba9fb165a2d1f78406b9309daedffb598b62780029",
   "sourceMap": "91:4395:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;91:4395:2;;;;;;;",
   "deployedSourceMap": "91:4395:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;91:4395:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;4346:135;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;4346:135:2;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;1441:333;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1441:333:2;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;2115:302;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;2115:302:2;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;3010:153;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;3010:153:2;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;3864:218;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;3864:218:2;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;2644:145;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;2644:145:2;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;889:261;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;889:261:2;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;3451:129;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;3451:129:2;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;4346:135;4413:11;4444:17;:29;4462:10;4444:29;;;;;;;;;;;;4437:36;;4346:135;;;:::o;1441:333::-;1581:1;1540:22;:37;1563:13;1540:37;;;;;;;;;;;;:42;1532:66;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1649:7;1609:22;:37;1632:13;1609:37;;;;;;;;;;;:47;;;;1701:13;1667:22;:31;1690:7;1667:31;;;;;;;;;;;:47;;;;1730:36;1743:13;1758:7;1730:36;;;;;;;;;;;;;;;;;;;;;;;;1441:333;;:::o;2115:302::-;2246:1;2238:10;;2205:17;:29;2223:10;2205:29;;;;;;;;;;;;:43;2197:67;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2307:3;2275:17;:29;2293:10;2275:29;;;;;;;;;;;:35;;;;2346:10;2321:17;:22;2339:3;2321:22;;;;;;;;;;;:35;;;;2372:37;2394:10;2405:3;2372:37;;;;;;;;;;;;;;;;;;;;;;;;2115:302;;:::o;3010:153::-;3086:12;3118:22;:37;3141:13;3118:37;;;;;;;;;;;;3111:44;;3010:153;;;:::o;3864:218::-;3931:13;3957:14;3974:17;:22;3992:3;3974:22;;;;;;;;;;;;3957:39;;4018:19;:30;4038:9;4018:30;;;;;;;;;;;;4006:42;;4065:9;4058:16;;;3864:218;;;:::o;2644:145::-;2713:18;2750:22;:31;2773:7;2750:31;;;;;;;;;;;;2743:38;;2644:145;;;:::o;889:261::-;1017:1;983:19;:30;1003:9;983:30;;;;;;;;;;;;:35;975:59;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1078:10;1045:19;:30;1065:9;1045:30;;;;;;;;;;;:43;;;;1104:38;1120:9;1131:10;1104:38;;;;;;;;;;;;;;;;;;;;;;;;889:261;;:::o;3451:129::-;3515:15;3550:17;:22;3568:3;3550:22;;;;;;;;;;;;3543:29;;3451:129;;;:::o",
   "source": "pragma solidity ^0.5.0;\r\n\r\n/*\r\n * @title Price/numeric Pull Oracle mapping contract\r\n*/\r\n\r\ncontract OracleIDDescriptions {\r\n\r\n    /*Variables*/\r\n    mapping(uint=>bytes32) tellorIDtoBytesID;\r\n    mapping(bytes32 => uint) bytesIDtoTellorID;\r\n    mapping(uint => uint) tellorCodeToStatusCode;\r\n    mapping(uint => uint) statusCodeToTellorCode;\r\n    mapping(uint => int) tellorIdtoAdjFactor;\r\n\r\n    /*Events*/\r\n    event TellorIdMappedToBytes(uint _requestID, bytes32 _id);\r\n    event StatusMapped(uint _tellorStatus, uint _status);\r\n    event AdjFactorMapped(uint _requestID, int _adjFactor);\r\n\r\n\r\n    /**\r\n    * @dev This function allows the user to map the tellor's Id to it's _adjFactor and\r\n    * to match the standarized granularity\r\n    * @param _tellorId uint the tellor status\r\n    * @param _adjFactor is 1eN where N is the number of decimals to convert to ADO standard\r\n    */\r\n    function defineTellorIdtoAdjFactor(uint _tellorId, int _adjFactor) external{\r\n        require(tellorIdtoAdjFactor[_tellorId] == 0, \"Already Set\");\r\n        tellorIdtoAdjFactor[_tellorId] = _adjFactor;\r\n        emit AdjFactorMapped(_tellorId, _adjFactor);\r\n    }\r\n\r\n    /**\r\n    * @dev This function allows the user to map the tellor uint data status code to the standarized \r\n    * ADO uint status code such as null, retreived etc...\r\n    * @param _tellorStatus uint the tellor status\r\n    * @param _status the ADO standarized uint status\r\n    */\r\n    function defineTellorCodeToStatusCode(uint _tellorStatus, uint _status) external{\r\n        require(tellorCodeToStatusCode[_tellorStatus] == 0, \"Already Set\");\r\n        tellorCodeToStatusCode[_tellorStatus] = _status;\r\n        statusCodeToTellorCode[_status] = _tellorStatus;\r\n        emit StatusMapped(_tellorStatus, _status);\r\n    }\r\n\r\n    /**\r\n    * @dev Allows user to map the standarized bytes32 Id to a specific requestID from Tellor\r\n    * The dev should ensure the _requestId exists otherwise request the data on Tellor to get a requestId\r\n    * @param _requestID is the existing Tellor RequestID \r\n    * @param _id is the descption of the ID in bytes \r\n    */ \r\n    function defineTellorIdToBytesID(uint _requestID, bytes32 _id) external{\r\n        require(tellorIDtoBytesID[_requestID] == bytes32(0), \"Already Set\");\r\n        tellorIDtoBytesID[_requestID] = _id;\r\n        bytesIDtoTellorID[_id] = _requestID;\r\n        emit TellorIdMappedToBytes(_requestID,_id);\r\n    }\r\n\r\n    /**\r\n    * @dev Getter function for the uint Tellor status code from the specified uint ADO standarized status code\r\n    * @param _status the uint ADO standarized status\r\n    * @return _tellorStatus uint \r\n    */ \r\n    function getTellorStatusFromStatus(uint _status) public view returns(uint _tellorStatus){\r\n        return statusCodeToTellorCode[_status];\r\n    }\r\n\r\n    /**\r\n    * @dev Getter function of the uint ADO standarized status code from the specified Tellor uint status\r\n    * @param _tellorStatus uint \r\n    * @return _status the uint ADO standarized status\r\n    */ \r\n    function getStatusFromTellorStatus (uint _tellorStatus) public view returns(uint _status) {\r\n        return tellorCodeToStatusCode[_tellorStatus];\r\n    }\r\n    \r\n    /**\r\n    * @dev Getter function of the Tellor RequestID based on the specified bytes32 ADO standaraized _id\r\n    * @param _id is the bytes32 descriptor mapped to an existing Tellor's requestId\r\n    * @return _requestId is Tellor's requestID corresnpoding to _id\r\n    */ \r\n    function getTellorIdFromBytes(bytes32 _id) public view  returns(uint _requestId)  {\r\n       return bytesIDtoTellorID[_id];\r\n    }\r\n\r\n    /**\r\n    * @dev Getter function of the Tellor RequestID based on the specified bytes32 ADO standaraized _id\r\n    * @param _id is the bytes32 descriptor mapped to an existing Tellor's requestId\r\n    * @return _requestId is Tellor's requestID corresnpoding to _id\r\n    */ \r\n    function getGranularityAdjFactor(bytes32 _id) public view  returns(int adjFactor)  {\r\n       uint requestID = bytesIDtoTellorID[_id];\r\n       adjFactor = tellorIdtoAdjFactor[requestID];\r\n       return adjFactor;\r\n    }\r\n\r\n    /**\r\n    * @dev Getter function of the bytes32 ADO standaraized _id based on the specified Tellor RequestID \r\n    * @param _requestId is Tellor's requestID\r\n    * @return _id is the bytes32 descriptor mapped to an existing Tellor's requestId\r\n    */ \r\n    function getBytesFromTellorID(uint _requestId) public view returns(bytes32 _id) {\r\n        return tellorIDtoBytesID[_requestId];\r\n    }\r\n\r\n}",
-  "sourcePath": "usingtellor\\contracts\\OracleIDDescriptions.sol",
+  "sourcePath": "usingtellor/contracts/OracleIDDescriptions.sol",
   "ast": {
     "absolutePath": "usingtellor/contracts/OracleIDDescriptions.sol",
     "exportedSymbols": {
@@ -992,7 +970,7 @@
                 }
               ]
             },
-            "documentation": "@dev This function allows the user to map the tellor's Id to it's _adjFactor and\nto match the standarized granularity\n@param _tellorId uint the tellor status\n@param _adjFactor is 1eN where N is the number of decimals to convert to ADO standard",
+            "documentation": "@dev This function allows the user to map the tellor's Id to it's _adjFactor and\r\nto match the standarized granularity\r\n@param _tellorId uint the tellor status\r\n@param _adjFactor is 1eN where N is the number of decimals to convert to ADO standard\r",
             "id": 194,
             "implemented": true,
             "kind": "function",
@@ -1438,7 +1416,7 @@
                 }
               ]
             },
-            "documentation": "@dev This function allows the user to map the tellor uint data status code to the standarized \nADO uint status code such as null, retreived etc...\n@param _tellorStatus uint the tellor status\n@param _status the ADO standarized uint status",
+            "documentation": "@dev This function allows the user to map the tellor uint data status code to the standarized \r\nADO uint status code such as null, retreived etc...\r\n@param _tellorStatus uint the tellor status\r\n@param _status the ADO standarized uint status\r",
             "id": 228,
             "implemented": true,
             "kind": "function",
@@ -1922,7 +1900,7 @@
                 }
               ]
             },
-            "documentation": "@dev Allows user to map the standarized bytes32 Id to a specific requestID from Tellor\nThe dev should ensure the _requestId exists otherwise request the data on Tellor to get a requestId\n@param _requestID is the existing Tellor RequestID \n@param _id is the descption of the ID in bytes ",
+            "documentation": "@dev Allows user to map the standarized bytes32 Id to a specific requestID from Tellor\r\nThe dev should ensure the _requestId exists otherwise request the data on Tellor to get a requestId\r\n@param _requestID is the existing Tellor RequestID \r\n@param _id is the descption of the ID in bytes \r",
             "id": 264,
             "implemented": true,
             "kind": "function",
@@ -2054,7 +2032,7 @@
                 }
               ]
             },
-            "documentation": "@dev Getter function for the uint Tellor status code from the specified uint ADO standarized status code\n@param _status the uint ADO standarized status\n@return _tellorStatus uint ",
+            "documentation": "@dev Getter function for the uint Tellor status code from the specified uint ADO standarized status code\r\n@param _status the uint ADO standarized status\r\n@return _tellorStatus uint \r",
             "id": 276,
             "implemented": true,
             "kind": "function",
@@ -2187,7 +2165,7 @@
                 }
               ]
             },
-            "documentation": "@dev Getter function of the uint ADO standarized status code from the specified Tellor uint status\n@param _tellorStatus uint \n@return _status the uint ADO standarized status",
+            "documentation": "@dev Getter function of the uint ADO standarized status code from the specified Tellor uint status\r\n@param _tellorStatus uint \r\n@return _status the uint ADO standarized status\r",
             "id": 288,
             "implemented": true,
             "kind": "function",
@@ -2320,7 +2298,7 @@
                 }
               ]
             },
-            "documentation": "@dev Getter function of the Tellor RequestID based on the specified bytes32 ADO standaraized _id\n@param _id is the bytes32 descriptor mapped to an existing Tellor's requestId\n@return _requestId is Tellor's requestID corresnpoding to _id",
+            "documentation": "@dev Getter function of the Tellor RequestID based on the specified bytes32 ADO standaraized _id\r\n@param _id is the bytes32 descriptor mapped to an existing Tellor's requestId\r\n@return _requestId is Tellor's requestID corresnpoding to _id\r",
             "id": 300,
             "implemented": true,
             "kind": "function",
@@ -2575,7 +2553,7 @@
                 }
               ]
             },
-            "documentation": "@dev Getter function of the Tellor RequestID based on the specified bytes32 ADO standaraized _id\n@param _id is the bytes32 descriptor mapped to an existing Tellor's requestId\n@return _requestId is Tellor's requestID corresnpoding to _id",
+            "documentation": "@dev Getter function of the Tellor RequestID based on the specified bytes32 ADO standaraized _id\r\n@param _id is the bytes32 descriptor mapped to an existing Tellor's requestId\r\n@return _requestId is Tellor's requestID corresnpoding to _id\r",
             "id": 322,
             "implemented": true,
             "kind": "function",
@@ -2708,7 +2686,7 @@
                 }
               ]
             },
-            "documentation": "@dev Getter function of the bytes32 ADO standaraized _id based on the specified Tellor RequestID \n@param _requestId is Tellor's requestID\n@return _id is the bytes32 descriptor mapped to an existing Tellor's requestId",
+            "documentation": "@dev Getter function of the bytes32 ADO standaraized _id based on the specified Tellor RequestID \r\n@param _requestId is Tellor's requestID\r\n@return _id is the bytes32 descriptor mapped to an existing Tellor's requestId\r",
             "id": 334,
             "implemented": true,
             "kind": "function",
@@ -3555,7 +3533,7 @@
                 }
               ]
             },
-            "documentation": "@dev This function allows the user to map the tellor's Id to it's _adjFactor and\nto match the standarized granularity\n@param _tellorId uint the tellor status\n@param _adjFactor is 1eN where N is the number of decimals to convert to ADO standard",
+            "documentation": "@dev This function allows the user to map the tellor's Id to it's _adjFactor and\r\nto match the standarized granularity\r\n@param _tellorId uint the tellor status\r\n@param _adjFactor is 1eN where N is the number of decimals to convert to ADO standard\r",
             "id": 194,
             "implemented": true,
             "kind": "function",
@@ -4001,7 +3979,7 @@
                 }
               ]
             },
-            "documentation": "@dev This function allows the user to map the tellor uint data status code to the standarized \nADO uint status code such as null, retreived etc...\n@param _tellorStatus uint the tellor status\n@param _status the ADO standarized uint status",
+            "documentation": "@dev This function allows the user to map the tellor uint data status code to the standarized \r\nADO uint status code such as null, retreived etc...\r\n@param _tellorStatus uint the tellor status\r\n@param _status the ADO standarized uint status\r",
             "id": 228,
             "implemented": true,
             "kind": "function",
@@ -4485,7 +4463,7 @@
                 }
               ]
             },
-            "documentation": "@dev Allows user to map the standarized bytes32 Id to a specific requestID from Tellor\nThe dev should ensure the _requestId exists otherwise request the data on Tellor to get a requestId\n@param _requestID is the existing Tellor RequestID \n@param _id is the descption of the ID in bytes ",
+            "documentation": "@dev Allows user to map the standarized bytes32 Id to a specific requestID from Tellor\r\nThe dev should ensure the _requestId exists otherwise request the data on Tellor to get a requestId\r\n@param _requestID is the existing Tellor RequestID \r\n@param _id is the descption of the ID in bytes \r",
             "id": 264,
             "implemented": true,
             "kind": "function",
@@ -4617,7 +4595,7 @@
                 }
               ]
             },
-            "documentation": "@dev Getter function for the uint Tellor status code from the specified uint ADO standarized status code\n@param _status the uint ADO standarized status\n@return _tellorStatus uint ",
+            "documentation": "@dev Getter function for the uint Tellor status code from the specified uint ADO standarized status code\r\n@param _status the uint ADO standarized status\r\n@return _tellorStatus uint \r",
             "id": 276,
             "implemented": true,
             "kind": "function",
@@ -4750,7 +4728,7 @@
                 }
               ]
             },
-            "documentation": "@dev Getter function of the uint ADO standarized status code from the specified Tellor uint status\n@param _tellorStatus uint \n@return _status the uint ADO standarized status",
+            "documentation": "@dev Getter function of the uint ADO standarized status code from the specified Tellor uint status\r\n@param _tellorStatus uint \r\n@return _status the uint ADO standarized status\r",
             "id": 288,
             "implemented": true,
             "kind": "function",
@@ -4883,7 +4861,7 @@
                 }
               ]
             },
-            "documentation": "@dev Getter function of the Tellor RequestID based on the specified bytes32 ADO standaraized _id\n@param _id is the bytes32 descriptor mapped to an existing Tellor's requestId\n@return _requestId is Tellor's requestID corresnpoding to _id",
+            "documentation": "@dev Getter function of the Tellor RequestID based on the specified bytes32 ADO standaraized _id\r\n@param _id is the bytes32 descriptor mapped to an existing Tellor's requestId\r\n@return _requestId is Tellor's requestID corresnpoding to _id\r",
             "id": 300,
             "implemented": true,
             "kind": "function",
@@ -5138,7 +5116,7 @@
                 }
               ]
             },
-            "documentation": "@dev Getter function of the Tellor RequestID based on the specified bytes32 ADO standaraized _id\n@param _id is the bytes32 descriptor mapped to an existing Tellor's requestId\n@return _requestId is Tellor's requestID corresnpoding to _id",
+            "documentation": "@dev Getter function of the Tellor RequestID based on the specified bytes32 ADO standaraized _id\r\n@param _id is the bytes32 descriptor mapped to an existing Tellor's requestId\r\n@return _requestId is Tellor's requestID corresnpoding to _id\r",
             "id": 322,
             "implemented": true,
             "kind": "function",
@@ -5271,7 +5249,7 @@
                 }
               ]
             },
-            "documentation": "@dev Getter function of the bytes32 ADO standaraized _id based on the specified Tellor RequestID \n@param _requestId is Tellor's requestID\n@return _id is the bytes32 descriptor mapped to an existing Tellor's requestId",
+            "documentation": "@dev Getter function of the bytes32 ADO standaraized _id based on the specified Tellor RequestID \r\n@param _requestId is Tellor's requestID\r\n@return _id is the bytes32 descriptor mapped to an existing Tellor's requestId\r",
             "id": 334,
             "implemented": true,
             "kind": "function",
@@ -5359,68 +5337,68 @@
   },
   "compiler": {
     "name": "solc",
-    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.0.23",
-  "updatedAt": "2020-07-08T18:39:34.024Z",
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2020-08-12T21:10:45.935Z",
   "devdoc": {
     "methods": {
       "defineTellorCodeToStatusCode(uint256,uint256)": {
-        "details": "This function allows the user to map the tellor uint data status code to the standarized  ADO uint status code such as null, retreived etc...",
+        "details": "This function allows the user to map the tellor uint data status code to the standarized \r ADO uint status code such as null, retreived etc...\r",
         "params": {
-          "_status": "the ADO standarized uint status",
-          "_tellorStatus": "uint the tellor status"
+          "_status": "the ADO standarized uint status\r",
+          "_tellorStatus": "uint the tellor status\r"
         }
       },
       "defineTellorIdToBytesID(uint256,bytes32)": {
-        "details": "Allows user to map the standarized bytes32 Id to a specific requestID from Tellor The dev should ensure the _requestId exists otherwise request the data on Tellor to get a requestId",
+        "details": "Allows user to map the standarized bytes32 Id to a specific requestID from Tellor\r The dev should ensure the _requestId exists otherwise request the data on Tellor to get a requestId\r",
         "params": {
-          "_id": "is the descption of the ID in bytes ",
-          "_requestID": "is the existing Tellor RequestID "
+          "_id": "is the descption of the ID in bytes \r",
+          "_requestID": "is the existing Tellor RequestID \r"
         }
       },
       "defineTellorIdtoAdjFactor(uint256,int256)": {
-        "details": "This function allows the user to map the tellor's Id to it's _adjFactor and to match the standarized granularity",
+        "details": "This function allows the user to map the tellor's Id to it's _adjFactor and\r to match the standarized granularity\r",
         "params": {
-          "_adjFactor": "is 1eN where N is the number of decimals to convert to ADO standard",
-          "_tellorId": "uint the tellor status"
+          "_adjFactor": "is 1eN where N is the number of decimals to convert to ADO standard\r",
+          "_tellorId": "uint the tellor status\r"
         }
       },
       "getBytesFromTellorID(uint256)": {
-        "details": "Getter function of the bytes32 ADO standaraized _id based on the specified Tellor RequestID ",
+        "details": "Getter function of the bytes32 ADO standaraized _id based on the specified Tellor RequestID \r",
         "params": {
-          "_requestId": "is Tellor's requestID"
+          "_requestId": "is Tellor's requestID\r"
         },
-        "return": "_id is the bytes32 descriptor mapped to an existing Tellor's requestId"
+        "return": "_id is the bytes32 descriptor mapped to an existing Tellor's requestId\r"
       },
       "getGranularityAdjFactor(bytes32)": {
-        "details": "Getter function of the Tellor RequestID based on the specified bytes32 ADO standaraized _id",
+        "details": "Getter function of the Tellor RequestID based on the specified bytes32 ADO standaraized _id\r",
         "params": {
-          "_id": "is the bytes32 descriptor mapped to an existing Tellor's requestId"
+          "_id": "is the bytes32 descriptor mapped to an existing Tellor's requestId\r"
         },
-        "return": "_requestId is Tellor's requestID corresnpoding to _id"
+        "return": "_requestId is Tellor's requestID corresnpoding to _id\r"
       },
       "getStatusFromTellorStatus(uint256)": {
-        "details": "Getter function of the uint ADO standarized status code from the specified Tellor uint status",
+        "details": "Getter function of the uint ADO standarized status code from the specified Tellor uint status\r",
         "params": {
-          "_tellorStatus": "uint "
+          "_tellorStatus": "uint \r"
         },
-        "return": "_status the uint ADO standarized status"
+        "return": "_status the uint ADO standarized status\r"
       },
       "getTellorIdFromBytes(bytes32)": {
-        "details": "Getter function of the Tellor RequestID based on the specified bytes32 ADO standaraized _id",
+        "details": "Getter function of the Tellor RequestID based on the specified bytes32 ADO standaraized _id\r",
         "params": {
-          "_id": "is the bytes32 descriptor mapped to an existing Tellor's requestId"
+          "_id": "is the bytes32 descriptor mapped to an existing Tellor's requestId\r"
         },
-        "return": "_requestId is Tellor's requestID corresnpoding to _id"
+        "return": "_requestId is Tellor's requestID corresnpoding to _id\r"
       },
       "getTellorStatusFromStatus(uint256)": {
-        "details": "Getter function for the uint Tellor status code from the specified uint ADO standarized status code",
+        "details": "Getter function for the uint Tellor status code from the specified uint ADO standarized status code\r",
         "params": {
-          "_status": "the uint ADO standarized status"
+          "_status": "the uint ADO standarized status\r"
         },
-        "return": "_tellorStatus uint "
+        "return": "_tellorStatus uint \r"
       }
     }
   },

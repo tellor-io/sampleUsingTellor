@@ -2,37 +2,11 @@
   "contractName": "UsingTellor",
   "abi": [
     {
-      "inputs": [
-        {
-          "internalType": "address payable",
-          "name": "_storage",
-          "type": "address"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "constructor"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": false,
-          "internalType": "address",
-          "name": "_descriptorSet",
-          "type": "address"
-        }
-      ],
-      "name": "NewDescriptorSet",
-      "type": "event"
-    },
-    {
       "constant": true,
       "inputs": [],
       "name": "oracleIDDescriptionsAddress",
       "outputs": [
         {
-          "internalType": "address",
           "name": "",
           "type": "address"
         }
@@ -47,7 +21,6 @@
       "name": "tellorStorageAddress",
       "outputs": [
         {
-          "internalType": "address payable",
           "name": "",
           "type": "address"
         }
@@ -57,10 +30,32 @@
       "type": "function"
     },
     {
+      "inputs": [
+        {
+          "name": "_storage",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "_descriptorSet",
+          "type": "address"
+        }
+      ],
+      "name": "NewDescriptorSet",
+      "type": "event"
+    },
+    {
       "constant": false,
       "inputs": [
         {
-          "internalType": "address",
           "name": "_oracleDescriptors",
           "type": "address"
         }
@@ -75,7 +70,6 @@
       "constant": true,
       "inputs": [
         {
-          "internalType": "uint256",
           "name": "_requestId",
           "type": "uint256"
         }
@@ -83,17 +77,14 @@
       "name": "getCurrentValue",
       "outputs": [
         {
-          "internalType": "bool",
           "name": "ifRetrieve",
           "type": "bool"
         },
         {
-          "internalType": "uint256",
           "name": "value",
           "type": "uint256"
         },
         {
-          "internalType": "uint256",
           "name": "_timestampRetrieved",
           "type": "uint256"
         }
@@ -106,7 +97,6 @@
       "constant": true,
       "inputs": [
         {
-          "internalType": "bytes32",
           "name": "_bytesId",
           "type": "bytes32"
         }
@@ -114,17 +104,14 @@
       "name": "valueFor",
       "outputs": [
         {
-          "internalType": "int256",
           "name": "value",
           "type": "int256"
         },
         {
-          "internalType": "uint256",
           "name": "timestamp",
           "type": "uint256"
         },
         {
-          "internalType": "uint256",
           "name": "status",
           "type": "uint256"
         }
@@ -137,22 +124,18 @@
       "constant": true,
       "inputs": [
         {
-          "internalType": "uint256",
           "name": "_requestId",
           "type": "uint256"
         },
         {
-          "internalType": "uint256",
           "name": "_timestamp",
           "type": "uint256"
         },
         {
-          "internalType": "uint256",
           "name": "_limit",
           "type": "uint256"
         },
         {
-          "internalType": "uint256",
           "name": "_offset",
           "type": "uint256"
         }
@@ -160,17 +143,14 @@
       "name": "getDataBefore",
       "outputs": [
         {
-          "internalType": "bool",
           "name": "_ifRetrieve",
           "type": "bool"
         },
         {
-          "internalType": "uint256",
           "name": "_value",
           "type": "uint256"
         },
         {
-          "internalType": "uint256",
           "name": "_timestampRetrieved",
           "type": "uint256"
         }
@@ -180,10 +160,10 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"_storage\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_descriptorSet\",\"type\":\"address\"}],\"name\":\"NewDescriptorSet\",\"type\":\"event\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_requestId\",\"type\":\"uint256\"}],\"name\":\"getCurrentValue\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"ifRetrieve\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_timestampRetrieved\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_requestId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_timestamp\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_limit\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_offset\",\"type\":\"uint256\"}],\"name\":\"getDataBefore\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"_ifRetrieve\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"_value\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_timestampRetrieved\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"oracleIDDescriptionsAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_oracleDescriptors\",\"type\":\"address\"}],\"name\":\"setOracleIDDescriptors\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"tellorStorageAddress\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_bytesId\",\"type\":\"bytes32\"}],\"name\":\"valueFor\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"value\",\"type\":\"int256\"},{\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"status\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"constructor\":{\"details\":\"the constructor sets the storage address and owner\",\"params\":{\"_storage\":\"is the TellorMaster address\"}},\"getCurrentValue(uint256)\":{\"details\":\"Allows the user to get the latest value for the requestId specified\",\"params\":{\"_requestId\":\"is the requestId to look up the value for\"},\"return\":\"bool true if it is able to retreive a value, the value, and the value's timestamp\"},\"getDataBefore(uint256,uint256,uint256,uint256)\":{\"details\":\"Allows the user to get the first value for the requestId before the specified timestamp\",\"params\":{\"_limit\":\"a limit on the number of values to look at\",\"_offset\":\"the number of values to go back before looking for data values\",\"_requestId\":\"is the requestId to look up the value for\",\"_timestamp\":\"before which to search for first verified value\"},\"return\":\"bool true if it is able to retreive a value, the value, and the value's timestamp\"},\"valueFor(bytes32)\":{\"details\":\"Allows the user to get the latest value for the requestId specified using the ADO specification for the standard inteface for price oracles\",\"params\":{\"_bytesId\":\"is the ADO standarized bytes32 price/key value pair identifier\"},\"return\":\"the timestamp, outcome or value/ and the status code (for retreived, null, etc...)\"}},\"title\":\"UserContract This contracts creates for easy integration to the Tellor System by allowing smart contracts to read data off Tellor\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"usingtellor/contracts/UsingTellor.sol\":\"UsingTellor\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"usingtellor/contracts/OracleIDDescriptions.sol\":{\"keccak256\":\"0xd64d287d85868142312486c9092fb988e78aabc7d0dcf32bec8ac5e0b142cec4\",\"urls\":[\"bzz-raw://0fd55670db352e998633e0475726ee2dac274bc330ba98d27f847a4b983ccf45\",\"dweb:/ipfs/QmaMe52m2oZWtMZLx1TA43ZW8VgzA9eRnqL7FM2j7wMCNX\"]},\"usingtellor/contracts/UsingTellor.sol\":{\"keccak256\":\"0x769ac984e2f301753ba496b24aad2f00d7d3e5a8fe2b79151a3d6255186af1a8\",\"urls\":[\"bzz-raw://9c4c4c5d45e5d414d895fcc3a0a1306df7f9143b33a09574ccf55eaf125e28b0\",\"dweb:/ipfs/QmP7JrqYDWXtaBbNQh9psmNpTaARYvoFaJXZGJshtTekd8\"]},\"usingtellor/contracts/interfaces/EIP2362Interface.sol\":{\"keccak256\":\"0xe934d1ed8c39cd8031f49ac06297f397556dbe0c82cfd7ba523b27b578c9588f\",\"urls\":[\"bzz-raw://528806f5f5c3a967a83c777a2c4d5bd165ca0569fecfa22bb9950bbbb73a2563\",\"dweb:/ipfs/Qman1PPYKg77h2N2KKjdwwoNw9967BWwanhn3rpvGKtWx8\"]},\"usingtellor/contracts/libraries/SafeMath.sol\":{\"keccak256\":\"0x62b9162f069143cfced67a222b466d7635f16dff23357c8ebdf83f133a94d38e\",\"urls\":[\"bzz-raw://37784d9a64bf6fcbde2c7dbafa0d32a6e44d63fd38505d6d0b98fdb199a64cd3\",\"dweb:/ipfs/QmZ5ogZNJ2efUQhTsrnG4T3oYUPn5PTjdbsyFsXGm7XUF1\"]},\"usingtellor/contracts/libraries/TellorDispute.sol\":{\"keccak256\":\"0x98255437065d395c075e710a49723c28358cc937720c262562b0772a38e39e49\",\"urls\":[\"bzz-raw://b598e276a177a93d239d34269e20f9c6001fa3b106318bc89eaa36f976a12f5a\",\"dweb:/ipfs/QmVuGmBEAvttaht32KCm8yDpoXBRSQmNGen9cXnyfmhHEC\"]},\"usingtellor/contracts/libraries/TellorGettersLibrary.sol\":{\"keccak256\":\"0xd52316b297624a2c00a68e92e5c57c4c50ccc6a4a1377d27d4e191f121e62035\",\"urls\":[\"bzz-raw://f49adf41f77d2ed927f540726826aab6c1fe98a009fe4a8b30de0413550d1f65\",\"dweb:/ipfs/QmWFTk2eUNaKSVCqFD1B2kTrEMXDAnoiCMhVqroLNsXRX8\"]},\"usingtellor/contracts/libraries/TellorLibrary.sol\":{\"keccak256\":\"0x941237e993b7ac107abe0b590184251c2ff28e5377692e0b49cb7eee623354a8\",\"urls\":[\"bzz-raw://354aa9c734b44c22898efe5af6690ac17f598511ebb1480882dc6f14ab7124f7\",\"dweb:/ipfs/QmZnW9iZ1jKyawrzJrYQbNHnUQFPW2dJLvC7FZ1EMZuEHr\"]},\"usingtellor/contracts/libraries/TellorStorage.sol\":{\"keccak256\":\"0x54607e8b302ce32f7311be680dbcfdbb6d1054d5091f47bcc0544237b42d483c\",\"urls\":[\"bzz-raw://67debccd700171ddcc9d0296928297ce29b2235fd07f943012ecde1051408328\",\"dweb:/ipfs/QmTat7EPRWCrBA7Ba98uKeHRqW8dhz798GUx2n7iGbWEfo\"]},\"usingtellor/contracts/libraries/TellorTransfer.sol\":{\"keccak256\":\"0xb9ad394b89a6314b8b8c1e331fcde96f85635a1428b7c79848a9b39d5879cbe4\",\"urls\":[\"bzz-raw://baf25c0ad41fd767d7e8c589ecb0566f4a9b41deb898cfadabec60387c316a8d\",\"dweb:/ipfs/QmT67VEbydbsKrszcjwNAG1dQHogzmgMxm7RHr38MPeYDQ\"]},\"usingtellor/contracts/libraries/Utilities.sol\":{\"keccak256\":\"0x70653719f7deda44ce81106e687ad70e56c09c70146e8e70d7ec732f83ba0d6a\",\"urls\":[\"bzz-raw://fb2e76fc7066016ac733f6b47350805bcfc952ea26cebe910c6ffc887c7f1f89\",\"dweb:/ipfs/QmbwLMbd1kPNon7pvhTtvaxuS19Gxebr9zjZzoR2bWAruW\"]},\"usingtellor/contracts/testContracts/Tellor.sol\":{\"keccak256\":\"0x6e556b1f9d7cc6ef53a4f91caac0acb2e7fba494120f15fda79c17e8f5e0a5c3\",\"urls\":[\"bzz-raw://1de5373b07df0c73dae2077802dd06905613520058869a9a6197c31f13186296\",\"dweb:/ipfs/QmfL6ddQYa21XmhDdU4qFd9EdMzZP1LQKp3msMkJQ5rk5g\"]},\"usingtellor/contracts/testContracts/TellorGetters.sol\":{\"keccak256\":\"0xd1295cbf80868844e5a68b527b91c8a420b5d9bbf6b2269525233931514c2361\",\"urls\":[\"bzz-raw://957e0744a36c1e8db72e7a2855bd2b991e256a098288fb16f3e9fafcbb8727e2\",\"dweb:/ipfs/QmUEZb5m9t624PEwdw2o2RKyYKbDUWkJwXpEriMDDhR4BA\"]},\"usingtellor/contracts/testContracts/TellorMaster.sol\":{\"keccak256\":\"0x40bef5591065126b3caffae521d576d6f0952c286d329e6179f53e17d83f817d\",\"urls\":[\"bzz-raw://810a43c04d6fa882e74f03823210ee8987619c9c12deacdc8f6a3a463229f120\",\"dweb:/ipfs/QmSrpLZGzqxAQhVWFFWNDKdykvD8AQWaHmfX4qwctDHjgd\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b50604051610d13380380610d138339818101604052602081101561003357600080fd5b8101908080519060200190929190505050806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff16600260006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050610c1d806100f66000396000f3fe608060405234801561001057600080fd5b50600436106100625760003560e01c80633fcad96414610067578063526366b4146100bb578063a802097314610105578063bb97f31d1461014f578063ddb2d6c514610193578063f78eea8314610205575b600080fd5b6100936004803603602081101561007d57600080fd5b8101908080359060200190929190505050610255565b6040518084151515158152602001838152602001828152602001935050505060405180910390f35b6100c3610275565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61010d61029b565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6101916004803603602081101561016557600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506102c0565b005b6101dd600480360360808110156101a957600080fd5b810190808035906020019092919080359060200190929190803590602001909291908035906020019092919050505061046c565b6040518084151515158152602001838152602001828152602001935050505060405180910390f35b6102316004803603602081101561021b57600080fd5b81019080803590602001909291905050506107ff565b60405180848152602001838152602001828152602001935050505060405180910390f35b600080600061026884426001600061046c565b9250925092509193909250565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600073ffffffffffffffffffffffffffffffffffffffff16600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1614610384576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252600b8152602001807f416c72656164792053657400000000000000000000000000000000000000000081525060200191505060405180910390fd5b80600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555080600360006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055507f5c6c85f31e475f047482022539bfe2a3941c15e582053b7420f22e5e8cc5d7f681604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390a150565b600080600080600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166346eee1c4896040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b1580156104e557600080fd5b505afa1580156104f9573d6000803e3d6000fd5b505050506040513d602081101561050f57600080fd5b8101908080519060200190929190505050905060008111156107e257600085820390505b86868303018110156107e0576000600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166377fbb6638b600185036040518363ffffffff1660e01b8152600401808381526020018281526020019250505060206040518083038186803b1580156105bf57600080fd5b505afa1580156105d3573d6000803e3d6000fd5b505050506040513d60208110156105e957600080fd5b8101908080519060200190929190505050905060008511801561060b57508881115b1561062257600185859550955095505050506107f5565b6000811180156106325750888111155b80156106f7575060001515600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16633df0777b8c846040518363ffffffff1660e01b8152600401808381526020018281526020019250505060206040518083038186803b1580156106b857600080fd5b505afa1580156106cc573d6000803e3d6000fd5b505050506040513d60208110156106e257600080fd5b81019080805190602001909291905050501515145b156107d257600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166393fa49158b836040518363ffffffff1660e01b8152600401808381526020018281526020019250505060206040518083038186803b15801561077757600080fd5b505afa15801561078b573d6000803e3d6000fd5b505050506040513d60208110156107a157600080fd5b81019080805190602001909291905050509450809350828214156107d157600185859550955095505050506107f5565b5b508080600101915050610533565b505b6000806000819150809050935093509350505b9450945094915050565b600080600080600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663c4e9e950866040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b15801561087857600080fd5b505afa15801561088c573d6000803e3d6000fd5b505050506040513d60208110156108a257600080fd5b810190808051906020019092919050505090506000600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166373b33318876040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b15801561092a57600080fd5b505afa15801561093e573d6000803e3d6000fd5b505050506040513d602081101561095457600080fd5b810190808051906020019092919050505090506000821115610b2057600080600061098385426001600061046c565b8093508194508295505050508215610a585783820281600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166367cfa3f860016040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b158015610a0d57600080fd5b505afa158015610a21573d6000803e3d6000fd5b505050506040513d6020811015610a3757600080fd5b81019080805190602001909291905050509750975097505050505050610be1565b600080600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166367cfa3f860026040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b158015610acf57600080fd5b505afa158015610ae3573d6000803e3d6000fd5b505050506040513d6020811015610af957600080fd5b81019080805190602001909291905050508292508191509750975097505050505050610be1565b600080600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166367cfa3f860006040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b158015610b9757600080fd5b505afa158015610bab573d6000803e3d6000fd5b505050506040513d6020811015610bc157600080fd5b810190808051906020019092919050505082925081915094509450945050505b919390925056fea265627a7a723158207cb4999f0a52f8450e7c64f8f10f6d9901b981c4736b844a8eddecd924a6ea2064736f6c63430005100032",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100625760003560e01c80633fcad96414610067578063526366b4146100bb578063a802097314610105578063bb97f31d1461014f578063ddb2d6c514610193578063f78eea8314610205575b600080fd5b6100936004803603602081101561007d57600080fd5b8101908080359060200190929190505050610255565b6040518084151515158152602001838152602001828152602001935050505060405180910390f35b6100c3610275565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61010d61029b565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6101916004803603602081101561016557600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506102c0565b005b6101dd600480360360808110156101a957600080fd5b810190808035906020019092919080359060200190929190803590602001909291908035906020019092919050505061046c565b6040518084151515158152602001838152602001828152602001935050505060405180910390f35b6102316004803603602081101561021b57600080fd5b81019080803590602001909291905050506107ff565b60405180848152602001838152602001828152602001935050505060405180910390f35b600080600061026884426001600061046c565b9250925092509193909250565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600073ffffffffffffffffffffffffffffffffffffffff16600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1614610384576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252600b8152602001807f416c72656164792053657400000000000000000000000000000000000000000081525060200191505060405180910390fd5b80600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555080600360006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055507f5c6c85f31e475f047482022539bfe2a3941c15e582053b7420f22e5e8cc5d7f681604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390a150565b600080600080600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166346eee1c4896040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b1580156104e557600080fd5b505afa1580156104f9573d6000803e3d6000fd5b505050506040513d602081101561050f57600080fd5b8101908080519060200190929190505050905060008111156107e257600085820390505b86868303018110156107e0576000600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166377fbb6638b600185036040518363ffffffff1660e01b8152600401808381526020018281526020019250505060206040518083038186803b1580156105bf57600080fd5b505afa1580156105d3573d6000803e3d6000fd5b505050506040513d60208110156105e957600080fd5b8101908080519060200190929190505050905060008511801561060b57508881115b1561062257600185859550955095505050506107f5565b6000811180156106325750888111155b80156106f7575060001515600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16633df0777b8c846040518363ffffffff1660e01b8152600401808381526020018281526020019250505060206040518083038186803b1580156106b857600080fd5b505afa1580156106cc573d6000803e3d6000fd5b505050506040513d60208110156106e257600080fd5b81019080805190602001909291905050501515145b156107d257600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166393fa49158b836040518363ffffffff1660e01b8152600401808381526020018281526020019250505060206040518083038186803b15801561077757600080fd5b505afa15801561078b573d6000803e3d6000fd5b505050506040513d60208110156107a157600080fd5b81019080805190602001909291905050509450809350828214156107d157600185859550955095505050506107f5565b5b508080600101915050610533565b505b6000806000819150809050935093509350505b9450945094915050565b600080600080600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663c4e9e950866040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b15801561087857600080fd5b505afa15801561088c573d6000803e3d6000fd5b505050506040513d60208110156108a257600080fd5b810190808051906020019092919050505090506000600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166373b33318876040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b15801561092a57600080fd5b505afa15801561093e573d6000803e3d6000fd5b505050506040513d602081101561095457600080fd5b810190808051906020019092919050505090506000821115610b2057600080600061098385426001600061046c565b8093508194508295505050508215610a585783820281600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166367cfa3f860016040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b158015610a0d57600080fd5b505afa158015610a21573d6000803e3d6000fd5b505050506040513d6020811015610a3757600080fd5b81019080805190602001909291905050509750975097505050505050610be1565b600080600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166367cfa3f860026040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b158015610acf57600080fd5b505afa158015610ae3573d6000803e3d6000fd5b505050506040513d6020811015610af957600080fd5b81019080805190602001909291905050508292508191509750975097505050505050610be1565b600080600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166367cfa3f860006040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b158015610b9757600080fd5b505afa158015610bab573d6000803e3d6000fd5b505050506040513d6020811015610bc157600080fd5b810190808051906020019092919050505082925081915094509450945050505b919390925056fea265627a7a723158207cb4999f0a52f8450e7c64f8f10f6d9901b981c4736b844a8eddecd924a6ea2064736f6c63430005100032",
-  "sourceMap": "488:4387:3:-;;;911:151;8:9:-1;5:2;;;30:1;27;20:12;5:2;911:151:3;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;911:151:3;;;;;;;;;;;;;;;;990:8;967:20;;:31;;;;;;;;;;;;;;;;;;1033:20;;;;;;;;;;;1009:8;;:45;;;;;;;;;;;;;;;;;;911:151;488:4387;;;;;;",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"_requestId\",\"type\":\"uint256\"}],\"name\":\"getCurrentValue\",\"outputs\":[{\"name\":\"ifRetrieve\",\"type\":\"bool\"},{\"name\":\"value\",\"type\":\"uint256\"},{\"name\":\"_timestampRetrieved\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"oracleIDDescriptionsAddress\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"tellorStorageAddress\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_oracleDescriptors\",\"type\":\"address\"}],\"name\":\"setOracleIDDescriptors\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_requestId\",\"type\":\"uint256\"},{\"name\":\"_timestamp\",\"type\":\"uint256\"},{\"name\":\"_limit\",\"type\":\"uint256\"},{\"name\":\"_offset\",\"type\":\"uint256\"}],\"name\":\"getDataBefore\",\"outputs\":[{\"name\":\"_ifRetrieve\",\"type\":\"bool\"},{\"name\":\"_value\",\"type\":\"uint256\"},{\"name\":\"_timestampRetrieved\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_bytesId\",\"type\":\"bytes32\"}],\"name\":\"valueFor\",\"outputs\":[{\"name\":\"value\",\"type\":\"int256\"},{\"name\":\"timestamp\",\"type\":\"uint256\"},{\"name\":\"status\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"name\":\"_storage\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_descriptorSet\",\"type\":\"address\"}],\"name\":\"NewDescriptorSet\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{\"constructor\":{\"details\":\"the constructor sets the storage address and owner\\r\",\"params\":{\"_storage\":\"is the TellorMaster address\\r\"}},\"getCurrentValue(uint256)\":{\"details\":\"Allows the user to get the latest value for the requestId specified\\r\",\"params\":{\"_requestId\":\"is the requestId to look up the value for\\r\"},\"return\":\"bool true if it is able to retreive a value, the value, and the value's timestamp\\r\"},\"getDataBefore(uint256,uint256,uint256,uint256)\":{\"details\":\"Allows the user to get the first value for the requestId before the specified timestamp\\r\",\"params\":{\"_limit\":\"a limit on the number of values to look at\\r\",\"_offset\":\"the number of values to go back before looking for data values\\r\",\"_requestId\":\"is the requestId to look up the value for\\r\",\"_timestamp\":\"before which to search for first verified value\\r\"},\"return\":\"bool true if it is able to retreive a value, the value, and the value's timestamp\\r\"},\"valueFor(bytes32)\":{\"details\":\"Allows the user to get the latest value for the requestId specified using the\\r ADO specification for the standard inteface for price oracles\\r\",\"params\":{\"_bytesId\":\"is the ADO standarized bytes32 price/key value pair identifier\\r\"},\"return\":\"the timestamp, outcome or value/ and the status code (for retreived, null, etc...)\\r\"}},\"title\":\"UserContract\\r This contracts creates for easy integration to the Tellor System\\r by allowing smart contracts to read data off Tellor\\r\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"usingtellor/contracts/UsingTellor.sol\":\"UsingTellor\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"usingtellor/contracts/OracleIDDescriptions.sol\":{\"keccak256\":\"0xd64d287d85868142312486c9092fb988e78aabc7d0dcf32bec8ac5e0b142cec4\",\"urls\":[\"bzzr://95623e6a7dfafa146b3d7d4eb96493abf967d6cc482e88fb4f13546ecbe3dcda\"]},\"usingtellor/contracts/UsingTellor.sol\":{\"keccak256\":\"0x769ac984e2f301753ba496b24aad2f00d7d3e5a8fe2b79151a3d6255186af1a8\",\"urls\":[\"bzzr://08947ed5981661b2c89065adf8739d5f10fa7b63322fca40a10d7b2b99c4e55e\"]},\"usingtellor/contracts/interfaces/EIP2362Interface.sol\":{\"keccak256\":\"0xe934d1ed8c39cd8031f49ac06297f397556dbe0c82cfd7ba523b27b578c9588f\",\"urls\":[\"bzzr://734510a13f375fea0e4a264ab81e8c30d43dfc9bc354489d2cd82b877210208c\"]},\"usingtellor/contracts/libraries/SafeMath.sol\":{\"keccak256\":\"0x62b9162f069143cfced67a222b466d7635f16dff23357c8ebdf83f133a94d38e\",\"urls\":[\"bzzr://573395652f31cb705d2ade016c073fda6bedde50a5843820c809befe7295ef6a\"]},\"usingtellor/contracts/libraries/TellorDispute.sol\":{\"keccak256\":\"0x98255437065d395c075e710a49723c28358cc937720c262562b0772a38e39e49\",\"urls\":[\"bzzr://127f03fcadcca8e6f4c17d2050029a8129eea741f3d73a905622765d65721b7b\"]},\"usingtellor/contracts/libraries/TellorGettersLibrary.sol\":{\"keccak256\":\"0xd52316b297624a2c00a68e92e5c57c4c50ccc6a4a1377d27d4e191f121e62035\",\"urls\":[\"bzzr://09ffb18a64e4e8fe8bb0a411b0654301e797ea8afd3fe85b1595a6e6aa522338\"]},\"usingtellor/contracts/libraries/TellorLibrary.sol\":{\"keccak256\":\"0x941237e993b7ac107abe0b590184251c2ff28e5377692e0b49cb7eee623354a8\",\"urls\":[\"bzzr://6f44c27a88534da9701584fcb8432389ff39a73a89ad72c0e33f6ee11f990cd4\"]},\"usingtellor/contracts/libraries/TellorStorage.sol\":{\"keccak256\":\"0x54607e8b302ce32f7311be680dbcfdbb6d1054d5091f47bcc0544237b42d483c\",\"urls\":[\"bzzr://263f2237829b260b0694f973f229781be7e1e09e30617b40e88959736f7b0f2a\"]},\"usingtellor/contracts/libraries/TellorTransfer.sol\":{\"keccak256\":\"0xb9ad394b89a6314b8b8c1e331fcde96f85635a1428b7c79848a9b39d5879cbe4\",\"urls\":[\"bzzr://5c84c97c0b0fd4b9577ff0e3377335675f84e7febe01e387afdb54ef9c2a3b08\"]},\"usingtellor/contracts/libraries/Utilities.sol\":{\"keccak256\":\"0x70653719f7deda44ce81106e687ad70e56c09c70146e8e70d7ec732f83ba0d6a\",\"urls\":[\"bzzr://0b7a6090a7dd244e28ee3ca27043a88b501854eb17eadc97f1551ff84e2c7202\"]},\"usingtellor/contracts/testContracts/Tellor.sol\":{\"keccak256\":\"0x6e556b1f9d7cc6ef53a4f91caac0acb2e7fba494120f15fda79c17e8f5e0a5c3\",\"urls\":[\"bzzr://352ba4d4980c84628e7fd2ae39d10ad8236efb476cdf0b1d9b2f2ee59656c5d7\"]},\"usingtellor/contracts/testContracts/TellorGetters.sol\":{\"keccak256\":\"0xd1295cbf80868844e5a68b527b91c8a420b5d9bbf6b2269525233931514c2361\",\"urls\":[\"bzzr://0b08dd04532aecc3dab067e456cdb1311ac5386d8a445e0725b2c5c0acfaea6c\"]},\"usingtellor/contracts/testContracts/TellorMaster.sol\":{\"keccak256\":\"0x40bef5591065126b3caffae521d576d6f0952c286d329e6179f53e17d83f817d\",\"urls\":[\"bzzr://ec55bcea631a5495c110775eee3bf8e028d6a2f987b26bd2c59504b98ec9b8c7\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50604051602080610d078339810180604052602081101561003057600080fd5b8101908080519060200190929190505050806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff16600260006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050610c14806100f36000396000f3fe608060405234801561001057600080fd5b50600436106100625760003560e01c80633fcad96414610067578063526366b4146100bb578063a802097314610105578063bb97f31d1461014f578063ddb2d6c514610193578063f78eea8314610205575b600080fd5b6100936004803603602081101561007d57600080fd5b8101908080359060200190929190505050610255565b6040518084151515158152602001838152602001828152602001935050505060405180910390f35b6100c3610275565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61010d61029b565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6101916004803603602081101561016557600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506102c0565b005b6101dd600480360360808110156101a957600080fd5b810190808035906020019092919080359060200190929190803590602001909291908035906020019092919050505061046c565b6040518084151515158152602001838152602001828152602001935050505060405180910390f35b6102316004803603602081101561021b57600080fd5b81019080803590602001909291905050506107ff565b60405180848152602001838152602001828152602001935050505060405180910390f35b600080600061026884426001600061046c565b9250925092509193909250565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600073ffffffffffffffffffffffffffffffffffffffff16600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1614610384576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252600b8152602001807f416c72656164792053657400000000000000000000000000000000000000000081525060200191505060405180910390fd5b80600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555080600360006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055507f5c6c85f31e475f047482022539bfe2a3941c15e582053b7420f22e5e8cc5d7f681604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390a150565b600080600080600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166346eee1c4896040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b1580156104e557600080fd5b505afa1580156104f9573d6000803e3d6000fd5b505050506040513d602081101561050f57600080fd5b8101908080519060200190929190505050905060008111156107e257600085820390505b86868303018110156107e0576000600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166377fbb6638b600185036040518363ffffffff1660e01b8152600401808381526020018281526020019250505060206040518083038186803b1580156105bf57600080fd5b505afa1580156105d3573d6000803e3d6000fd5b505050506040513d60208110156105e957600080fd5b8101908080519060200190929190505050905060008511801561060b57508881115b1561062257600185859550955095505050506107f5565b6000811180156106325750888111155b80156106f7575060001515600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16633df0777b8c846040518363ffffffff1660e01b8152600401808381526020018281526020019250505060206040518083038186803b1580156106b857600080fd5b505afa1580156106cc573d6000803e3d6000fd5b505050506040513d60208110156106e257600080fd5b81019080805190602001909291905050501515145b156107d257600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166393fa49158b836040518363ffffffff1660e01b8152600401808381526020018281526020019250505060206040518083038186803b15801561077757600080fd5b505afa15801561078b573d6000803e3d6000fd5b505050506040513d60208110156107a157600080fd5b81019080805190602001909291905050509450809350828214156107d157600185859550955095505050506107f5565b5b508080600101915050610533565b505b6000806000819150809050935093509350505b9450945094915050565b600080600080600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663c4e9e950866040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b15801561087857600080fd5b505afa15801561088c573d6000803e3d6000fd5b505050506040513d60208110156108a257600080fd5b810190808051906020019092919050505090506000600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166373b33318876040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b15801561092a57600080fd5b505afa15801561093e573d6000803e3d6000fd5b505050506040513d602081101561095457600080fd5b810190808051906020019092919050505090506000821115610b2057600080600061098385426001600061046c565b8093508194508295505050508215610a585783820281600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166367cfa3f860016040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b158015610a0d57600080fd5b505afa158015610a21573d6000803e3d6000fd5b505050506040513d6020811015610a3757600080fd5b81019080805190602001909291905050509750975097505050505050610be1565b600080600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166367cfa3f860026040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b158015610acf57600080fd5b505afa158015610ae3573d6000803e3d6000fd5b505050506040513d6020811015610af957600080fd5b81019080805190602001909291905050508292508191509750975097505050505050610be1565b600080600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166367cfa3f860006040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b158015610b9757600080fd5b505afa158015610bab573d6000803e3d6000fd5b505050506040513d6020811015610bc157600080fd5b810190808051906020019092919050505082925081915094509450945050505b919390925056fea165627a7a72305820f6a74b86bcec1bfa6ca57cd3ef451cc46cb9bcc1a559f7d7a6690038514e6a1f0029",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100625760003560e01c80633fcad96414610067578063526366b4146100bb578063a802097314610105578063bb97f31d1461014f578063ddb2d6c514610193578063f78eea8314610205575b600080fd5b6100936004803603602081101561007d57600080fd5b8101908080359060200190929190505050610255565b6040518084151515158152602001838152602001828152602001935050505060405180910390f35b6100c3610275565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61010d61029b565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6101916004803603602081101561016557600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506102c0565b005b6101dd600480360360808110156101a957600080fd5b810190808035906020019092919080359060200190929190803590602001909291908035906020019092919050505061046c565b6040518084151515158152602001838152602001828152602001935050505060405180910390f35b6102316004803603602081101561021b57600080fd5b81019080803590602001909291905050506107ff565b60405180848152602001838152602001828152602001935050505060405180910390f35b600080600061026884426001600061046c565b9250925092509193909250565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600073ffffffffffffffffffffffffffffffffffffffff16600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1614610384576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252600b8152602001807f416c72656164792053657400000000000000000000000000000000000000000081525060200191505060405180910390fd5b80600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555080600360006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055507f5c6c85f31e475f047482022539bfe2a3941c15e582053b7420f22e5e8cc5d7f681604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390a150565b600080600080600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166346eee1c4896040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b1580156104e557600080fd5b505afa1580156104f9573d6000803e3d6000fd5b505050506040513d602081101561050f57600080fd5b8101908080519060200190929190505050905060008111156107e257600085820390505b86868303018110156107e0576000600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166377fbb6638b600185036040518363ffffffff1660e01b8152600401808381526020018281526020019250505060206040518083038186803b1580156105bf57600080fd5b505afa1580156105d3573d6000803e3d6000fd5b505050506040513d60208110156105e957600080fd5b8101908080519060200190929190505050905060008511801561060b57508881115b1561062257600185859550955095505050506107f5565b6000811180156106325750888111155b80156106f7575060001515600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16633df0777b8c846040518363ffffffff1660e01b8152600401808381526020018281526020019250505060206040518083038186803b1580156106b857600080fd5b505afa1580156106cc573d6000803e3d6000fd5b505050506040513d60208110156106e257600080fd5b81019080805190602001909291905050501515145b156107d257600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166393fa49158b836040518363ffffffff1660e01b8152600401808381526020018281526020019250505060206040518083038186803b15801561077757600080fd5b505afa15801561078b573d6000803e3d6000fd5b505050506040513d60208110156107a157600080fd5b81019080805190602001909291905050509450809350828214156107d157600185859550955095505050506107f5565b5b508080600101915050610533565b505b6000806000819150809050935093509350505b9450945094915050565b600080600080600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663c4e9e950866040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b15801561087857600080fd5b505afa15801561088c573d6000803e3d6000fd5b505050506040513d60208110156108a257600080fd5b810190808051906020019092919050505090506000600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166373b33318876040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b15801561092a57600080fd5b505afa15801561093e573d6000803e3d6000fd5b505050506040513d602081101561095457600080fd5b810190808051906020019092919050505090506000821115610b2057600080600061098385426001600061046c565b8093508194508295505050508215610a585783820281600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166367cfa3f860016040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b158015610a0d57600080fd5b505afa158015610a21573d6000803e3d6000fd5b505050506040513d6020811015610a3757600080fd5b81019080805190602001909291905050509750975097505050505050610be1565b600080600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166367cfa3f860026040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b158015610acf57600080fd5b505afa158015610ae3573d6000803e3d6000fd5b505050506040513d6020811015610af957600080fd5b81019080805190602001909291905050508292508191509750975097505050505050610be1565b600080600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166367cfa3f860006040518263ffffffff1660e01b81526004018082815260200191505060206040518083038186803b158015610b9757600080fd5b505afa158015610bab573d6000803e3d6000fd5b505050506040513d6020811015610bc157600080fd5b810190808051906020019092919050505082925081915094509450945050505b919390925056fea165627a7a72305820f6a74b86bcec1bfa6ca57cd3ef451cc46cb9bcc1a559f7d7a6690038514e6a1f0029",
+  "sourceMap": "488:4387:3:-;;;911:151;8:9:-1;5:2;;;30:1;27;20:12;5:2;911:151:3;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;911:151:3;;;;;;;;;;;;;;;;990:8;967:20;;:31;;;;;;;;;;;;;;;;;;1033:20;;;;;;;;;;;1009:8;;:45;;;;;;;;;;;;;;;;;;911:151;488:4387;;;;;;",
   "deployedSourceMap": "488:4387:3:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;488:4387:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1932:186;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1932:186:3;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;585:42;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;535:43;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1333:330;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1333:330:3;;;;;;;;;;;;;;;;;;;:::i;:::-;;3792:1080;;;;;;13:3:-1;8;5:12;2:2;;;30:1;27;20:12;2:2;3792:1080:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2486:795;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;2486:795:3;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1932:186;1998:15;2015:13;2030:27;2077:33;2091:10;2102:3;2106:1;2108;2077:13;:33::i;:::-;2070:40;;;;;;1932:186;;;;;:::o;585:42::-;;;;;;;;;;;;;:::o;535:43::-;;;;;;;;;;;;;:::o;1333:330::-;1460:1;1421:41;;:27;;;;;;;;;;;:41;;;1413:65;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1519:18;1489:27;;:48;;;;;;;;;;;;;;;;;;1584:18;1548:12;;:55;;;;;;;;;;;;;;;;;;1619:36;1636:18;1619:36;;;;;;;;;;;;;;;;;;;;;;1333:330;:::o;3792:1080::-;3936:16;3954:14;3970:27;4015:14;4032:8;;;;;;;;;;;:36;;;4069:10;4032:48;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;4032:48:3;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;4032:48:3;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;4032:48:3;;;;;;;;;;;;;;;;4015:65;;4104:1;4095:6;:10;4091:743;;;4127:9;4148:7;4139:6;:16;4127:28;;4122:701;4179:6;4169:7;4161:6;:15;:24;4157:1;:28;4122:701;;;4211:13;4227:8;;;;;;;;;;;:40;;;4268:10;4284:1;4280;:5;4227:59;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;4227:59:3;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;4227:59:3;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;4227:59:3;;;;;;;;;;;;;;;;4211:75;;4317:1;4308:6;:10;:32;;;;;4330:10;4322:5;:18;4308:32;4305:503;;;4371:4;4377:6;4385:19;4364:41;;;;;;;;;;;4305:503;4460:1;4452:5;:9;:32;;;;;4474:10;4465:5;:19;;4452:32;:83;;;;;4530:5;4488:47;;:8;;;;;;;;;;;:20;;;4509:10;4520:5;4488:38;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;4488:38:3;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;4488:38:3;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;4488:38:3;;;;;;;;;;;;;;;;:47;;;4452:83;4448:360;;;4569:8;;;;;;;;;;;:21;;;4591:10;4603:5;4569:40;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;4569:40:3;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;4569:40:3;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;4569:40:3;;;;;;;;;;;;;;;;4560:49;;4654:5;4632:27;;4690:6;4685:1;:11;4682:107;;;4731:4;4737:6;4745:19;4724:41;;;;;;;;;;;4682:107;4448:360;4122:701;4187:3;;;;;;;4122:701;;;;4091:743;4852:5;4859:1;4862;4844:20;;;;;;;;;;;;;3792:1080;;;;;;;;;:::o;2486:795::-;2545:9;2556:17;2575:11;2599:8;2610:12;;;;;;;;;;;:33;;;2644:8;2610:43;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;2610:43:3;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;2610:43:3;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;2610:43:3;;;;;;;;;;;;;;;;2599:54;;2664:5;2672:12;;;;;;;;;;;:36;;;2709:8;2672:46;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;2672:46:3;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;2672:46:3;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;2672:46:3;;;;;;;;;;;;;;;;2664:54;;2739:1;2733:3;:7;2729:478;;;2756:12;2783:22;2820:27;2909:26;2923:3;2927;2931:1;2933;2909:13;:26::i;:::-;2862:73;;;;;;;;;;;;2953:7;2950:246;;;3008:1;2992:14;2988:21;3010:19;3031:12;;;;;;;;;;;:38;;;3070:1;3031:41;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;3031:41:3;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;3031:41:3;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;3031:41:3;;;;;;;;;;;;;;;;2980:93;;;;;;;;;;;;;2950:246;3134:1;3136;3138:12;;;;;;;;;;;:38;;;3177:1;3138:41;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;3138:41:3;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;3138:41:3;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;3138:41:3;;;;;;;;;;;;;;;;3126:54;;;;;;;;;;;;;;;;;;;2729:478;3225:1;3228;3231:12;;;;;;;;;;;:38;;;3270:1;3231:41;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;3231:41:3;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;3231:41:3;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;3231:41:3;;;;;;;;;;;;;;;;3217:56;;;;;;;;;;;;;;2486:795;;;;;;:::o",
   "source": "pragma solidity ^0.5.0;\r\n\r\nimport \"../contracts/testContracts/TellorMaster.sol\";\r\nimport \"../contracts/libraries/TellorLibrary.sol\";//imported for testing ease\r\nimport \"../contracts/testContracts/Tellor.sol\";//imported for testing ease\r\nimport \"./OracleIDDescriptions.sol\";\r\nimport \"../contracts/interfaces/EIP2362Interface.sol\";\r\n\r\n/**\r\n* @title UserContract\r\n* This contracts creates for easy integration to the Tellor System\r\n* by allowing smart contracts to read data off Tellor\r\n*/\r\ncontract UsingTellor is EIP2362Interface{\r\n    address payable public tellorStorageAddress;\r\n    address public oracleIDDescriptionsAddress;\r\n    TellorMaster _tellorm;\r\n    OracleIDDescriptions descriptions;\r\n\r\n    event NewDescriptorSet(address _descriptorSet);\r\n\r\n    /*Constructor*/\r\n    /**\r\n    * @dev the constructor sets the storage address and owner\r\n    * @param _storage is the TellorMaster address\r\n    */\r\n    constructor(address payable _storage) public {\r\n        tellorStorageAddress = _storage;\r\n        _tellorm = TellorMaster(tellorStorageAddress);\r\n    }\r\n\r\n    /*Functions*/\r\n    /*\r\n    * @dev Allows the owner to set the address for the oracleID descriptors\r\n    * used by the ADO members for price key value pairs standarization\r\n    * _oracleDescriptors is the address for the OracleIDDescriptions contract\r\n    */\r\n    function setOracleIDDescriptors(address _oracleDescriptors) external {\r\n        require(oracleIDDescriptionsAddress == address(0), \"Already Set\");\r\n        oracleIDDescriptionsAddress = _oracleDescriptors;\r\n        descriptions = OracleIDDescriptions(_oracleDescriptors);\r\n        emit NewDescriptorSet(_oracleDescriptors);\r\n    }\r\n\r\n    /**\r\n    * @dev Allows the user to get the latest value for the requestId specified\r\n    * @param _requestId is the requestId to look up the value for\r\n    * @return bool true if it is able to retreive a value, the value, and the value's timestamp\r\n    */\r\n    function getCurrentValue(uint256 _requestId) public view returns (bool ifRetrieve, uint256 value, uint256 _timestampRetrieved) {\r\n        return getDataBefore(_requestId,now,1,0);\r\n    }\r\n\r\n    /**\r\n    * @dev Allows the user to get the latest value for the requestId specified using the\r\n    * ADO specification for the standard inteface for price oracles\r\n    * @param _bytesId is the ADO standarized bytes32 price/key value pair identifier\r\n    * @return the timestamp, outcome or value/ and the status code (for retreived, null, etc...)\r\n    */\r\n    function valueFor(bytes32 _bytesId) external view returns (int value, uint256 timestamp, uint status) {\r\n        uint _id = descriptions.getTellorIdFromBytes(_bytesId);\r\n        int n = descriptions.getGranularityAdjFactor(_bytesId);\r\n        if (_id > 0){\r\n            bool _didGet;\r\n            uint256 _returnedValue;\r\n            uint256 _timestampRetrieved;\r\n            (_didGet,_returnedValue,_timestampRetrieved) = getDataBefore(_id,now,1,0);\r\n            if(_didGet){\r\n                return (int(_returnedValue)*n,_timestampRetrieved, descriptions.getStatusFromTellorStatus(1));\r\n            }\r\n            else{\r\n                return (0,0,descriptions.getStatusFromTellorStatus(2));\r\n            }\r\n        }\r\n        return (0, 0, descriptions.getStatusFromTellorStatus(0));\r\n    }\r\n\r\n    /**\r\n    * @dev Allows the user to get the first value for the requestId before the specified timestamp\r\n    * @param _requestId is the requestId to look up the value for\r\n    * @param _timestamp before which to search for first verified value\r\n    * @param _limit a limit on the number of values to look at\r\n    * @param _offset the number of values to go back before looking for data values\r\n    * @return bool true if it is able to retreive a value, the value, and the value's timestamp\r\n    */\r\n    function getDataBefore(uint256 _requestId, uint256 _timestamp, uint256 _limit, uint256 _offset)\r\n        public\r\n        view\r\n        returns (bool _ifRetrieve, uint256 _value, uint256 _timestampRetrieved)\r\n    {\r\n        uint256 _count = _tellorm.getNewValueCountbyRequestId(_requestId);\r\n        if (_count > 0) {\r\n            for (uint256 i = _count - _offset; i < _count -_offset + _limit; i++) {\r\n                uint256 _time = _tellorm.getTimestampbyRequestIDandIndex(_requestId, i - 1);\r\n                if(_value > 0 && _time > _timestamp){\r\n                    return(true, _value, _timestampRetrieved);\r\n                }\r\n                else if (_time > 0 && _time <= _timestamp && _tellorm.isInDispute(_requestId,_time) == false) {\r\n                    _value = _tellorm.retrieveData(_requestId, _time);\r\n                    _timestampRetrieved = _time;\r\n                    if(i == _count){\r\n                        return(true, _value, _timestampRetrieved);\r\n                    }\r\n                }\r\n            }\r\n        }\r\n        return (false, 0, 0);\r\n    }\r\n}\r\n",
   "sourcePath": "usingtellor/contracts/UsingTellor.sol",
@@ -288,7 +268,7 @@
           635
         ],
         "contractKind": "contract",
-        "documentation": "@title UserContract\nThis contracts creates for easy integration to the Tellor System\nby allowing smart contracts to read data off Tellor",
+        "documentation": "@title UserContract\r\nThis contracts creates for easy integration to the Tellor System\r\nby allowing smart contracts to read data off Tellor\r",
         "fullyImplemented": true,
         "id": 621,
         "linearizedBaseContracts": [
@@ -587,7 +567,7 @@
                 }
               ]
             },
-            "documentation": "@dev the constructor sets the storage address and owner\n@param _storage is the TellorMaster address",
+            "documentation": "@dev the constructor sets the storage address and owner\r\n@param _storage is the TellorMaster address\r",
             "id": 372,
             "implemented": true,
             "kind": "constructor",
@@ -1161,7 +1141,7 @@
                 }
               ]
             },
-            "documentation": "@dev Allows the user to get the latest value for the requestId specified\n@param _requestId is the requestId to look up the value for\n@return bool true if it is able to retreive a value, the value, and the value's timestamp",
+            "documentation": "@dev Allows the user to get the latest value for the requestId specified\r\n@param _requestId is the requestId to look up the value for\r\n@return bool true if it is able to retreive a value, the value, and the value's timestamp\r",
             "id": 420,
             "implemented": true,
             "kind": "function",
@@ -2341,7 +2321,7 @@
                 }
               ]
             },
-            "documentation": "@dev Allows the user to get the latest value for the requestId specified using the\nADO specification for the standard inteface for price oracles\n@param _bytesId is the ADO standarized bytes32 price/key value pair identifier\n@return the timestamp, outcome or value/ and the status code (for retreived, null, etc...)",
+            "documentation": "@dev Allows the user to get the latest value for the requestId specified using the\r\nADO specification for the standard inteface for price oracles\r\n@param _bytesId is the ADO standarized bytes32 price/key value pair identifier\r\n@return the timestamp, outcome or value/ and the status code (for retreived, null, etc...)\r",
             "id": 504,
             "implemented": true,
             "kind": "function",
@@ -3856,7 +3836,7 @@
                 }
               ]
             },
-            "documentation": "@dev Allows the user to get the first value for the requestId before the specified timestamp\n@param _requestId is the requestId to look up the value for\n@param _timestamp before which to search for first verified value\n@param _limit a limit on the number of values to look at\n@param _offset the number of values to go back before looking for data values\n@return bool true if it is able to retreive a value, the value, and the value's timestamp",
+            "documentation": "@dev Allows the user to get the first value for the requestId before the specified timestamp\r\n@param _requestId is the requestId to look up the value for\r\n@param _timestamp before which to search for first verified value\r\n@param _limit a limit on the number of values to look at\r\n@param _offset the number of values to go back before looking for data values\r\n@return bool true if it is able to retreive a value, the value, and the value's timestamp\r",
             "id": 620,
             "implemented": true,
             "kind": "function",
@@ -4173,7 +4153,7 @@
           635
         ],
         "contractKind": "contract",
-        "documentation": "@title UserContract\nThis contracts creates for easy integration to the Tellor System\nby allowing smart contracts to read data off Tellor",
+        "documentation": "@title UserContract\r\nThis contracts creates for easy integration to the Tellor System\r\nby allowing smart contracts to read data off Tellor\r",
         "fullyImplemented": true,
         "id": 621,
         "linearizedBaseContracts": [
@@ -4472,7 +4452,7 @@
                 }
               ]
             },
-            "documentation": "@dev the constructor sets the storage address and owner\n@param _storage is the TellorMaster address",
+            "documentation": "@dev the constructor sets the storage address and owner\r\n@param _storage is the TellorMaster address\r",
             "id": 372,
             "implemented": true,
             "kind": "constructor",
@@ -5046,7 +5026,7 @@
                 }
               ]
             },
-            "documentation": "@dev Allows the user to get the latest value for the requestId specified\n@param _requestId is the requestId to look up the value for\n@return bool true if it is able to retreive a value, the value, and the value's timestamp",
+            "documentation": "@dev Allows the user to get the latest value for the requestId specified\r\n@param _requestId is the requestId to look up the value for\r\n@return bool true if it is able to retreive a value, the value, and the value's timestamp\r",
             "id": 420,
             "implemented": true,
             "kind": "function",
@@ -6226,7 +6206,7 @@
                 }
               ]
             },
-            "documentation": "@dev Allows the user to get the latest value for the requestId specified using the\nADO specification for the standard inteface for price oracles\n@param _bytesId is the ADO standarized bytes32 price/key value pair identifier\n@return the timestamp, outcome or value/ and the status code (for retreived, null, etc...)",
+            "documentation": "@dev Allows the user to get the latest value for the requestId specified using the\r\nADO specification for the standard inteface for price oracles\r\n@param _bytesId is the ADO standarized bytes32 price/key value pair identifier\r\n@return the timestamp, outcome or value/ and the status code (for retreived, null, etc...)\r",
             "id": 504,
             "implemented": true,
             "kind": "function",
@@ -7741,7 +7721,7 @@
                 }
               ]
             },
-            "documentation": "@dev Allows the user to get the first value for the requestId before the specified timestamp\n@param _requestId is the requestId to look up the value for\n@param _timestamp before which to search for first verified value\n@param _limit a limit on the number of values to look at\n@param _offset the number of values to go back before looking for data values\n@return bool true if it is able to retreive a value, the value, and the value's timestamp",
+            "documentation": "@dev Allows the user to get the first value for the requestId before the specified timestamp\r\n@param _requestId is the requestId to look up the value for\r\n@param _timestamp before which to search for first verified value\r\n@param _limit a limit on the number of values to look at\r\n@param _offset the number of values to go back before looking for data values\r\n@return bool true if it is able to retreive a value, the value, and the value's timestamp\r",
             "id": 620,
             "implemented": true,
             "kind": "function",
@@ -7959,45 +7939,45 @@
   },
   "compiler": {
     "name": "solc",
-    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.0.23",
-  "updatedAt": "2020-07-08T18:39:34.027Z",
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2020-08-12T21:10:45.936Z",
   "devdoc": {
     "methods": {
       "constructor": {
-        "details": "the constructor sets the storage address and owner",
+        "details": "the constructor sets the storage address and owner\r",
         "params": {
-          "_storage": "is the TellorMaster address"
+          "_storage": "is the TellorMaster address\r"
         }
       },
       "getCurrentValue(uint256)": {
-        "details": "Allows the user to get the latest value for the requestId specified",
+        "details": "Allows the user to get the latest value for the requestId specified\r",
         "params": {
-          "_requestId": "is the requestId to look up the value for"
+          "_requestId": "is the requestId to look up the value for\r"
         },
-        "return": "bool true if it is able to retreive a value, the value, and the value's timestamp"
+        "return": "bool true if it is able to retreive a value, the value, and the value's timestamp\r"
       },
       "getDataBefore(uint256,uint256,uint256,uint256)": {
-        "details": "Allows the user to get the first value for the requestId before the specified timestamp",
+        "details": "Allows the user to get the first value for the requestId before the specified timestamp\r",
         "params": {
-          "_limit": "a limit on the number of values to look at",
-          "_offset": "the number of values to go back before looking for data values",
-          "_requestId": "is the requestId to look up the value for",
-          "_timestamp": "before which to search for first verified value"
+          "_limit": "a limit on the number of values to look at\r",
+          "_offset": "the number of values to go back before looking for data values\r",
+          "_requestId": "is the requestId to look up the value for\r",
+          "_timestamp": "before which to search for first verified value\r"
         },
-        "return": "bool true if it is able to retreive a value, the value, and the value's timestamp"
+        "return": "bool true if it is able to retreive a value, the value, and the value's timestamp\r"
       },
       "valueFor(bytes32)": {
-        "details": "Allows the user to get the latest value for the requestId specified using the ADO specification for the standard inteface for price oracles",
+        "details": "Allows the user to get the latest value for the requestId specified using the\r ADO specification for the standard inteface for price oracles\r",
         "params": {
-          "_bytesId": "is the ADO standarized bytes32 price/key value pair identifier"
+          "_bytesId": "is the ADO standarized bytes32 price/key value pair identifier\r"
         },
-        "return": "the timestamp, outcome or value/ and the status code (for retreived, null, etc...)"
+        "return": "the timestamp, outcome or value/ and the status code (for retreived, null, etc...)\r"
       }
     },
-    "title": "UserContract This contracts creates for easy integration to the Tellor System by allowing smart contracts to read data off Tellor"
+    "title": "UserContract\r This contracts creates for easy integration to the Tellor System\r by allowing smart contracts to read data off Tellor\r"
   },
   "userdoc": {
     "methods": {}

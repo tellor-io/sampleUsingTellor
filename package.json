@@ -7,10 +7,11 @@
     "test": "test"
   },
   "dependencies": {
-    "dotenv": "^8.2.0",
     "usingtellor": "^1.0.10"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "dotenv": "^8.2.0"
+  },
   "scripts": {
     "test": "truffle test"
   },

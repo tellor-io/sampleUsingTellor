@@ -5,7 +5,6 @@
       "constant": true,
       "inputs": [
         {
-          "internalType": "bytes32",
           "name": "_id",
           "type": "bytes32"
         }
@@ -13,17 +12,14 @@
       "name": "valueFor",
       "outputs": [
         {
-          "internalType": "int256",
           "name": "",
           "type": "int256"
         },
         {
-          "internalType": "uint256",
           "name": "",
           "type": "uint256"
         },
         {
-          "internalType": "uint256",
           "name": "",
           "type": "uint256"
         }
@@ -33,13 +29,13 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_id\",\"type\":\"bytes32\"}],\"name\":\"valueFor\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"EIP2362 Interface for pull oracles https://github.com/tellor-io/EIP-2362\",\"methods\":{\"valueFor(bytes32)\":{\"details\":\"Exposed function pertaining to EIP standards\",\"params\":{\"_id\":\"bytes32 ID of the query\"},\"return\":\"int,uint,uint returns the value, timestamp, and status code of query\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"usingtellor/contracts/interfaces/EIP2362Interface.sol\":\"EIP2362Interface\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"usingtellor/contracts/interfaces/EIP2362Interface.sol\":{\"keccak256\":\"0xe934d1ed8c39cd8031f49ac06297f397556dbe0c82cfd7ba523b27b578c9588f\",\"urls\":[\"bzz-raw://528806f5f5c3a967a83c777a2c4d5bd165ca0569fecfa22bb9950bbbb73a2563\",\"dweb:/ipfs/Qman1PPYKg77h2N2KKjdwwoNw9967BWwanhn3rpvGKtWx8\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"_id\",\"type\":\"bytes32\"}],\"name\":\"valueFor\",\"outputs\":[{\"name\":\"\",\"type\":\"int256\"},{\"name\":\"\",\"type\":\"uint256\"},{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"EIP2362 Interface for pull oracles\\r https://github.com/tellor-io/EIP-2362\\r\",\"methods\":{\"valueFor(bytes32)\":{\"details\":\"Exposed function pertaining to EIP standards\\r\",\"params\":{\"_id\":\"bytes32 ID of the query\\r\"},\"return\":\"int,uint,uint returns the value, timestamp, and status code of query\\r\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"usingtellor/contracts/interfaces/EIP2362Interface.sol\":\"EIP2362Interface\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"usingtellor/contracts/interfaces/EIP2362Interface.sol\":{\"keccak256\":\"0xe934d1ed8c39cd8031f49ac06297f397556dbe0c82cfd7ba523b27b578c9588f\",\"urls\":[\"bzzr://734510a13f375fea0e4a264ab81e8c30d43dfc9bc354489d2cd82b877210208c\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity >=0.5.0 <0.7.0;\r\n\r\n/**\r\n    * @dev EIP2362 Interface for pull oracles\r\n    * https://github.com/tellor-io/EIP-2362\r\n*/\r\ninterface EIP2362Interface{\r\n\t/**\r\n    \t* @dev Exposed function pertaining to EIP standards\r\n    \t* @param _id bytes32 ID of the query\r\n    \t* @return int,uint,uint returns the value, timestamp, and status code of query\r\n\t*/\r\n  \tfunction valueFor(bytes32 _id) external view returns(int256,uint256,uint256);\r\n}\r\n",
-  "sourcePath": "usingtellor\\contracts\\interfaces\\EIP2362Interface.sol",
+  "sourcePath": "usingtellor/contracts/interfaces/EIP2362Interface.sol",
   "ast": {
     "absolutePath": "usingtellor/contracts/interfaces/EIP2362Interface.sol",
     "exportedSymbols": {
@@ -68,7 +64,7 @@
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "interface",
-        "documentation": "@dev EIP2362 Interface for pull oracles\nhttps://github.com/tellor-io/EIP-2362",
+        "documentation": "@dev EIP2362 Interface for pull oracles\r\nhttps://github.com/tellor-io/EIP-2362\r",
         "fullyImplemented": false,
         "id": 635,
         "linearizedBaseContracts": [
@@ -79,7 +75,7 @@
         "nodes": [
           {
             "body": null,
-            "documentation": "@dev Exposed function pertaining to EIP standards\n@param _id bytes32 ID of the query\n@return int,uint,uint returns the value, timestamp, and status code of query",
+            "documentation": "@dev Exposed function pertaining to EIP standards\r\n@param _id bytes32 ID of the query\r\n@return int,uint,uint returns the value, timestamp, and status code of query\r",
             "id": 634,
             "implemented": false,
             "kind": "function",
@@ -245,7 +241,7 @@
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "interface",
-        "documentation": "@dev EIP2362 Interface for pull oracles\nhttps://github.com/tellor-io/EIP-2362",
+        "documentation": "@dev EIP2362 Interface for pull oracles\r\nhttps://github.com/tellor-io/EIP-2362\r",
         "fullyImplemented": false,
         "id": 635,
         "linearizedBaseContracts": [
@@ -256,7 +252,7 @@
         "nodes": [
           {
             "body": null,
-            "documentation": "@dev Exposed function pertaining to EIP standards\n@param _id bytes32 ID of the query\n@return int,uint,uint returns the value, timestamp, and status code of query",
+            "documentation": "@dev Exposed function pertaining to EIP standards\r\n@param _id bytes32 ID of the query\r\n@return int,uint,uint returns the value, timestamp, and status code of query\r",
             "id": 634,
             "implemented": false,
             "kind": "function",
@@ -396,20 +392,20 @@
   },
   "compiler": {
     "name": "solc",
-    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.0.23",
-  "updatedAt": "2020-07-08T18:39:34.030Z",
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2020-08-12T21:10:45.938Z",
   "devdoc": {
-    "details": "EIP2362 Interface for pull oracles https://github.com/tellor-io/EIP-2362",
+    "details": "EIP2362 Interface for pull oracles\r https://github.com/tellor-io/EIP-2362\r",
     "methods": {
       "valueFor(bytes32)": {
-        "details": "Exposed function pertaining to EIP standards",
+        "details": "Exposed function pertaining to EIP standards\r",
         "params": {
-          "_id": "bytes32 ID of the query"
+          "_id": "bytes32 ID of the query\r"
         },
-        "return": "int,uint,uint returns the value, timestamp, and status code of query"
+        "return": "int,uint,uint returns the value, timestamp, and status code of query\r"
       }
     }
   },

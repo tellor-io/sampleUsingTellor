@@ -1,13 +1,13 @@
 {
   "contractName": "Utilities",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"usingtellor/contracts/libraries/Utilities.sol\":\"Utilities\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"usingtellor/contracts/libraries/Utilities.sol\":{\"keccak256\":\"0x70653719f7deda44ce81106e687ad70e56c09c70146e8e70d7ec732f83ba0d6a\",\"urls\":[\"bzz-raw://fb2e76fc7066016ac733f6b47350805bcfc952ea26cebe910c6ffc887c7f1f89\",\"dweb:/ipfs/QmbwLMbd1kPNon7pvhTtvaxuS19Gxebr9zjZzoR2bWAruW\"]}},\"version\":1}",
-  "bytecode": "0x60556023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea265627a7a723158203651b3b5981b808ac2757f0c5838c92b175eb92bc9abb7510a0021091740acc864736f6c63430005100032",
-  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea265627a7a723158203651b3b5981b808ac2757f0c5838c92b175eb92bc9abb7510a0021091740acc864736f6c63430005100032",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"usingtellor/contracts/libraries/Utilities.sol\":\"Utilities\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"usingtellor/contracts/libraries/Utilities.sol\":{\"keccak256\":\"0x70653719f7deda44ce81106e687ad70e56c09c70146e8e70d7ec732f83ba0d6a\",\"urls\":[\"bzzr://0b7a6090a7dd244e28ee3ca27043a88b501854eb17eadc97f1551ff84e2c7202\"]}},\"version\":1}",
+  "bytecode": "0x604c6023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea165627a7a723058209d01e772429a8676a55cfdcf2d396b7b6dd15b82ad04acba4717462c745855430029",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea165627a7a723058209d01e772429a8676a55cfdcf2d396b7b6dd15b82ad04acba4717462c745855430029",
   "sourceMap": "223:818:11:-;;132:2:-1;166:7;155:9;146:7;137:37;255:7;249:14;246:1;241:23;235:4;232:33;222:2;;269:9;222:2;293:9;290:1;283:20;323:4;314:7;306:22;347:7;338;331:24",
   "deployedSourceMap": "223:818:11:-;;;;;;;;",
   "source": "pragma solidity ^0.5.0;\r\n//Functions for retrieving min and Max in 51 length array (requestQ)\r\n//Taken partly from: https://github.com/modular-network/ethereum-libraries-array-utils/blob/master/contracts/Array256Lib.sol\r\n\r\nlibrary Utilities{\r\n\r\n    /**\r\n    * @dev Returns the minimum value in an array.\r\n    */\r\n    function getMax(uint[51] memory data) internal pure returns(uint256 max,uint256 maxIndex) {\r\n        max = data[1];\r\n        maxIndex;\r\n        for(uint i=1;i < data.length;i++){\r\n            if(data[i] > max){\r\n                max = data[i];\r\n                maxIndex = i;\r\n                }\r\n        }\r\n    }\r\n\r\n    /**\r\n    * @dev Returns the minimum value in an array.\r\n    */\r\n    function getMin(uint[51] memory data) internal pure returns(uint256 min,uint256 minIndex) {\r\n        minIndex = data.length - 1;\r\n        min = data[minIndex];\r\n        for(uint i = data.length-1;i > 0;i--) {\r\n            if(data[i] < min) {\r\n                min = data[i];\r\n                minIndex = i;\r\n            }\r\n        }\r\n  }\r\n}\r\n\r\n",
-  "sourcePath": "usingtellor\\contracts\\libraries\\Utilities.sol",
+  "sourcePath": "usingtellor/contracts/libraries/Utilities.sol",
   "ast": {
     "absolutePath": "usingtellor/contracts/libraries/Utilities.sol",
     "exportedSymbols": {
@@ -511,7 +511,7 @@
                 }
               ]
             },
-            "documentation": "@dev Returns the minimum value in an array.",
+            "documentation": "@dev Returns the minimum value in an array.\r",
             "id": 3239,
             "implemented": true,
             "kind": "function",
@@ -1225,7 +1225,7 @@
                 }
               ]
             },
-            "documentation": "@dev Returns the minimum value in an array.",
+            "documentation": "@dev Returns the minimum value in an array.\r",
             "id": 3296,
             "implemented": true,
             "kind": "function",
@@ -1867,7 +1867,7 @@
                 }
               ]
             },
-            "documentation": "@dev Returns the minimum value in an array.",
+            "documentation": "@dev Returns the minimum value in an array.\r",
             "id": 3239,
             "implemented": true,
             "kind": "function",
@@ -2581,7 +2581,7 @@
                 }
               ]
             },
-            "documentation": "@dev Returns the minimum value in an array.",
+            "documentation": "@dev Returns the minimum value in an array.\r",
             "id": 3296,
             "implemented": true,
             "kind": "function",
@@ -2722,11 +2722,11 @@
   },
   "compiler": {
     "name": "solc",
-    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.0.23",
-  "updatedAt": "2020-07-08T18:39:34.061Z",
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2020-08-12T21:10:45.953Z",
   "devdoc": {
     "methods": {}
   },
