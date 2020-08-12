@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
+    "ganache-cli": "^6.10.1",
     "truffle": "^5.1.39"
   },
   "scripts": {
