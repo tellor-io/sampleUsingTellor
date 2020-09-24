@@ -17,7 +17,7 @@ contract("UsingTellor Tests", function (accounts) {
   beforeEach("Setup contract for each test", async function () {
     //Deploy MockTellor and sampleUsingTellor
     tellorOracle = await Tellor.new([], []);
-    sampleUsingTellor = await sampleUsingTellor.new(tellorOracle.address);
+    sampleUsingTellor = await SampleUsingTellor.new(tellorOracle.address);
   });
 
   it("Update Price", async function () {
