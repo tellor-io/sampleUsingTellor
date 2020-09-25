@@ -1,31 +1,21 @@
-pragma solidity >=0.4.21 <0.7.0;
+pragma solidity 0.5.16;
 import "usingtellor/contracts/UsingTellor.sol";
-// import "usingtellor/contracts/libraries/TellorLibrary.sol";
-// import "usingtellor/contracts/testContracts/Tellor.sol";
 
 contract SampleUsingTellor is UsingTellor {
-  uint public tellorID;
-  uint public qualifiedValue;
-  uint public currentValue;
-  uint public granularity;
 
-  constructor(uint _tellorID, address payable _tellorAddress,uint _granularity) UsingTellor(_tellorAddress) public {
-    tellorID = _tellorID;
-    granularity = _granularity;
+  constructor(address payable _tellorAddress) UsingTellor(_tellorAddress) public {}
+
+  function readTellorValue(uint256 _tellorID) external view returns (uint256) {
+    //Helper function to get latest available value for that Id
+    (bool ifRetrieve, uint256 value, uint256 _timestampRetrieved) = getCurrentValue(_tellorID);
+    if(!ifRetrieve) return 0;
+    return value;
   }
 
-  function updateValues(uint _limit,uint _offset) external {
-    bool _didGet;
-    uint _timestamp;
-    uint _value;
-
-    (_didGet,_value,_timestamp) = getDataBefore(tellorID, now - 1 hours,_limit, _offset);
-    if(_didGet){
-      qualifiedValue = _value/granularity;
-    }
-
-    (_didGet,currentValue,_timestamp) = getCurrentValue(tellorID);
-    currentValue = currentValue / granularity;
+  function readTellorValueBefore(uint256 _tellorId, uint256 _timestamp) external view returns (uint256, uint256){
+    //Helper Function to get a value before the given timestamp
+    (bool _ifRetrieve, uint256 _value, uint256 _timestampRetrieved)  = getDataBefore(_tellorId, _timestamp, 10, 10);
+    if(!_ifRetrieve) return (0,0);
+    return (_value, _timestampRetrieved);
   }
-
 }
