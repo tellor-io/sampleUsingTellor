@@ -30,7 +30,36 @@ git clone git@github.com:tellor-io/sampleUsingTellor.git
 npm install 
 ```
 
-#### 2. The sample contract `SampleUsingTellor` have access to the following Tellor functions:
+#### 2. How to Use
+Just Inherit the UsingTellor contract, passing the Tellor address as a constructor argument: 
+
+Here's an example
+```solidity 
+contract BtcPriceContract is UsingTellor {
+
+  //This Contract now have access to all functions on UsingTellor
+
+  uint256 btcPrice;
+  uint256 btcRequetId = 2;
+
+  constructor(address payable _tellorAddress) UsingTellor(_tellorAddress) public {}
+
+  function setBtcPrice() public {
+    bool _didGet;
+    uint _timestamp;
+    uint _value;
+
+    (_didGet, btcPrice, _timestamp) = getCurrentValue(btcRequetId);
+  }
+}
+```
+##### Addresses:
+Mainnet: `0x0Ba45A8b5d5575935B8158a88C631E9F9C95a2e5`
+Rinkeby: `0xFe41Cb708CD98C5B20423433309E55b53F79134a`
+Test: Use the MockTellor address
+
+
+#### 3. The sample contract `SampleUsingTellor` have access to the following Tellor functions:
 
 ```solidity
     /**
@@ -133,15 +162,17 @@ For ease of use, the  `UsingTellor`  repo provides a MockTellor system for easie
 
 #### 5. To run tests:
 
-In another terminal window run
-```bash
-ganache-cli
-```
-
-In the first terminal run
 ```bash
 npm run test
 ```
+
+#### 6. Migrations:
+Just run truffle migrate with desired Network
+
+```bash
+truffle migrate --network rinkeby
+```
+
 
 
 ### Useful Links
