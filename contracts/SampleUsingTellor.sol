@@ -12,9 +12,9 @@ contract SampleUsingTellor is UsingTellor {
     return value;
   }
 
-  function readTellorValueBefore(uint256 _tellorId, uint256 _timestamp) external view returns (uint256, uint256){
+  function readTellorValueBefore(uint256 _tellorId, uint256 _timestamp) external returns (uint256, uint256){
     //Helper Function to get a value before the given timestamp
-    (bool _ifRetrieve, uint256 _value, uint256 _timestampRetrieved)  = getDataBefore(_tellorId, _timestamp, 10, 10);
+    (bool _ifRetrieve, uint256 _value, uint256 _timestampRetrieved)  = getDataBefore(_tellorId, _timestamp);
     if(!_ifRetrieve) return (0,0);
     return (_value, _timestampRetrieved);
   }
