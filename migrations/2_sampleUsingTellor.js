@@ -12,8 +12,8 @@ module.exports = function (deployer, network) {
     deployer.deploy(SampleUsingTellor, rinkebyAddress);
   } else {
     //deploy MockTellor
-    deployer.deploy(MockTellor, [], []).then(() => {
-      deployer.deploy(SampleUsingTellor);
+    deployer.deploy(MockTellor, [], []).then((instance) => {
+      deployer.deploy(SampleUsingTellor, instance.address);
     });
   }
 };
