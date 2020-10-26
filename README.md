@@ -104,8 +104,6 @@ Test: Use the MockTellor address
     * @dev Allows the user to get the first value for the requestId before the specified timestamp
     * @param _requestId is the requestId to look up the value for
     * @param _timestamp before which to search for first verified value
-    * @param _limit a limit on the number of values to look at
-    * @param _offset the number of values to go back before looking for data values
     * @return bool true if it is able to retreive a value, the value, and the value's timestamp
     */
     function getDataBefore(uint256 _requestId, uint256 _timestamp, uint256 _limit, uint256 _offset)
