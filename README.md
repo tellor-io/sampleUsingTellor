@@ -106,7 +106,7 @@ Test: Use the MockTellor address
     * @param _timestamp before which to search for first verified value
     * @return bool true if it is able to retreive a value, the value, and the value's timestamp
     */
-    function getDataBefore(uint256 _requestId, uint256 _timestamp, uint256 _limit, uint256 _offset)
+    function getDataBefore(uint256 _requestId, uint256 _timestamp)
         public
         view
         returns (bool _ifRetrieve, uint256 _value, uint256 _timestampRetrieved);
