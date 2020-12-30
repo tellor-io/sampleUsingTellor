@@ -1,5 +1,5 @@
 const SampleUsingTellor = artifacts.require("./SampleUsingTellor.sol");
-const Tellor = artifacts.require("usingtellor/contracts/MockTellor.sol");
+const Tellor = artifacts.require("usingtellor/contracts/TellorPlayground.sol");
 
 //Helper function that submits and value and returns a timestamp for easy retrieval
 const submitTellorValue = async (tellorOracle, requestId, amount) => {
