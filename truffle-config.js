@@ -26,6 +26,11 @@ module.exports = {
   //     gasPrice: 4000000000,
   //   },
   //}
+  compilers: {
+    solc: {
+      version: "0.7.0",
+    },
+  },
   mocha: {
     enableTimeouts: false,
     before_timeout: 210000, // Here is 2min but can be whatever timeout is suitable for you.

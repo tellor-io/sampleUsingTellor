@@ -1,5 +1,5 @@
 const SampleUsingTellor = artifacts.require("./SampleUsingTellor.sol");
-const Tellor = artifacts.require("usingtellor/contracts/TellorPlayground.sol");
+const Tellor = artifacts.require("TellorPlayground.sol");
 
 //Helper function that submits and value and returns a timestamp for easy retrieval
 const submitTellorValue = async (tellorOracle, requestId, amount) => {
@@ -15,8 +15,7 @@ contract("UsingTellor Tests", function (accounts) {
   let tellorOracle;
 
   beforeEach("Setup contract for each test", async function () {
-    //Deploy MockTellor and sampleUsingTellor
-    tellorOracle = await Tellor.new([], []);
+    tellorOracle = await Tellor.new();
     sampleUsingTellor = await SampleUsingTellor.new(tellorOracle.address);
   });
 
