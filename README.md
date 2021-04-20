@@ -34,7 +34,10 @@ npm install
 Just Inherit the UsingTellor contract, passing the Tellor address as a constructor argument: 
 
 Here's an example
-```solidity 
+```solidity
+import "usingtellor/contracts/UsingTellor.sol";
+import "usingtellor/contracts/TellorPlayground.sol";
+
 contract BtcPriceContract is UsingTellor {
 
   //This Contract now have access to all functions on UsingTellor
