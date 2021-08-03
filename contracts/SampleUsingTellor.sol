@@ -1,12 +1,10 @@
-pragma solidity >=0.5.16;
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.7.0;
+
 import "usingtellor/contracts/UsingTellor.sol";
-import "usingtellor/contracts/TellorPlayground.sol";
 
 contract SampleUsingTellor is UsingTellor {
-    constructor(address payable _tellorAddress)
-        public
-        UsingTellor(_tellorAddress)
-    {}
+    constructor(address payable _tellorAddress) UsingTellor(_tellorAddress) public {}
 
     function readTellorValue(uint256 _tellorID)
         external
@@ -21,7 +19,7 @@ contract SampleUsingTellor is UsingTellor {
     }
 
     function readTellorValueBefore(uint256 _tellorId, uint256 _timestamp)
-        external
+        external view
         returns (uint256, uint256)
     {
         //Helper Function to get a value before the given timestamp
