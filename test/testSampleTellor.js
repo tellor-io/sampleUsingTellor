@@ -1,29 +1,27 @@
-const SampleUsingTellor = artifacts.require("./SampleUsingTellor.sol");
-const Tellor = artifacts.require("TellorPlayground.sol");
+const { expect } = require("chai");
+const { ethers } = require("hardhat");
+const { abi, bytecode } = require("usingtellor/artifacts/contracts/TellorPlayground.sol/TellorPlayground.json")
 
-//Helper function that submits and value and returns a timestamp for easy retrieval
-const submitTellorValue = async (tellorOracle, requestId, amount) => {
-  //Get the amount of values for that timestamp
-  let count = await tellorOracle.getNewValueCountbyRequestId();
-  await tellorOracle.submitValue(requestId, amount);
-  let time = await getTimestampbyRequestIDandIndex(requestId, count.toString());
-  return time.toNumber();
-};
-
-contract("UsingTellor Tests", function (accounts) {
+describe("Tellor", function() {
   let sampleUsingTellor;
   let tellorOracle;
 
-  beforeEach("Setup contract for each test", async function () {
-    tellorOracle = await Tellor.new();
-    sampleUsingTellor = await SampleUsingTellor.new(tellorOracle.address);
+  // Set up Tellor Playground Oracle and SampleUsingTellor
+  beforeEach(async function () {
+    let TellorOracle = await ethers.getContractFactory(abi, bytecode);
+    tellorOracle = await TellorOracle.deploy();
+    await tellorOracle.deployed();
+
+    let SampleUsingTellor = await ethers.getContractFactory("SampleUsingTellor");
+    sampleUsingTellor = await SampleUsingTellor.deploy(tellorOracle.address);
+    await sampleUsingTellor.deployed();
   });
 
-  it("Update Price", async function () {
+  it("Update Price", async function() {
     const requestId = 1;
     const mockValue = "7000000";
     await tellorOracle.submitValue(requestId, mockValue);
     let retrievedVal = await sampleUsingTellor.readTellorValue(requestId);
-    assert.equal(retrievedVal.toString(), mockValue);
+    expect(retrievedVal).to.equal(mockValue);
   });
 });
