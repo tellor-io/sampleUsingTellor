@@ -4,7 +4,7 @@ pragma solidity >=0.7.0;
 import "usingtellor/contracts/UsingTellor.sol";
 
 contract SampleUsingTellor is UsingTellor {
-    constructor(address payable _tellorAddress) UsingTellor(_tellorAddress) public {}
+    constructor(address payable _tellorAddress) UsingTellor(_tellorAddress) {}
 
     function readTellorValue(uint256 _tellorID)
         external
@@ -12,7 +12,7 @@ contract SampleUsingTellor is UsingTellor {
         returns (uint256)
     {
         //Helper function to get latest available value for that Id
-        (bool ifRetrieve, uint256 value, uint256 _timestampRetrieved) =
+        (bool ifRetrieve, uint256 value, ) =
             getCurrentValue(_tellorID);
         if (!ifRetrieve) return 0;
         return value;
