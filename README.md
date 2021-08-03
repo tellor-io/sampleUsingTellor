@@ -11,7 +11,7 @@
 </p>
 
 
-## Updated Sample project UsingTellor <a name="sample"> </a>
+## Sample project UsingTellor <a name="sample"> </a>
 
 <b>The Tellor oracle</b> is a decentralized oracle. It provides an option for contracts to securely interact with and obtain data from off-chain.
 
