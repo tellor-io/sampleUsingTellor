@@ -58,7 +58,7 @@ contract BtcPriceContract is UsingTellor {
   }
 }
 ```
-##### [Oracle Addresses](https://github.com/tellor-io/TellorCore):
+#### [Oracle Addresses](https://github.com/tellor-io/TellorCore):
 
 Mainnet **-**[ `0x88dF592F8eb5D7Bd38bFeF7dEb0fBc02cf3778a0`](https://etherscan.io/address/0x88dF592F8eb5D7Bd38bFeF7dEb0fBc02cf3778a0)
 
@@ -177,7 +177,7 @@ For ease of use, the  `UsingTellor`  repo comes with a version of [Tellor Playgr
 
 ```
 
-##### [Playground Addresses](https://github.com/tellor-io/TellorCore):
+#### [Playground Addresses](https://github.com/tellor-io/TellorCore):
 
 Mainnet: [`0x0Ba45A8b5d5575935B8158a88C631E9F9C95a2e5`](https://etherscan.io/address/0x0Ba45A8b5d5575935B8158a88C631E9F9C95a2e5)
 
