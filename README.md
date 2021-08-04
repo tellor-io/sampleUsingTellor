@@ -21,7 +21,7 @@ For more in-depth information about Tellor, check out our [documentation](https:
 
 Quick references are included below: 
 
-<b>Implement Tellor into your project</b>
+# Implement Tellor into your project
 This repo already includes the [usingTellor](https://github.com/tellor-io/usingtellor) package.
 
 ## How to use 
