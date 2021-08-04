@@ -13,11 +13,11 @@
 
 ## Sample project UsingTellor <a name="sample"> </a>
 
-<b>The Tellor oracle</b> is a decentralized oracle. It provides an option for contracts to securely interact with and obtain data from off-chain.
+<b>The Tellor oracle</b> is a decentralized oracle. It provides an option for contracts to interact securely with and obtain data from off-chain.
 
 This repository aims to provide an updated version of sample code that uses Tellor by using Ethers.js, Waffle,and Hardhat.
 
-For more in-depth information about Tellor checkout our [documenation](https://app.gitbook.com/@tellor-2/s/tellor-docs/), [whitepaper](https://tellor.io/whitepaper/) and [FAQ](https://tellor.io/faq/) page. 
+For more in-depth information about Tellor, check out our [documentation](https://app.gitbook.com/@tellor-2/s/tellor-docs/), [whitepaper](https://tellor.io/whitepaper/) and [FAQ](https://tellor.io/faq/) page. 
 
 Quick references are included below: 
 
@@ -33,9 +33,9 @@ npm install
 ```
 
 #### 2. How to Use
-Just Inherit the UsingTellor contract, passing the Tellor address as a constructor argument: 
+Just inherit the UsingTellor contract, passing the Tellor address as a constructor argument: 
 
-Here's an example
+Here's an example:
 ```solidity
 import "usingtellor/contracts/UsingTellor.sol";
 import "usingtellor/contracts/TellorPlayground.sol";
@@ -71,7 +71,7 @@ Ropsten: [`0x20374E579832859f180536A69093A126Db1c8aE9`](https://ropsten.ethersca
 Goerli: [`0x20374E579832859f180536A69093A126Db1c8aE9`](https://goerli.etherscan.io/address/0x20374E579832859f180536A69093A126Db1c8aE9#code)
 
 
-#### 3. The sample contract `SampleUsingTellor` have access to the following Tellor functions:
+#### 3. The sample contract `SampleUsingTellor` has access to the following Tellor functions:
 
 ```solidity
     /**
