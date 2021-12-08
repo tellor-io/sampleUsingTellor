@@ -44,17 +44,16 @@ contract BtcPriceContract is UsingTellor {
 
   //This Contract now have access to all functions on UsingTellor
 
-  uint256 btcPrice;
-  uint256 btcRequestId = 2;
+  bytes btcPrice;
+  bytes32 btcQueryId = 0x0000000000000000000000000000000000000000000000000000000000000002;
 
   constructor(address payable _tellorAddress) UsingTellor(_tellorAddress) public {}
 
   function setBtcPrice() public {
     bool _didGet;
-    uint _timestamp;
-    uint _value;
+    uint256 _timestamp;
 
-    (_didGet, btcPrice, _timestamp) = getCurrentValue(btcRequestId);
+    (_didGet, btcPrice, _timestamp) = getCurrentValue(btcQueryId);
   }
 }
 ```
@@ -68,53 +67,53 @@ Rinkeby **-**[ `0x88dF592F8eb5D7Bd38bFeF7dEb0fBc02cf3778a0`](https://rinkeby.eth
 
 ```solidity
     /**
-    * @dev Retreive value from oracle based on requestId/timestamp
-    * @param _requestId being requested
-    * @param _timestamp to retreive data/value from
-    * @return uint value for requestId/timestamp submitted
+    * @dev Retrieve value from oracle based on requestId/timestamp
+    * @param _queryId being requested
+    * @param _timestamp to retrieve data/value from
+    * @return uint value for queryId/timestamp submitted
     */
-    function retrieveData(uint256 _requestId, uint256 _timestamp) public view returns(uint256);
+    function retrieveData(bytes32 _queryId, uint256 _timestamp) public view returns(uint256);
 
     /**
     * @dev Gets if the mined value for the specified requestId/_timestamp is currently under dispute
-    * @param _requestId to looku p
+    * @param _queryId to lookup
     * @param _timestamp is the timestamp to look up miners for
     * @return bool true if requestId/timestamp is under dispute
     */
-    function isInDispute(uint256 _requestId, uint256 _timestamp) public view returns(bool);
+    function isInDispute(bytes32 _queryId, uint256 _timestamp) public view returns(bool);
 
     /**
     * @dev Counts the number of values that have been submited for the request
-    * @param _requestId the requestId to look up
+    * @param _queryId the query to look up
     * @return uint count of the number of values received for the requestId
     */
-    function getNewValueCountbyRequestId(uint256 _requestId) public view returns(uint);
+    function getNewValueCountbyRequestId(bytes32 _queryId) public view returns(uint);
 
     /**
     * @dev Gets the timestamp for the value based on their index
-    * @param _requestId is the requestId to look up
+    * @param _queryId is the query to look up
     * @param _index is the value index to look up
     * @return uint timestamp
     */
-    function getTimestampbyRequestIDandIndex(uint256 _requestId, uint256 _index) public view returns(uint256);
+    function getTimestampbyRequestIDandIndex(bytes32 _queryId, uint256 _index) public view returns(uint256);
 
     /**
     * @dev Allows the user to get the latest value for the requestId specified
-    * @param _requestId is the requestId to look up the value for
+    * @param _queryId is the query to look up the value for
     * @return bool true if it is able to retreive a value, the value, and the value's timestamp
     */
-    function getCurrentValue(uint256 _requestId) public view returns (bool ifRetrieve, uint256 value, uint256 _timestampRetrieved);
+    function getCurrentValue(bytes32 _queryId) public view returns (bool ifRetrieve, bytes memory _value, uint256 _timestampRetrieved);
 
     /**
     * @dev Allows the user to get the first value for the requestId before the specified timestamp
-    * @param _requestId is the requestId to look up the value for
+    * @param _queryId is the query to look up the value for
     * @param _timestamp before which to search for first verified value
     * @return bool true if it is able to retreive a value, the value, and the value's timestamp
     */
-    function getDataBefore(uint256 _requestId, uint256 _timestamp)
+    function getDataBefore(bytes32 _queryId, uint256 _timestamp)
         public
         view
-        returns (bool _ifRetrieve, uint256 _value, uint256 _timestampRetrieved);
+        returns (bool _ifRetrieve, bytes memory _value, uint256 _timestampRetrieved);
 
 ```
 
@@ -124,57 +123,51 @@ For ease of use, the  `UsingTellor`  repo comes with a version of [Tellor Playgr
 
 ```solidity
    /**
-    * @dev A mock function to submit a value to be read withoun miners needed
-    * @param _requestId The tellorId to associate the value to
-    * @param _value the value for the requestId
+    * @dev A mock function to submit a value to be read without miners needed
+    * @param _queryId The tellorId to associate the value to
+    * @param _value the value for the queryId
+    * @param _nonce the current value count for the query id
+    * @param _queryData the data used by reporters to fulfill the data query
     */
-    function submitValue(uint256 _requestId,uint256 _value) external;
+    function submitValue(bytes32 _queryId, bytes calldata _value, uint256 _nonce, bytes memory _queryData) external;
 
     /**
     * @dev A mock function to create a dispute
-    * @param _requestId The tellorId to be disputed
-    * @param _timestamp the timestamp that indentifies for the value
+    * @param _queryId The tellorId to be disputed
+    * @param _timestamp the timestamp of the value to be disputed
     */
-    function disputeValue(uint256 _requestId, uint256 _timestamp) external;
+    function beginDispute(bytes32 _queryId, uint256 _timestamp) external;
 
      /**
     * @dev Retreive value from oracle based on requestId/timestamp
-    * @param _requestId being requested
-    * @param _timestamp to retreive data/value from
-    * @return uint value for requestId/timestamp submitted
+    * @param _queryId being requested
+    * @param _timestamp to retrieve data/value from
+    * @return bytes value for requestId/timestamp submitted
     */
-    function retrieveData(uint256 _requestId, uint256 _timestamp) public view returns(uint256);
+    function retrieveData(bytes32 _queryId, uint256 _timestamp) public view returns (bytes memory);
 
     /**
-    * @dev Gets if the mined value for the specified requestId/_timestamp is currently under dispute
-    * @param _requestId to looku p
-    * @param _timestamp is the timestamp to look up miners for
-    * @return bool true if requestId/timestamp is under dispute
+    * @dev Counts the number of values that have been submitted for the request
+    * @param _queryId the requestId to look up
+    * @return uint256 count of the number of values received for the requestId
     */
-    function isInDispute(uint256 _requestId, uint256 _timestamp) public view returns(bool);
-
-    /**
-    * @dev Counts the number of values that have been submited for the request
-    * @param _requestId the requestId to look up
-    * @return uint count of the number of values received for the requestId
-    */
-    function getNewValueCountbyRequestId(uint256 _requestId) public view returns(uint);
+    function getNewValueCountbyQueryId(bytes32 _queryId) public view returns(uint256);
 
     /**
     * @dev Gets the timestamp for the value based on their index
-    * @param _requestId is the requestId to look up
-    * @param index is the value index to look up
-    * @return uint timestamp
+    * @param _queryId is the requestId to look up
+    * @param _index is the value index to look up
+    * @return uint256 timestamp
     */
-    function getTimestampbyRequestIDandIndex(uint256 _requestId, uint256 index) public view returns(uint256);
+    function getTimestampbyRequestIDandIndex(uint256 _queryId, uint256 index) public view returns(uint256);
 
     /**
-    * @dev Adds a tip to a given request Id.
-    * @param _requestId is the requestId to look up
-    * @param _amount is the amount of tips
-    */
-    function addTip(uint256 _requestId, uint256 _amount) external;
-
+     * @dev Adds a tip to a given query ID.
+     * @param _queryId is the queryId to look up
+     * @param _amount is the amount of tips
+     * @param _queryData is the extra bytes data needed to fulfill the request
+     */
+    function tipQuery(bytes32 _queryId, uint256 _amount, bytes memory _queryData) external;
 ```
 
 #### [Playground Addresses](https://github.com/tellor-io/TellorCore):
