@@ -1,6 +1,7 @@
 const { expect } = require("chai");
 const { ethers } = require("hardhat");
 const { abi, bytecode } = require("usingtellor/artifacts/contracts/TellorPlayground.sol/TellorPlayground.json")
+const h = require("usingtellor/test/helpers/helpers.js");
 
 describe("Tellor", function() {
   let sampleUsingTellor;
@@ -18,10 +19,12 @@ describe("Tellor", function() {
   });
 
   it("Update Price", async function() {
-    const requestId = 1;
-    const mockValue = "7000000";
-    await tellorOracle.submitValue(requestId, mockValue);
-    let retrievedVal = await sampleUsingTellor.readTellorValue(requestId);
-    expect(retrievedVal).to.equal(mockValue);
+    const queryId = h.uintTob32(1);
+    const mockValue = 150;
+    // submit value takes 4 args : queryId, value, nonce and queryData
+    // Tim uses h.uintTob32(1),150,0,'0x' for these in usingtellor test, so i will use the same
+    await tellorOracle.submitValue(queryId,150,0,'0x');
+    let retrievedVal = await sampleUsingTellor.readTellorValue(queryId);
+    expect(retrievedVal).to.equal(h.bytes(mockValue));
   });
 });
