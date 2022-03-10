@@ -7,7 +7,7 @@
 <p align="center">
   <a href='https://twitter.com/WeAreTellor'>
     <img src= 'https://img.shields.io/twitter/url/http/shields.io.svg?style=social' alt='Twitter WeAreTellor' />
-  </a> 
+  </a>
 </p>
 
 
@@ -17,43 +17,51 @@
 
 This repository aims to provide an updated version of sample code that uses Tellor by using Ethers.js, Waffle,and Hardhat.
 
-For more in-depth information about Tellor, check out our [documentation](https://app.gitbook.com/@tellor-2/s/tellor-docs/), [whitepaper](https://tellor.io/whitepaper/) and [FAQ](https://tellor.io/faq/) page. 
+For more in-depth information about Tellor, check out our [documentation](https://app.gitbook.com/@tellor-2/s/tellor-docs/), [whitepaper](https://tellor.io/whitepaper/) and [FAQ](https://tellor.io/faq/) page.
 
-Quick references are included below: 
+Quick references are included below:
 
 # Implement Tellor into your project
 This repo already includes the [usingTellor](https://github.com/tellor-io/usingtellor) package.
 
-## How to use 
+## How to use
 #### 1. Clone project and install dependencies
 
 ```bash
 git clone git@github.com:tellor-io/sampleUsingTellor.git
-npm install 
+npm install
 ```
 
 #### 2. How to Use
-Just inherit the UsingTellor contract, passing the Tellor address as a constructor argument: 
+Just inherit the UsingTellor contract, passing the Tellor address as a constructor argument:
 
 Here's an example:
 ```solidity
-import "usingtellor/contracts/UsingTellor.sol";
-import "usingtellor/contracts/TellorPlayground.sol";
+contract PriceContract is UsingTellor {
 
-contract BtcPriceContract is UsingTellor {
+  uint256 public btcPrice;
 
-  //This Contract now have access to all functions on UsingTellor
-
-  bytes btcPrice;
-  bytes32 btcQueryId = 0x0000000000000000000000000000000000000000000000000000000000000002;
+  //This Contract now has access to all functions in UsingTellor
 
   constructor(address payable _tellorAddress) UsingTellor(_tellorAddress) public {}
 
   function setBtcPrice() public {
+
+    bytes memory _b = abi.encode("SpotPrice",abi.encode("BTC","USD"));
+    bytes32 _queryID = keccak256(_b);
+
     bool _didGet;
     uint256 _timestamp;
+    bytes _value
 
-    (_didGet, btcPrice, _timestamp) = getCurrentValue(btcQueryId);
+    (_didGet, _value, _timestamp) = getCurrentValue(btcQueryId);
+
+    //fast bytes to uint conversion //https://stackoverflow.com/questions/63252057/how-to-use-bytestouint-function-in-solidity-the-one-with-assembly
+
+    require(_value.length == 32);
+    assembly {
+      btcPrice := mload(add(_value, 0x20))
+    }
   }
 }
 ```
@@ -207,17 +215,17 @@ Miner [Documentation](https://tellor.readthedocs.io/en/latest/MinerSetup/)
 
 General Tellor Developer's [Documentation](https://tellor.readthedocs.io/en/latest/DevDocumentation/)
 
-Metamask - www.metamask.io 
+Metamask - www.metamask.io
 <br>
 Hardhat - https://hardhat.org/
 <br>
 Waffle - https://getwaffle.io/
 
 
-#### Maintainers <a name="maintainers"> </a> 
+#### Maintainers <a name="maintainers"> </a>
 [@themandalore](https://github.com/themandalore)
 <br>
-[@brendaloya](https://github.com/brendaloya) 
+[@brendaloya](https://github.com/brendaloya)
 
 
 #### How to Contribute<a name="how2contribute"> </a>  
@@ -225,7 +233,7 @@ Join our Discord or Telegram:
 [<img src="./public/telegram.png" width="24" height="24">](https://t.me/tellor)
 [<img src="./public/discord.png" width="24" height="24">](https://discord.gg/zFcM3G)
 
-Check out our issues log here on Github or contribute to our future plans to build a better miner and more examples of data secured by Tellor. 
+Check out our issues log here on Github or contribute to our future plans to build a better miner and more examples of data secured by Tellor.
 
 
 #### Contributors<a name="contributors"> </a>
