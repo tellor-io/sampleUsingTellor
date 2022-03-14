@@ -229,8 +229,7 @@ Waffle - https://getwaffle.io/
 
 
 #### How to Contribute<a name="how2contribute"> </a>  
-Join our Discord or Telegram:
-[<img src="./public/telegram.png" width="24" height="24">](https://t.me/tellor)
+Join our Discord:
 [<img src="./public/discord.png" width="24" height="24">](https://discord.gg/zFcM3G)
 
 Check out our issues log here on Github or contribute to our future plans to build a better miner and more examples of data secured by Tellor.
@@ -243,4 +242,4 @@ This repository is maintained by the Tellor team - [www.tellor.io](https://www.t
 
 #### Copyright
 
-Tellor Inc. 2021
+Tellor Inc. 2022
