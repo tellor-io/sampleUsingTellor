@@ -18,12 +18,14 @@ describe("Tellor", function() {
     await sampleUsingTellor.deployed();
   });
 
-  it("Update Price", async function() {
-    const queryId = h.uintTob32(1);
-    const mockValue = 150;
+  it("Read tellor value", async function() {
+    const abiCoder = new ethers.utils.AbiCoder
+    const queryDataArgs = abiCoder.encode(['string', 'string'], ['btc', 'usd'])
+    const queryData = abiCoder.encode(['string', 'bytes'], ['SpotPrice', queryDataArgs])
+    const queryId = ethers.utils.keccak256(queryData)
+    const mockValue = 50000;
     // submit value takes 4 args : queryId, value, nonce and queryData
-    // Tim uses h.uintTob32(1),150,0,'0x' for these in usingtellor test, so i will use the same
-    await tellorOracle.submitValue(queryId,150,0,'0x');
+    await tellorOracle.submitValue(queryId,mockValue,0,queryData);
     let retrievedVal = await sampleUsingTellor.readTellorValue(queryId);
     expect(retrievedVal).to.equal(h.bytes(mockValue));
   });
