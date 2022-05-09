@@ -54,7 +54,7 @@ contract PriceContract is UsingTellor {
     uint256 _timestamp;
     bytes _value
 
-    (_didGet, _value, _timestamp) = getCurrentValue(btcQueryId);
+    (_didGet, _value, _timestamp) = getCurrentValue(_queryId);
 
     btcPrice = abi.decode(_value,(uint256));
   }
