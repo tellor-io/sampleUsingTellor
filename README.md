@@ -52,7 +52,7 @@ contract PriceContract is UsingTellor {
 
     bool _didGet;
     uint256 _timestamp;
-    bytes _value
+    bytes _value;
 
     (_didGet, _value, _timestamp) = getCurrentValue(_queryId);
 
