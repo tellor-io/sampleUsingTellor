@@ -17,7 +17,7 @@
 
 This repository aims to provide an updated version of sample code that uses Tellor by using Ethers.js, Waffle,and Hardhat.
 
-For more in-depth information about Tellor, check out our [documentation](https://app.gitbook.com/@tellor-2/s/tellor-docs/), [whitepaper](https://tellor.io/whitepaper/) and [FAQ](https://tellor.io/faq/) page.
+For more in-depth information about Tellor, check out our [documentation](https://docs.tellor.io/tellor/).
 
 Quick references are included below:
 
@@ -47,7 +47,7 @@ contract PriceContract is UsingTellor {
 
   function setBtcPrice() public {
 
-    bytes memory _b = abi.encode("SpotPrice",abi.encode("BTC","USD"));
+    bytes memory _b = abi.encode("SpotPrice",abi.encode("btc","usd"));
     bytes32 _queryID = keccak256(_b);
 
     bool _didGet;
