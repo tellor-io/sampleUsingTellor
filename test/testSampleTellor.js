@@ -18,7 +18,7 @@ describe("Tellor", function() {
     await sampleUsingTellor.deployed();
   });
 
-  it("Read tellor value", async function() {
+  it("Read tellor value before", async function() {
     const abiCoder = new ethers.utils.AbiCoder
     const queryDataArgs = abiCoder.encode(['string', 'string'], ['btc', 'usd'])
     const queryData = abiCoder.encode(['string', 'bytes'], ['SpotPrice', queryDataArgs])
@@ -26,7 +26,8 @@ describe("Tellor", function() {
     const mockValue = 50000;
     // submit value takes 4 args : queryId, value, nonce and queryData
     await tellorOracle.submitValue(queryId,mockValue,0,queryData);
-    let retrievedVal = await sampleUsingTellor.readTellorValue(queryId);
-    expect(retrievedVal).to.equal(h.bytes(mockValue));
+    let blocky = await h.getBlock();
+    let retrievedVal = await sampleUsingTellor.readTellorValueBefore(queryId, blocky.timestamp + 1);
+    expect(retrievedVal[0]).to.equal(h.bytes(mockValue));
   });
 });

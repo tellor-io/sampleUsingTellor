@@ -50,11 +50,10 @@ contract PriceContract is UsingTellor {
     bytes memory _b = abi.encode("SpotPrice",abi.encode("btc","usd"));
     bytes32 _queryID = keccak256(_b);
 
-    bool _didGet;
     uint256 _timestamp;
     bytes _value;
 
-    (_didGet, _value, _timestamp) = getCurrentValue(_queryId);
+    (_value, _timestamp) = getDataBefore(_queryId);
 
     btcPrice = abi.decode(_value,(uint256));
   }
@@ -65,53 +64,126 @@ contract PriceContract is UsingTellor {
 
 ```solidity
     /**
-    * @dev Retrieve value from oracle based on requestId/timestamp
-    * @param _queryId being requested
-    * @param _timestamp to retrieve data/value from
-    * @return uint value for queryId/timestamp submitted
-    */
-    function retrieveData(bytes32 _queryId, uint256 _timestamp) public view returns(uint256);
+     * @dev Retrieves the next value for the queryId after the specified timestamp
+     * @param _queryId is the queryId to look up the value for
+     * @param _timestamp after which to search for next value
+     * @return _value the value retrieved
+     * @return _timestampRetrieved the value's timestamp
+     */
+      function getDataAfter(bytes32 _queryId, uint256 _timestamp)
+          public
+          view
+          returns (bytes memory _value, uint256 _timestampRetrieved);
 
     /**
-    * @dev Gets if the mined value for the specified requestId/_timestamp is currently under dispute
-    * @param _queryId to lookup
-    * @param _timestamp is the timestamp to look up miners for
-    * @return bool true if requestId/timestamp is under dispute
-    */
-    function isInDispute(bytes32 _queryId, uint256 _timestamp) public view returns(bool);
+     * @dev Retrieves the latest value for the queryId before the specified timestamp
+     * @param _queryId is the queryId to look up the value for
+     * @param _timestamp before which to search for latest value
+     * @return _value the value retrieved
+     * @return _timestampRetrieved the value's timestamp
+     */
+      function getDataBefore(bytes32 _queryId, uint256 _timestamp)
+          public
+          view
+          returns (bytes memory _value, uint256 _timestampRetrieved);
 
     /**
-    * @dev Counts the number of values that have been submited for the request
-    * @param _queryId the query to look up
-    * @return uint count of the number of values received for the requestId
-    */
-    function getNewValueCountbyRequestId(bytes32 _queryId) public view returns(uint);
+     * @dev Retrieves next array index of data after the specified timestamp for the queryId
+     * @param _queryId is the queryId to look up the index for
+     * @param _timestamp is the timestamp after which to search for the next index
+     * @return _found whether the index was found
+     * @return _index the next index found after the specified timestamp
+     */
+      function getIndexForDataAfter(bytes32 _queryId, uint256 _timestamp)
+          public
+          view
+          returns (bool _found, uint256 _index);
 
     /**
-    * @dev Gets the timestamp for the value based on their index
-    * @param _queryId is the query to look up
-    * @param _index is the value index to look up
-    * @return uint timestamp
-    */
-    function getTimestampbyRequestIDandIndex(bytes32 _queryId, uint256 _index) public view returns(uint256);
+     * @dev Retrieves latest array index of data before the specified timestamp for the queryId
+     * @param _queryId is the queryId to look up the index for
+     * @param _timestamp is the timestamp before which to search for the latest index
+     * @return _found whether the index was found
+     * @return _index the latest index found before the specified timestamp
+     */
+      function getIndexForDataBefore(bytes32 _queryId, uint256 _timestamp)
+          public
+          view
+          returns (bool _found, uint256 _index);
 
     /**
-    * @dev Allows the user to get the latest value for the requestId specified
-    * @param _queryId is the query to look up the value for
-    * @return bool true if it is able to retreive a value, the value, and the value's timestamp
-    */
-    function getCurrentValue(bytes32 _queryId) public view returns (bool ifRetrieve, bytes memory _value, uint256 _timestampRetrieved);
-
+     * @dev Retrieves multiple uint256 values before the specified timestamp
+     * @param _queryId the unique id of the data query
+     * @param _timestamp the timestamp before which to search for values
+     * @param _maxAge the maximum number of seconds before the _timestamp to search for values
+     * @param _maxCount the maximum number of values to return
+     * @return _values the values retrieved, ordered from oldest to newest
+     * @return _timestamps the timestamps of the values retrieved
+     */
+      function getMultipleValuesBefore(
+          bytes32 _queryId,
+          uint256 _timestamp,
+          uint256 _maxAge,
+          uint256 _maxCount
+      )
+          public
+          view
+          returns (bytes[] memory _values, uint256[] memory _timestamps);
+    
     /**
-    * @dev Allows the user to get the first value for the requestId before the specified timestamp
-    * @param _queryId is the query to look up the value for
-    * @param _timestamp before which to search for first verified value
-    * @return bool true if it is able to retreive a value, the value, and the value's timestamp
-    */
-    function getDataBefore(bytes32 _queryId, uint256 _timestamp)
-        public
-        view
-        returns (bool _ifRetrieve, bytes memory _value, uint256 _timestampRetrieved);
+     * @dev Counts the number of values that have been submitted for the queryId
+     * @param _queryId the id to look up
+     * @return uint256 count of the number of values received for the queryId
+     */
+      function getNewValueCountbyQueryId(bytes32 _queryId)
+          public
+          view
+          returns (uint256);
+    
+    /**
+     * @dev Gets the timestamp for the value based on their index
+     * @param _queryId is the id to look up
+     * @param _index is the value index to look up
+     * @return uint256 timestamp
+     */
+      function getTimestampbyQueryIdandIndex(bytes32 _queryId, uint256 _index)
+          public
+          view
+          returns (uint256);
+    
+    /**
+     * @dev Determines whether a value with a given queryId and timestamp has been disputed
+     * @param _queryId is the value id to look up
+     * @param _timestamp is the timestamp of the value to look up
+     * @return bool true if queryId/timestamp is under dispute
+     */
+      function isInDispute(bytes32 _queryId, uint256 _timestamp)
+          public
+          view
+          returns (bool);
+    
+    /**
+     * @dev allows dev to set mapping contract for valueFor (EIP2362)
+     * @param _addy address of mapping contract
+     */
+      function setIdMappingContract(address _addy) external;
+    
+    /**
+     * @dev Retrieve most recent int256 value from oracle based on queryId
+     * @param _id being requested
+     * @return _value most recent value submitted
+     * @return _timestamp timestamp of most recent value
+     * @return _statusCode 200 if value found, 404 if not found
+     */
+      function valueFor(bytes32 _id)
+          external
+          view
+          override
+          returns (
+              int256 _value,
+              uint256 _timestamp,
+              uint256 _statusCode
+          );
 
 ```
 
@@ -152,20 +224,14 @@ For ease of use, the  `UsingTellor`  repo comes with a version of [Tellor Playgr
     function getNewValueCountbyQueryId(bytes32 _queryId) public view returns(uint256);
 
     /**
-    * @dev Gets the timestamp for the value based on their index
-    * @param _queryId is the requestId to look up
-    * @param _index is the value index to look up
-    * @return uint256 timestamp
-    */
-    function getTimestampbyRequestIDandIndex(uint256 _queryId, uint256 index) public view returns(uint256);
-
-    /**
-     * @dev Adds a tip to a given query ID.
+     * @dev Gets the timestamp for the value based on their index
      * @param _queryId is the queryId to look up
-     * @param _amount is the amount of tips
-     * @param _queryData is the extra bytes data needed to fulfill the request
+     * @param _index is the value index to look up
+     * @return uint256 timestamp
      */
-    function tipQuery(bytes32 _queryId, uint256 _amount, bytes memory _queryData) external;
+      function getTimestampbyQueryIdandIndex(bytes32 _queryId, uint256 _index) public view
+      returns (uint256);
+
 ```
 
 #### 5. To run tests:
