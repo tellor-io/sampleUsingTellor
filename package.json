@@ -9,6 +9,6 @@
     "hardhat": "^2.5.0"
   },
   "dependencies": {
-    "usingtellor": "^4.0.7"
+    "usingtellor": "github:tellor-io/usingtellor#360audit"
   }
 }
