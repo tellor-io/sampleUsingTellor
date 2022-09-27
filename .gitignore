@@ -2,8 +2,9 @@
 ./node_modules
 /node_modules
 /build
-.env
 /artifacts
 /cache
 
+.env
+package-lock.json
 **.DS_Store
