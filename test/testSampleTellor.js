@@ -1,15 +1,19 @@
 const { expect } = require("chai");
 const { ethers } = require("hardhat");
-const { abi, bytecode } = require("usingtellor/artifacts/contracts/TellorPlayground.sol/TellorPlayground.json")
 const h = require("usingtellor/test/helpers/helpers.js");
+const web3 = require('web3');
 
 describe("Tellor", function() {
   let sampleUsingTellor;
   let tellorOracle;
+  const abiCoder = new ethers.utils.AbiCoder();
+  const ETH_USD_QUERY_DATA_ARGS = abiCoder.encode(["string", "string"], ["eth", "usd"]);
+  const ETH_USD_QUERY_DATA = abiCoder.encode(["string", "bytes"], ["SpotPrice", ETH_USD_QUERY_DATA_ARGS]);
+  const ETH_USD_QUERY_ID = ethers.utils.keccak256(ETH_USD_QUERY_DATA);
 
   // Set up Tellor Playground Oracle and SampleUsingTellor
   beforeEach(async function () {
-    let TellorOracle = await ethers.getContractFactory(abi, bytecode);
+    let TellorOracle = await ethers.getContractFactory("TellorPlayground");
     tellorOracle = await TellorOracle.deploy();
     await tellorOracle.deployed();
 
@@ -18,15 +22,11 @@ describe("Tellor", function() {
     await sampleUsingTellor.deployed();
   });
 
-  it("Read tellor value", async function() {
-    const abiCoder = new ethers.utils.AbiCoder
-    const queryDataArgs = abiCoder.encode(['string', 'string'], ['btc', 'usd'])
-    const queryData = abiCoder.encode(['string', 'bytes'], ['SpotPrice', queryDataArgs])
-    const queryId = ethers.utils.keccak256(queryData)
-    const mockValue = 50000;
-    // submit value takes 4 args : queryId, value, nonce and queryData
-    await tellorOracle.submitValue(queryId,mockValue,0,queryData);
-    let retrievedVal = await sampleUsingTellor.readTellorValue(queryId);
-    expect(retrievedVal).to.equal(h.bytes(mockValue));
-  });
+  it("readEthPrice", async function() {
+    const mockValue = web3.utils.toWei("2000");
+    await tellorOracle.submitValue(ETH_USD_QUERY_ID, h.bytes(mockValue), 0, ETH_USD_QUERY_DATA);
+    await h.advanceTime(60 * 15 + 1);
+    let retrievedVal = await sampleUsingTellor.readEthPrice();
+    expect(retrievedVal[0]).to.equal(h.bytes(mockValue));
+  })
 });
