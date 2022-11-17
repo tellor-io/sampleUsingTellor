@@ -25,7 +25,7 @@ describe("Tellor", function() {
   it("readEthPrice", async function() {
     const mockValue = web3.utils.toWei("2000");
     await tellorOracle.submitValue(ETH_USD_QUERY_ID, h.bytes(mockValue), 0, ETH_USD_QUERY_DATA);
-    await h.advanceTime(60 * 15 + 1)
+    await h.advanceTime(60 * 15 + 1);
     let retrievedVal = await sampleUsingTellor.readEthPrice();
     expect(retrievedVal[0]).to.equal(h.bytes(mockValue));
   })
