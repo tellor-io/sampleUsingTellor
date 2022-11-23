@@ -54,7 +54,7 @@ contract PriceContract is UsingTellor {
     uint256 _timestamp;
     bytes _value;
 
-    (_didGet, _value, _timestamp) = getDataBefore(_queryId, block.timestamp - 15 minutes);
+    (_value, _timestamp) = getDataBefore(_queryId, block.timestamp - 15 minutes);
 
     btcPrice = abi.decode(_value,(uint256));
   }
