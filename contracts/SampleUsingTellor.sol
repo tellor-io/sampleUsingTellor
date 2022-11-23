@@ -18,7 +18,6 @@ contract SampleUsingTellor is UsingTellor {
         // Helper Function to get a value before the given timestamp
         (bytes memory _value, uint256 _timestampRetrieved) =
             getDataBefore(queryId, block.timestamp - 15 minutes);
-        if (_timestampRetrieved == 0) return (bytes(""), 0);
         return (_value, _timestampRetrieved);
     }
 }
