@@ -50,7 +50,6 @@ contract PriceContract is UsingTellor {
     bytes memory _b = abi.encode("SpotPrice",abi.encode("btc","usd"));
     bytes32 _queryID = keccak256(_b);
 
-    bool _didGet;
     uint256 _timestamp;
     bytes _value;
 
