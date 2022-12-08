@@ -1,13 +1,12 @@
 const { expect } = require("chai");
 const { ethers } = require("hardhat");
-const web3 = require('web3');
-const h = require("usingtellor/test/helpers/helpers.js");
 const {abi, bytecode} = require("usingtellor/artifacts/contracts/TellorPlayground.sol/TellorPlayground.json");
 
 describe("Tellor", function() {
   let sampleUsingTellor;
   let tellorOracle;
   const abiCoder = new ethers.utils.AbiCoder();
+  // generate queryData and queryId for eth/usd price
   const ETH_USD_QUERY_DATA_ARGS = abiCoder.encode(["string", "string"], ["eth", "usd"]);
   const ETH_USD_QUERY_DATA = abiCoder.encode(["string", "bytes"], ["SpotPrice", ETH_USD_QUERY_DATA_ARGS]);
   const ETH_USD_QUERY_ID = ethers.utils.keccak256(ETH_USD_QUERY_DATA);
@@ -24,10 +23,19 @@ describe("Tellor", function() {
   });
 
   it("readEthPrice", async function() {
-    const mockValue = web3.utils.toWei("2000");
-    await tellorOracle.submitValue(ETH_USD_QUERY_ID, h.bytes(mockValue), 0, ETH_USD_QUERY_DATA);
-    await h.advanceTime(60 * 15 + 1);
-    let retrievedVal = await sampleUsingTellor.readEthPrice();
-    expect(retrievedVal[0]).to.equal(h.bytes(mockValue));
+    // mock value to report
+    const mockValue = BigInt(2000e18);
+    // convert to bytes
+    const mockValueBytes = abiCoder.encode(["uint256"], [mockValue]);
+    // submit value to playground
+    await tellorOracle.submitValue(ETH_USD_QUERY_ID, mockValueBytes, 0, ETH_USD_QUERY_DATA);
+    // advance block timestamp by 15 minutes to allow our value to be retrieved
+    await ethers.provider.send("evm_increaseTime", [901]);
+    await ethers.provider.send("evm_mine");
+    // retrieve value from playground in our sample contract
+    await sampleUsingTellor.readEthPrice();
+    // read our saved value from the sample contract
+    const retrievedVal = await sampleUsingTellor.ethPrice();
+    expect(BigInt(retrievedVal)).to.equal(mockValue);
   })
 });
