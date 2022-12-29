@@ -210,7 +210,7 @@ function beginDispute(bytes32 _queryId, uint256 _timestamp) external;
 #### 5. To run tests:
 
 ```bash
-npm hardhat test
+npx hardhat test
 ```
 
 #### 6. Deployment:
