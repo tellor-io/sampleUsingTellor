@@ -48,12 +48,15 @@ contract PriceContract is UsingTellor {
   function setBtcPrice() public {
 
     bytes memory _b = abi.encode("SpotPrice",abi.encode("btc","usd"));
-    bytes32 _queryID = keccak256(_b);
+    bytes32 _queryId = keccak256(_b);
 
     uint256 _timestamp;
-    bytes _value;
+    bytes memory _value;
 
     (_value, _timestamp) = getDataBefore(_queryId, block.timestamp - 15 minutes);
+
+    require(_timestamp > 0, "No data exists");
+    require(block.timestamp - _timestamp < 24 hours, "Data is too old");
 
     btcPrice = abi.decode(_value,(uint256));
   }
