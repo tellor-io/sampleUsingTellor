@@ -43,7 +43,7 @@ contract PriceContract is UsingTellor {
 
   //This Contract now has access to all functions in UsingTellor
 
-  constructor(address payable _tellorAddress) UsingTellor(_tellorAddress) public {}
+  constructor(address payable _tellorAddress) UsingTellor(_tellorAddress) {}
 
   function setBtcPrice() public {
 
