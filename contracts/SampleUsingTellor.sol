@@ -7,6 +7,7 @@ contract SampleUsingTellor is UsingTellor {
     bytes public queryData = abi.encode("SpotPrice", abi.encode("eth", "usd"));
     bytes32 public queryId = keccak256(queryData);
     uint256 public ethPrice;
+    uint256 public lastStoredTimestamp; // Cache timestamp to prevent dispute attacks
 
     // Input tellor oracle address
     constructor(address payable _tellorAddress) UsingTellor(_tellorAddress) {}
@@ -21,8 +22,12 @@ contract SampleUsingTellor is UsingTellor {
         if(_timestampRetrieved > 0) {
             // Check that the data is not too old
             if(block.timestamp - _timestampRetrieved < 24 hours) {
-                // Use the helper function _sliceUint to parse the bytes to uint256
-                ethPrice = _sliceUint(_value);
+                // Check that the data is newer than the last stored data to avoid dispute attacks
+                if(_timestampRetrieved > lastStoredTimestamp) {
+                    lastStoredTimestamp = _timestampRetrieved;
+                    // Use the helper function _sliceUint to parse the bytes to uint256
+                    ethPrice = _sliceUint(_value);
+                }
             }
         }
     }
