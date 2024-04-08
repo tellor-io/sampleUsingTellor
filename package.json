@@ -9,6 +9,6 @@
     "hardhat": "^2.5.0"
   },
   "dependencies": {
-    "usingtellor": "^5.0.3"
+    "usingtellor": "^5.0.4"
   }
 }
