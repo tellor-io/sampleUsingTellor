@@ -1,7 +1,6 @@
 const { expect } = require("chai");
 const { ethers } = require("hardhat");
 const {abi, bytecode} = require("usingtellor/artifacts/contracts/TellorPlayground.sol/TellorPlayground.json");
-// const h = require("./helpers/helpers");
 
 
 describe("Tellor", function() {
@@ -41,7 +40,7 @@ describe("Tellor", function() {
     expect(BigInt(retrievedVal)).to.equal(mockValue);
   })
 
-  it.only("readEthPrice checks working", async function() {
+  it("readEthPrice checks working", async function() {
     // mock value to report
     const mockValue1 = BigInt(2000e18);
     const mockValue2 = BigInt(3000e18);
