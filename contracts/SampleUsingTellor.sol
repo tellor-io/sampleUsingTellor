@@ -25,17 +25,9 @@ contract SampleUsingTellor is UsingTellor {
                 // Check that the data is newer than the last stored data to avoid dispute attacks
                 if(_timestampRetrieved > lastStoredTimestamp) {
                     lastStoredTimestamp = _timestampRetrieved;
-                    // Use the helper function _sliceUint to parse the bytes to uint256
-                    ethPrice = _sliceUint(_value);
+                    ethPrice = abi.decode(_value, (uint256));
                 }
             }
-        }
-    }
-
-    //helper function
-    function _sliceUint(bytes memory _b) internal pure returns (uint256 _number){
-        for (uint256 _i = 0; _i < _b.length; _i++) {
-            _number = _number * 256 + uint8(_b[_i]);
         }
     }
 }
