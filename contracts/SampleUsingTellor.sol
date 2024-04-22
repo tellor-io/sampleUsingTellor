@@ -17,7 +17,7 @@ contract SampleUsingTellor is UsingTellor {
     {
         // Retrieve data at least 15 minutes old to allow time for disputes
         (bytes memory _value, uint256 _timestampRetrieved) =
-            getDataBefore(queryId, block.timestamp - 15 minutes);
+            _getDataBefore(queryId, block.timestamp - 15 minutes);
         // If timestampRetrieved is 0, no data was found
         if(_timestampRetrieved > 0) {
             // Check that the data is not too old
@@ -29,6 +29,13 @@ contract SampleUsingTellor is UsingTellor {
                     ethPrice = _sliceUint(_value);
                 }
             }
+        }
+    }
+
+    //helper function
+    function _sliceUint(bytes memory _b) internal pure returns (uint256 _number){
+        for (uint256 _i = 0; _i < _b.length; _i++) {
+            _number = _number * 256 + uint8(_b[_i]);
         }
     }
 }
