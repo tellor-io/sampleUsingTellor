@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.8.0;
 
-import "usingtellor/contracts/UsingTellor.sol";
+import "../lib/usingtellor/contracts/UsingTellor.sol";
 
 contract SampleUsingTellor is UsingTellor {
     bytes public queryData = abi.encode("SpotPrice", abi.encode("eth", "usd"));
