@@ -2,22 +2,21 @@
 pragma solidity ^0.8.13;
 
 import {Test, console} from "forge-std/Test.sol";
-import {Counter} from "../src/Counter.sol";
+import {SampleUsingTellor} from "../src/SampleUsingTellor.sol";
 
-contract CounterTest is Test {
-    Counter public counter;
+contract SampleUsingTellorTest is Test {
+    SampleUsingTellor public sampleUsingTellor;
 
     function setUp() public {
-        counter = new Counter();
-        counter.setNumber(0);
+        sampleUsingTellor = new SampleUsingTellor();
     }
 
-    function test_Increment() public {
+    function test_ReadETHPrice() public {
         counter.increment();
         assertEq(counter.number(), 1);
     }
 
-    function testFuzz_SetNumber(uint256 x) public {
+    function test_ChangeETHPrice(uint256 x) public {
         counter.setNumber(x);
         assertEq(counter.number(), x);
     }
