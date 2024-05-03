@@ -1,0 +1,7 @@
+Paste into command line
+
+
+forge create --rpc-url <your_rpc_url> \
+    --constructor-args "myTellorAddress" \
+    --private-key <your_private_key> \
+    src/SampleUsingTellor.sol:SampleUSingTellor
