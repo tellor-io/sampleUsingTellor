@@ -1,4 +1,4 @@
-//require("@nomicfoundation/hardhat-toolbox")
+require("@nomicfoundation/hardhat-toolbox")
 require("dotenv").config();
 
 // This is a sample Hardhat task. To learn how to create your own go to
@@ -16,17 +16,30 @@ task("accounts", "Prints the list of accounts", async () => {
 
 module.exports = {
   //defaultNetwork: "polygon_amoy",
-  networks: {
-    polygon_amoy: {
-      url: process.env.NODE_URL,
-      seeds: [process.env.PRIVATE_KEY],
-      gas: 8000000 ,
-      gasPrice: 10000000000
-    },
-  },
-  etherscan: {
-    apiKey: {
-      polygon_amoy: process.env.VERIFICATION_KEY
+  solidity: {
+    version: "0.8.24",
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 200
+      }
     }
+  },
+  try:{
+    networks: {
+      polygon_amoy: {
+        url: process.env.NODE_URL,
+        accounts: [process.env.PRIVATE_KEY],
+        gas: 8000000 ,
+        gasPrice: 10000000000
+      },
+    },
+    etherscan: {
+      apiKey: {
+        polygon_amoy: process.env.VERIFICATION_KEY
+      }
+    }
+  },catch(e){
+    console.log("be sure to put in an env")
   }
 };

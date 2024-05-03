@@ -7,7 +7,9 @@ let tellorAddress = "0xC866DB9021fe81856fF6c5B3E3514BF9D1593D81"; //our construc
 
 
 const SampleUsingTellorModule = buildModule('SampleUsingTellorModule', (m) => {
-  const sampleUsingTellor = m.contract('SampleUsingTellor',[tellorAddress]);
+  const _t = m.getParameter("_tellorAddress", tellorAddress);
+
+  const sampleUsingTellor = m.contract('SampleUsingTellor',[_t]);
 
   return { sampleUsingTellor };
 });
