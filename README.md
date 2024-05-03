@@ -36,7 +36,6 @@ foundry:
 ```bash
 cd foundry
 forge install
-forge install github.com/tellor-io/usingtellor
 ```
 
 hardhat:
