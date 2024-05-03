@@ -245,7 +245,7 @@ First create a .env file corresponding to the .env.example file
 
 Next update your hardhat.config with the correct network/gas settings. 
 
-Then, in ignition/modules/SampleUsingTellor.js, change the tellor address to correspond to the correct address corresponding to your deployment network (https://docs.tellor.io/tellor/the-basics/contracts-reference)[https://docs.tellor.io/tellor/the-basics/contracts-reference]
+Then, in ignition/modules/SampleUsingTellor.js, change the tellor address to correspond to the correct address corresponding to your deployment network [https://docs.tellor.io/tellor/the-basics/contracts-reference](https://docs.tellor.io/tellor/the-basics/contracts-reference)
 
 
 Next run:
@@ -256,7 +256,7 @@ npx hardhat ignition deploy ignition/modules/SampleUsingTellor.js --network <my_
 
 Foundry: 
 
-Find a node URL, fund a wallet, and get a tellor address to corresponding to your deployment network (https://docs.tellor.io/tellor/the-basics/contracts-reference)[https://docs.tellor.io/tellor/the-basics/contracts-reference].  Then run: 
+Find a node URL, fund a wallet, and get a tellor address to corresponding to your deployment network https://docs.tellor.io/tellor/the-basics/contracts-reference](https://docs.tellor.io/tellor/the-basics/contracts-reference).  Then run: 
 
 ```bash
 forge create --rpc-url <your_rpc_url> \

@@ -1,0 +1,8 @@
+build/
+hardhat/node_modules/
+hardhat/artifacts/
+hardhat/cache/
+hardhat/.env/
+.env
+package-lock.json
+deployments/
