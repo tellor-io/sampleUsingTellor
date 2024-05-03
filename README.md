@@ -29,7 +29,21 @@ This repo already includes the [usingTellor](https://github.com/tellor-io/usingt
 
 ```bash
 git clone git@github.com:tellor-io/sampleUsingTellor.git
-npm install
+```
+
+foundry:
+
+```bash
+cd foundry
+forge install
+forge install github.com/tellor-io/usingtellor
+```
+
+hardhat:
+
+```bash
+cd hardhat
+npm i
 ```
 
 #### 2. How to Use
@@ -212,15 +226,45 @@ function beginDispute(bytes32 _queryId, uint256 _timestamp) external;
 
 #### 5. To run tests:
 
+Hardhat: 
+
 ```bash
 npx hardhat test
 ```
 
-#### 6. Deployment:
-Just run hardhat run with desired Network
+Foundry
 
 ```bash
-npx hardhat run --network <your-network> scripts/deploy.js
+forge test
+```
+
+
+#### 6. Deployment:
+Hardhat: 
+
+First create a .env file corresponding to the .env.example file
+
+Next update your hardhat.config with the correct network/gas settings. 
+
+Then, in ignition/modules/SampleUsingTellor.js, change the tellor address to correspond to the correct address corresponding to your deployment network (https://docs.tellor.io/tellor/the-basics/contracts-reference)[https://docs.tellor.io/tellor/the-basics/contracts-reference]
+
+
+Next run:
+```bash
+npx hardhat ignition deploy ignition/modules/SampleUsingTellor.js --network <my_network>
+
+```
+
+Foundry: 
+
+Find a node URL, fund a wallet, and get a tellor address to corresponding to your deployment network (https://docs.tellor.io/tellor/the-basics/contracts-reference)[https://docs.tellor.io/tellor/the-basics/contracts-reference].  Then run: 
+
+```bash
+forge create --rpc-url <your_rpc_url> \
+    --constructor-args "0x123_myTellorAddress" \
+    --private-key <your_private_key> \
+    src/SampleUsingTellor.sol:SampleUSingTellor
+
 ```
 
 
