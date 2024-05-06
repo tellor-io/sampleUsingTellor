@@ -122,8 +122,8 @@ function _getIndexForDataAfter(bytes32 _queryId, uint256 _timestamp)
  * @return _found whether the index was found
  * @return _index the latest index found before the specified timestamp
  */
-function getIndexForDataBefore(bytes32 _queryId, uint256 _timestamp)
-    public
+function _getIndexForDataBefore(bytes32 _queryId, uint256 _timestamp)
+    internal
     view
     returns (bool _found, uint256 _index);
 
