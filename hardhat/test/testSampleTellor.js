@@ -6,21 +6,21 @@ const {abi, bytecode} = require("usingtellor/artifacts/contracts/TellorPlaygroun
 describe("Tellor", function() {
   let sampleUsingTellor;
   let tellorOracle;
-  const abiCoder = new ethers.utils.AbiCoder();
+  const abiCoder = new ethers.AbiCoder();
   // generate queryData and queryId for eth/usd price
   const ETH_USD_QUERY_DATA_ARGS = abiCoder.encode(["string", "string"], ["eth", "usd"]);
   const ETH_USD_QUERY_DATA = abiCoder.encode(["string", "bytes"], ["SpotPrice", ETH_USD_QUERY_DATA_ARGS]);
-  const ETH_USD_QUERY_ID = ethers.utils.keccak256(ETH_USD_QUERY_DATA);
+  const ETH_USD_QUERY_ID = ethers.keccak256(ETH_USD_QUERY_DATA);
 
   // Set up Tellor Playground Oracle and SampleUsingTellor
   beforeEach(async function () {
     let TellorOracle = await ethers.getContractFactory(abi, bytecode);
     tellorOracle = await TellorOracle.deploy();
-    await tellorOracle.deployed();
+    await tellorOracle.waitForDeployment();
 
     let SampleUsingTellor = await ethers.getContractFactory("SampleUsingTellor");
-    sampleUsingTellor = await SampleUsingTellor.deploy(tellorOracle.address);
-    await sampleUsingTellor.deployed();
+    sampleUsingTellor = await SampleUsingTellor.deploy(tellorOracle.target);
+    await sampleUsingTellor.waitForDeployment();
   });
 
   it("readEthPrice", async function() {

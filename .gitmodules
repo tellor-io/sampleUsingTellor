@@ -1,0 +1,9 @@
+[submodule "foundry/hello_foundry/lib/forge-std"]
+	path = foundry/hello_foundry/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "foundry/lib/forge-std"]
+	path = foundry/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "foundry/lib/usingtellor"]
+	path = foundry/lib/usingtellor
+	url = https://github.com/tellor-io/usingtellor
