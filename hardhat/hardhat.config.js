@@ -25,21 +25,17 @@ module.exports = {
       }
     }
   },
-  try:{
-    networks: {
-      polygon_amoy: {
-        url: process.env.NODE_URL,
-        accounts: [process.env.PRIVATE_KEY],
-        gas: 8000000 ,
-        gasPrice: 10000000000
-      },
-    },
-    etherscan: {
-      apiKey: {
-        polygon_amoy: process.env.VERIFICATION_KEY
-      }
-    }
-  },catch(e){
-    console.log("be sure to put in an env")
-  }
+  // networks: {
+  //   polygon_amoy: {
+  //     url: process.env.NODE_URL,
+  //     accounts: [process.env.PRIVATE_KEY],
+  //     gas: 8000000 ,
+  //     gasPrice: 10000000000
+  //   },
+  // },
+  // etherscan: {
+  //   apiKey: {
+  //     polygon_amoy: process.env.VERIFICATION_KEY
+  //   }
+  // }
 };
