@@ -17,13 +17,26 @@ task("accounts", "Prints the list of accounts", async () => {
 module.exports = {
   //defaultNetwork: "polygon_amoy",
   solidity: {
-    version: "0.8.24",
-    settings: {
-      optimizer: {
-        enabled: true,
-        runs: 200
+    compilers: [
+      {
+        version: "0.8.3",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 300
+          }
+        }
+      },
+      {
+        version: "0.8.19",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 300
+          }
+        }
       }
-    }
+    ]
   },
   // networks: {
   //   polygon_amoy: {
