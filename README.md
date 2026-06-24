@@ -251,7 +251,7 @@ npx hardhat ignition deploy ignition/modules/SampleUsingTellor.js --network <my_
 
 Foundry: 
 
-Find a node URL, fund a wallet, and get a tellor address to corresponding to your deployment network [https://docs.tellor.io/tellor/the-basics/contracts-reference](https://docs.tellor.io/tellor/the-basics/contracts-reference).  Then run: 
+Find a node URL, fund a wallet, and get a tellor address to corresponding to your deployment network [https://docs.tellor.io/tellor/using-tellor-data/databridge-contracts-reference](https://docs.tellor.io/tellor/using-tellor-data/databridge-contracts-reference).  Then run: 
 
 ```bash
 forge create --rpc-url <your_rpc_url> \
